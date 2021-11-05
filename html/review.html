@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review</title>
     <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
 
 <body>
     <div class="review_page page">
-        <div class="page__menu">
+        <div class="page__menu flexrow">
             <div class="page__menu--logo">
                 <img src="../img/logo.png" alt="">
             </div>
@@ -23,29 +24,107 @@
                     <li><a href="./aboutus.html">about us</a></li>
                 </ul>
             </div>
-            <div class="btn-booknow"><a href="./booknow.html">BOOK NOW</a></div>
-            <div class="page__menu--icon"><a href="#">ICON</a></div>
+            <div class="btn btn-booknow btn-medium">
+                <a href="./booknow.html">BOOK NOW</a>
+            </div>
+            <div class="page__menu--icon flexrow">
+                <div class="btn-signin icon">
+                    <a href="#"><i class="far fa-user-circle"></i> Sign in</a>
+                </div>
+                <div class="btn-register icon"><a href="#"><i class="far fa-edit"></i> Register</a></div>
+            </div>
+
+            <div class="page__menu--icon-menu ">
+                <a href="#"><i class="fas fa-align-justify"></i></a>
+            </div>
         </div>
+
         <div class="page__content">
             <div class="page__content--section p1--review">
                 <div class="page__content--slide">
-                    Slide
+                    <img src="/img/Detail/16c_HaLong.png" alt="">
                 </div>
-                <div class="page__content--review_best">
-                    Best Package
-                </div>
+                <div class="page__content--best">
+                    <h3> Best package</h3>
+                    <div class="content__image--best">
+                        <div class="content__best">
+                            <img src="/img/Detail/2d_HaNoi.jpg" alt="">
+                            <p>Hà Nội</p>
+                        </div>
+                        <div class="content__best">
+                            <img src="/img/Detail/sapa.png" alt="">
+                            <p>SaPa</p>
+                        </div>
+                        <div class="content__best">
+                            <img src="/img/Detail/VT.png" alt="">
+                            <p>Vũng Tàu</p>
+                        </div>
+                    </div>
+                </div>    
             </div>
+            <h2>REVIEWS FROM CUSTOMER</h2>
             <div class="page__content--section p2--review">
                 <div class="page__content--image">
-                    Image
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/Detail/16b_HaLong.jpg" alt="" title="Hạ Long"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/Detail/15a_BinhThuan.jpg" alt="" title="Bình Thuận"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/Detail/4d_sapa.jpg" alt="" title="SaPa"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/Detail/17d_Phú Yên.png" alt="" title="Phú Yên"></a>
                 </div>
                 <div class="page__content--review">
-                    Content
+                    <iframe name="myreview" src=""></iframe>
                 </div>
             </div>
         </div>
+
         <div class="page__footer">
-            Footer
+            <div class="page__footer--left">
+                <h2 class="text-center">Travel with us</h2>
+                <img src="/img/logo.png" alt="">
+                <div class="footer-icon-contact">
+                    <a href="">
+                        <i class="fab fa-facebook footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-youtube footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fas fa-envelope footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-twitter footer-icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="page__footer--right">
+                <div class="footer--right--menu">
+                    <ul class="flexrow">
+                        <li>
+                            <a href="">About us</a>
+                        </li>
+                        <li>
+                            <a href="">Tour</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                        <li>
+                            <a href="">Provision</a>
+                        </li>
+                        <li>
+                            <a href="">Security</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer--information">
+                    <p>Địa chỉ: Lầu 2, 3 và 7, Tòa nhà An Phú Plaza, 117-119 Lý Chính Thắng, Phường 7, Quận 3, Tp. Hồ Chí Minh, Việt Nam</p>
+                    <p>Là công ty du lịch trực tuyến hàng đầu Đông Nam Á, EIV đáp ứng đa dạng các nhu cầu du lịch trên cùng một nền tảng, giúp khách hàng có được những chuyến du lịch tuyệt vời với người thân yêu.</p>
+                    <p style="font-family: 'Courier New', Courier, monospace; margin-top: 30px;">The every where in Vina</p>
+                </div>
+                <p style="color: white; font-style: italic; font-size: 15px; margin-top: var(--space);">@Copyright Group6_VIA</p>
+            </div>
         </div>
     </div>
 </body>

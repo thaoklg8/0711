@@ -29,6 +29,9 @@
         --space: 30px;
     }
     
+    :root {
+        --infColor:#f3fbfd;
+    }
     .flexrow {
         display: flex;
         justify-content: space-around;
@@ -368,49 +371,63 @@
     }
     /*PAGE about us*/
     /*PAGE review*/
-    
     .p1--review {
         padding-top: 100px;
-        z-index: 1;
     }
     
-    .page__content--slide {
+    .review_page .page__content--slide img{
         width: 900px;
-        background-color: rgb(102, 211, 219);
-        height: 384px;
+        height: 420px;
+        
     }
     
-    .page__content--review_best {
-        margin-left: 30px;
+    .review_page .content__best{
+        display: flex;
         width: 300px;
-        height: 384px;
-        background-color: rgb(209, 154, 45);
+        margin-bottom: var(--space);
+        margin-left: var(--space);
+        
+    }
+
+    .review_page .page__content--best img{
+        width: 100px;
+        height: 100px;
     }
     
-    .page__content--image {
-        width: 300px;
+    .page__content--image{
+        width: 430px;
         height: 680px;
-        background-color: rgb(224, 139, 224);
+        background-color: var(--infColor);
     }
-    
-    .page__content--review {
-        margin-left: 30px;
-        width: 900px;
-        background-color: rgb(118, 118, 196);
+
+    .review_page h2{
+        text-align: center;
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+    .review_page .page__content--image img{
+        width: 180px;
+        height: 200px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .page__content--review iframe{
+        margin-left: var(--space);
+        width: 760px;
         height: 680px;
+        background-color: var(--infColor);
     }
     /*PAGE detail*/
     
-    .page__banner {
+    .detail_page .page__banner {
         padding-top: 50px;
-        background-color: thistle;
-        height: 310px;
         width: 100%;
-        z-index: 1;
+        height: auto;
+        margin-bottom: var(--space);
     }
     
     .part--right {
-        margin-left: 30px;
+        margin-left: var(--space);
         width: 400px;
     }
     
@@ -418,75 +435,128 @@
         width: 800px;
     }
     
-    .page__content--video {
-        /* rớt xuống không ở chính giữa*/
-        background-color: tomato;
+    .page__content--video img{
         height: 600px;
+        width: 800px;
     }
-    
-    .detail_page .page__content--book {
-        background-color: rgb(205, 243, 128);
+
+    .page__content--book{
+        border: 1px solid rgb(50, 99, 235);
+        width: 397px;
         height: 600px;
+        background-color: var(--infColor);
     }
-    
+
+    .content__book--price{
+        background-color: #BA81CE;
+        font-size: xx-large;
+        text-align: center;
+        line-height: 110px;
+        color: white;
+        width: 400px;
+        height: 100px;
+        margin-bottom: var(--space);
+    }
+
+    .detail_page input, .detail_page textarea{
+        margin-left: 20px;
+        margin-bottom: var(--space);
+        border: 1px solid black;
+        border-radius: 20px;
+        padding-left: 10px;
+    }
+
+    .content__book--inf input{
+        height: 45px;
+        width: 135;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+
+    .content__book--infphone input{
+        height: 45px;
+        width: 310px;
+    }
+
+    .content__book--send{
+        background-color: #BA81CE;
+        text-align: center;
+        line-height: 45px;
+        width: 310px;
+        height: 45px;
+        font-size: x-large;
+        color: white;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+
     .page__content--discription {
-        background-color: aquamarine;
+        background-color: var(--infColor);
         height: 900px;
     }
     
-    .page__content--photos {
-        background-color: beige;
+    .page__content--photos img {
         height: 250px;
+        width: 400px;
+        margin-bottom: var(--space);
+    }
+
+    h3{
+        margin-bottom: var(--space);
+        margin-left: 40px;
+    }
+
+    p{
+        margin-left: 30px;
+    }
+
+    .content__best{
+        display: flex;
+        width: 300px;
+        margin-bottom: 60px;
+    }
+
+    .page__content--best img{
+        width: 100px;
+        height: 100px;
     }
     
-    .page__content--best {
-        margin-top: 50px;
-        background-color: azure;
-        height: 600px;
-    }
-    
-    .page__content--map {
-        background-color: blanchedalmond;
+    .page__content--map img {
+        width: 800px;
         height: 500px;
     }
     
-    .page__content--other {
-        background-color: cadetblue;
+    .page__content--otherpack img {
         height: 500px;
+    }
+
+    .page__content--related h3{
+        text-align: center;
     }
     /*PAGE security*/
-    
-    .p1--security {
+    .security_page .page__content {
         padding-top: 100px;
-        z-index: 1;
-    }
-    
-    .page__content--photo {
-        width: 800px;
-        background-color: lightseagreen;
-        height: 500px;
-    }
-    
-    .page__content--other {
-        width: 400px;
-        background-color: khaki;
-        margin-left: 30px;
-        height: 500px;
-    }
-    
-    .p2--security {
-        width: 100%;
-        height: 800px;
-        background-color: rgb(118, 228, 151);
-    }
-    /*PAGE provision*/
-    
-    .page__content--content {
-        margin-top: 100px;
         width: 100%;
         height: 990px;
-        background-color: rgb(118, 228, 151);
         z-index: 1;
+    }
+    .security_page .page__content--content{
+        background-color: var(--infColor);
+        width: 100%;
+        height: 990px;
+    }
+    
+    /*PAGE provision*/
+    .provision_page .page__content {
+        padding-top: 100px;
+        width: 100%;
+        height: 990px;
+        z-index: 1;
+    }
+    .provision_page .page__content--content{
+        background-color: var(--infColor);
+        width: 100%;
+        height: 990px;
     }
     /*chiều rộng nhỏ hơn hoặc bằng 480px thì*/
     /*chiều rộng nhỏ hơn hoặc bằng 1000px thì*/

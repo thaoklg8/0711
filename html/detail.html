@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Detail</title>
     <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
 
 <body>
-    <div class="detail__page page">
-        <div class="page__menu">
+    <div class="detail_page page">
+        <div class="page__menu flexrow">
             <div class="page__menu--logo">
                 <img src="../img/logo.png" alt="">
             </div>
@@ -23,56 +24,169 @@
                     <li><a href="./aboutus.html">about us</a></li>
                 </ul>
             </div>
-            <div class="btn-booknow"><a href="./booknow.html">BOOK NOW</a></div>
-            <div class="page__menu--icon"><a href="#">ICON</a></div>
+            <div class="btn btn-booknow btn-medium">
+                <a href="./booknow.html">BOOK NOW</a>
+            </div>
+            <div class="page__menu--icon flexrow">
+                <div class="btn-signin icon">
+                    <a href="#"><i class="far fa-user-circle"></i> Sign in</a>
+                </div>
+                <div class="btn-register icon"><a href="#"><i class="far fa-edit"></i> Register</a></div>
+            </div>
+
+            <div class="page__menu--icon-menu ">
+                <a href="#"><i class="fas fa-align-justify"></i></a>
+            </div>
         </div>
         <div class="page__banner">
-            banner
+            <img src="/img/banner1.png" alt="">
         </div>
         <div class="page__content">
             <div class="page__content--section">
                 <div class="page__content--video part--left">
-                    video
+                    <img src="/img/Detail/1e_Hue.jpg" alt="" title="Đại Nội Huế">
                 </div>
                 <div class="page__content--book part--right">
-                    book
+                    <div class="content__book--price"><p>700$</p></div>
+                    <div class="content__book--inf">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Surname">
+                    </div>
+                    <div class="content__book--inf">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Guests">
+                    </div>
+                    <div class="content__book--infphone"><input type="text" placeholder="Phone"></div>
+                    <div class=""><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></div>
+                    <div class="content__book--send"><p>Send now</p></div>
                 </div>
             </div>
+
             <div class="page__content--section">
                 <div class="page__content--discription part--left">
-                    discription
+                    <h3>Discription</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae mollitia dolorum in sequi pariatur adipisci voluptates, dolor iste, ullam facere reprehenderit? Ut id quod illo esse. Vero nihil eligendi accusamus.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nisi consectetur perferendis, voluptate cum quam quis facilis alias fugiat, animi asperiores quaerat modi ipsum enim mollitia beatae dignissimos! Expedita, qui!</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, voluptate eum quae suscipit ratione earum praesentium et quaerat laboriosam fugit esse odio, enim eius sapiente minima repellendus. Quo, doloribus voluptates!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas ratione, totam iure sed, quis libero incidunt sapiente, perspiciatis tenetur repellat id ea? Rem delectus, saepe doloremque iusto eligendi libero.</p>
                 </div>
                 <div class="part--right">
                     <div class="page__content--photos">
-                        photos
+                        <img src="/img/Detail/rsz_3e_binhdinh.jpg" alt="" title="Tháp Đôi">
                     </div>
                     <div class="page__content--best">
-                        best package
+                        <h3> Best package</h3>
+                        <div class="content__image--best">
+                            <div class="content__best">
+                                <img src="/img/Detail/2d_HaNoi.jpg" alt="">
+                                <p>Hà Nội</p>
+                            </div>
+                            <div class="content__best">
+                                <img src="/img/Detail/sapa.png" alt="">
+                                <p>SaPa</p>
+                            </div>
+                            <div class="content__best">
+                                <img src="/img/Detail/VT.png" alt="">
+                                <p>Vũng Tàu</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="page__content--section">
                 <div class="page__content--map part--left">
-                    map
+                    <h3>Tour Map</h3>
+                    <img src="/img/Detail/map_image.png" alt="">
                 </div>
-                <div class="page__content--other part--right">
-                    other package
-                </div>
-            </div>
-            <div class="page__content--tour">
-                <div class="tour--item">
-                    item1
-                </div>
-                <div class="tour--item">
-                    item2
-                </div>
-                <div class="tour--item">
-                    item3
+                <div class="page__content--otherpack part--right">
+                    <h3>Other Package</h3>
+                    <img src="/img/Detail/15f_nt.jpg" alt="" title="Nha Trang">
                 </div>
             </div>
+
+            <div class="page__content--related">
+                <h3>RELATED PACKAGES</h3>
+                <div class="page__content--tour">
+                    <div class="tour--item">
+                        <div class="tour--item-pic">
+                            <img src="/img/1a_hue.jpg" alt="">
+                        </div>
+                        <div class="tour--item--content">
+                            <div class="middle--item-content flexrow">
+                                <div class="tour--item--content--left">
+                                    <p class="title text-center">Đại nội Huế</p>
+                                    <p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> Huế</p>
+                                </div>
+                                <div class="tour--item--content--right price">
+                                    $700
+                                </div>
+                            </div>
+    
+                            <p class="title-script">Nằm ngay bên bờ sông Hương thơ mộng, Đại nội Huế là một quần thế di tích văn hoá được công nhận là di tích văn hoá thế giới. Địa điểm du lịch này hội tụ các nét đẹp kiến trúc đỉnh cao của thời đại phong kiến nhà Nguyễn, được xây
+                                dựng cách đây hàng trăm năm với diện tích vô cùng đồ sộ, có hơn 100 công trình kiến trúc lộng lẫy như: Ngọ Môn, Cung Diên Thọ, Tử Cấm Thành, Điện Thái Hòa được bố trí hài hòa, hợp lý.</p>
+                        </div>
+                        <div class="btn-detail btn-medium">Details</div>
+                    </div>
+                    <div class="tour--item">
+                        item2
+                    </div>
+                    <div class="tour--item">
+                        item3
+                    </div>
+                </div>
+            </div>
+            
         </div>
         <div class="page__footer">
-            footer
+            <div class="page__footer--left">
+                <h2 class="text-center">Travel with us</h2>
+                <img src="/img/logo.png" alt="">
+                <div class="footer-icon-contact">
+                    <a href="">
+                        <i class="fab fa-facebook footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-youtube footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fas fa-envelope footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-twitter footer-icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="page__footer--right">
+                <div class="footer--right--menu">
+                    <ul class="flexrow">
+                        <li>
+                            <a href="">About us</a>
+                        </li>
+                        <li>
+                            <a href="">Tour</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                        <li>
+                            <a href="">Provision</a>
+                        </li>
+                        <li>
+                            <a href="">Security</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer--information">
+                    <p>Địa chỉ: Lầu 2, 3 và 7, Tòa nhà An Phú Plaza, 117-119 Lý Chính Thắng, Phường 7, Quận 3, Tp. Hồ Chí Minh, Việt Nam</p>
+                    <p>Là công ty du lịch trực tuyến hàng đầu Đông Nam Á, EIV đáp ứng đa dạng các nhu cầu du lịch trên cùng một nền tảng, giúp khách hàng có được những chuyến du lịch tuyệt vời với người thân yêu.</p>
+                    <p style="font-family: 'Courier New', Courier, monospace; margin-top: 30px;">The every where in Vina</p>
+                </div>
+                <p style="color: white; font-style: italic; font-size: 15px; margin-top: var(--space);">@Copyright Group6_VIA</p>
+            </div>
         </div>
     </div>
 </body>
