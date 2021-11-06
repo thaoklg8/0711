@@ -6,19 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <title>Tour</title>
 </head>
-
 <body>
     <div class="tour_page page">
-        <div class="page__menu">
-            <span>Menu</span>
+        <div class="page__menu flexrow">
+            <div class="page__menu--logo">
+                <img src="../img/logo.png" alt="">
+            </div>
+            <div class="page__menu--ul">
+                <ul>
+                    <li><a href="./home_index.html">home</a></li>
+                    <li><a href="./tour.html">tour</a></li>
+                    <li><a href="./review.html">review</a></li>
+                    <li><a href="./aboutus.html">about us</a></li>
+                </ul>
+            </div>
+            <div class="btn btn-booknow btn-medium">
+                <a href="./booknow.html">BOOK NOW</a>
+            </div>
+            <div class="page__menu--icon flexrow">
+                <div class="btn-signin icon">
+                    <a href="#"><i class="far fa-user-circle"></i> Sign in</a>
+                </div>
+                <div class="btn-register icon"><a href="#"><i class="far fa-edit"></i> Register</a></div>
+            </div>
 
+            <div class="page__menu--icon-menu ">
+                <a href="#"><i class="fas fa-align-justify"></i></a>
+            </div>
         </div>
+
         <div class="page__content content">
             <h2 class="title">OUR TOURS</h2>
             <div class="page__content--tour">
-                <div class="tour--item">1</div>
+                <div class="tour--item">
+                    <div class="tour--item-pic">
+                        <img src="/img/1a_hue.jpg" alt="">
+                    </div>
+                    <div class="tour--item--content">
+                        <div class="middle--item-content flexrow">
+                            <div class="tour--item--content--left">
+                                <p class="title text-center">Đại nội Huế</p>
+                                <p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> Huế</p>
+                            </div>
+                            <div class="tour--item--content--right price">
+                                $700
+                            </div>
+                        </div>
+
+                        <p class="title-script">Nằm ngay bên bờ sông Hương thơ mộng, Đại nội Huế là một quần thế di tích văn hoá được công nhận là di tích văn hoá thế giới. Địa điểm du lịch này hội tụ các nét đẹp kiến trúc đỉnh cao của thời đại phong kiến nhà Nguyễn, được xây
+                            dựng cách đây hàng trăm năm với diện tích vô cùng đồ sộ, có hơn 100 công trình kiến trúc lộng lẫy như: Ngọ Môn, Cung Diên Thọ, Tử Cấm Thành, Điện Thái Hòa được bố trí hài hòa, hợp lý.</p>
+                    </div>
+                    <div class="btn-detail btn-medium">Details
+                </div>
                 <div class="tour--item">2</div>
                 <div class="tour--item">3</div>
                 <div class="tour--item">4</div>
@@ -35,8 +77,56 @@
                 <div class="tour--item">15</div>
             </div>
         </div>
+
         <div class="page__footer">
-            footer
+            <div class="page__footer--left">
+                <h2 class="text-center">Travel with us</h2>
+                <img src="/img/logo.png" alt="">
+                <div class="footer-icon-contact">
+                    <a href="">
+                        <i class="fab fa-facebook footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-youtube footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fas fa-envelope footer-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-twitter footer-icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="page__footer--right">
+                <div class="footer--right--menu">
+                    <ul class="flexrow">
+                        <li>
+                            <a href="">About us</a>
+                        </li>
+                        <li>
+                            <a href="">Tour</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                        <li>
+                            <a href="">Provision</a>
+                        </li>
+                        <li>
+                            <a href="">Security</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer--information">
+                    <p>Địa chỉ: Lầu 2, 3 và 7, Tòa nhà An Phú Plaza, 117-119 Lý Chính Thắng, Phường 7, Quận 3, Tp. Hồ Chí Minh, Việt Nam</p>
+                    <p>Là công ty du lịch trực tuyến hàng đầu Đông Nam Á, EIV đáp ứng đa dạng các nhu cầu du lịch trên cùng một nền tảng, giúp khách hàng có được những chuyến du lịch tuyệt vời với người thân yêu.</p>
+                    <p style="font-family: 'Courier New', Courier, monospace; margin-top: 30px;">The every where in Vina</p>
+                </div>
+                <p style="color: white; font-style: italic; font-size: 15px; margin-top: var(--space);">@Copyright Group6_VIA</p>
+            </div>
         </div>
     </div>
 </body>
