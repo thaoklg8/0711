@@ -568,7 +568,8 @@ h3 {
 }
 
 p {
-    margin-left: 30px;
+    margin-left: calc(var(--space)/3);
+    margin-right: calc(var(--space)/3);
 }
 
 .content__best {
