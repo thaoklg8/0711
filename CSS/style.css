@@ -281,10 +281,13 @@
         background-color: tomato;
         position: relative;
         z-index: 1;
+    }.page__transition img{
+        width: 100%;
+        height: 100%;
     }
     
     .home_page .page__content--review {
-        height: 100px;
+        
         width: 100%;
         background-color: violet;
         margin-left: 0px;
@@ -396,7 +399,11 @@
     .aboutus_page .page__content--content h1{
         text-align: center;
     }
-    .aboutus_page .page__content--content h2,p{
+    .aboutus_page .page__content--content> p{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .aboutus_page .page__content--content> h2{
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -450,14 +457,14 @@
         margin-top: 20px;
     }
     
-    .page__content--review {
+    .review_page .page__content--review {
         width: 760px;
         margin-left: var(--space);
         background-color: var(--infColor);
         height: 680px;
     }
     
-    .page__content--review iframe {
+    .review_page .page__content--review iframe {
         height: 680px;
         width: 100%;
     }
@@ -596,7 +603,7 @@
     .security_page .page__content--content {
         background-color: var(--infColor);
         width: 100%;
-        height: 990px;
+        /* height: 990px; */
         margin-bottom: var(--space);
     }
     .security_page .page__content--content{
