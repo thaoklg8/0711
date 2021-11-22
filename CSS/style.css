@@ -1,972 +1,680 @@
-    /*apply toàn bộ website*/
-    
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .page {
-        background-color: #e6f5f9;
-    }
-    
-     :root {
-        --textColor: rgb(206, 207, 211);
-    }
-    
-     :root {
-        --menuColor: #144496;
-    }
-    
-     :root {
-        --linkColor: #c2faf5;
-    }
-    
-     :root {
-        --footerColor: #44a1cf;
-    }
-    /* :root {
-    --footerColor: rgb(143, 71, 74);
-} */
-    
-     :root {
-        --mainColor: rgb(4, 20, 112);
-    }
-    
-     :root {
-        --space: 30px;
-    }
-    
-     :root {
-        --infColor: #f3fbfd;
-    }
-    
-    .flexrow {
-        display: flex;
-        justify-content: space-around;
-    }
-    /*phần chỉnh div lớn nhất*/
-    
-    .page {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        position: relative;
-        width: 100%;
-        font-size: 20px;
-    }
-    /*phần chỉnh menu*/
-    
-    .page__menu {
-        width: 100%;
-        height: 50px;
-        background-color: var(--menuColor);
-        position: fixed;
-        z-index: 2;
-        overflow: hidden;
-    }
-    
-    .page__menu--logo img {
-        display: block;
-        height: 100%;
-        /* margin-left: 10px; */
-    }
-    
-    .page__menu ul {
-        margin-left: 60px;
-        margin-right: 60px;
-        list-style: none;
-        display: flex;
-        /* justify-content: space-around; */
-        text-transform: uppercase;
-    }
-    
-    .page__menu li {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-left: 15px;
-    }
-    
-    .page__menu a {
-        text-decoration: none;
-        color: white;
-        line-height: 50px;
-    }
-    /* .page__menu--icon-menu {
-    margin-right: 20px;
-} */
-    
-    .page__menu .btn-booknow {
-        margin: auto 0px;
-    }
-    
-    .btn-booknow a {
-        line-height: 36px;
-    }
-    
-    .page__menu--icon .icon:first-child {
-        margin-right: 30px;
-    }
-    /*phần chỉnh nội dung website*/
-    
-    .page__content {
-        max-width: 1230px;
-        margin: 0 auto;
-    }
-    
-    .page__content--section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-bottom: var(--space);
-    }
-    /*phần chỉnh footer*/
-    
-    .page__footer {
-        width: 100%;
-        background-color: var(--footerColor);
-        padding-bottom: var(--space);
-        display: flex;
-        flex-wrap: wrap;
-        color: white;
-        padding-top: var(--space);
-    }
-    
-    .page__footer--left {
-        margin: var(--space);
-        flex: 1;
-        max-width: 300px;
-        min-width: 210px;
-    }
-    
-    .page__footer--left img {
-        width: 100%;
-    }
-    
-    .page__footer--right {
-        flex: 3;
-        min-width: 500px;
-    }
-    
-    .footer--right--menu li {
-        flex: 1;
-    }
-    
-    .footer--right--menu ul {
-        list-style: none;
-        justify-content: space-between;
-    }
-    
-    .footer--right--menu ul li a {
-        text-decoration: underline;
-        color: var(--linkColor);
-        font-style: italic;
-    }
-    
-    .footer--information {
-        margin-top: var(--space);
-    }
-    
-    .footer-icon-contact {
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    .page__footer .footer-icon-contact a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        color: var(--linkColor);
-    }
-    
-    .page__footer.footer-icon-contact a:hover {
-        text-decoration: none;
-    }
-    /*dung chung*/
-    
-    .page a:hover {
-        color: burlywood;
-        text-decoration: underline;
-    }
-    
-    .btn {
-        margin: 0 auto;
-        background-image: linear-gradient(0, #b25fc7, #f7c65d);
-        border-radius: 10px;
-        text-align: center;
-        font-weight: bold;
-        width: 100px;
-        height: 36px;
-    }
-    
-    .btn-medium {
-        width: 150px;
-        height: 36px;
-    }
-    
-    .btn-lager {
-        width: 250px;
-        height: 36px;
-        line-height: 36px;
-    }
-    
-    .text-center {
-        text-align: center;
-    }
-    
-    .price {
-        color: var(--mainColor);
-        font-weight: bold;
-        line-height: 30px;
-        text-align: center;
-        height: 30px;
-        width: 60px;
-        color: white;
-        background-color: violet;
-        border-radius: 5px;
-    }
-    /*PHẦN RIÊNG TỪNG PAGE*/
-    /*PAGE home*/
-    
-    .page--slide {
-        padding-top: 50px;
-    }
-    
-    .absolute {
-        position: relative;
-        margin: auto 0;
-    }
-    
-    .absolute .btn-search {
-        position: absolute;
-        margin-top: 50px;
-    }
-    
-    .input-search {
-        border-radius: 15px;
-        border-left: 1px solid white;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        width: 200px;
-        height: 26px;
-        padding-left: 10px;
-        background-color: inherit;
-        margin: auto 0;
-    }
-    
-    .fa-search {
-        margin-left: 10px;
-        margin: auto 0;
-        color: rgb(255, 255, 255);
-    }
-    
-    .fa-search:hover {
-        cursor: pointer;
-    }
-    
-    .page--slide img {
-        width: 100%;
-    }
-    
-    .page__content--tour {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    
-    .tour--item {
-        width: 380px;
-        height: 600px;
-        min-width: 300px;
-        border: 2px solid steelblue;
-        margin-bottom: var(--space);
-    }
-    
-    .tour--item .btn {
-        margin-bottom: var(--space);
-        margin-top: var(--space);
-    }
-    
-    .tour--item img {
-        width: 100%;
-    }
-    
-    .tour--item--content {
-        font-size: 15px;
-        text-align: justify;
-        margin: 5px;
-    }
-    
-    .tour--item--content .title {
-        font-size: 25px;
-        font-weight: bold;
-    }
-    
-    .tour--item--content .title_province {
-        font-size: 20px;
-        font-weight: bold;
-    }
-    
-    .tour--item--content--right {
-        margin: auto 0;
-    }
-    
-    .page__transition {
-        height: 300px;
-        width: 100%;
-        background-color: tomato;
-        position: relative;
-        z-index: 1;
-    }
-    
-    .page__transition img {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .home_page .page__content--review {
-        width: 100%;
-        background-color: violet;
-        margin-left: 0px;
-        margin-top: var(--space);
-        margin-bottom: var(--space);
-    }
-    
-    .page__partner {
-        /* background-color: rgb(149, 225, 255); */
-        margin-bottom: var(--space);
-        flex-wrap: wrap;
-    }
-    
-    .page__partner img {
-        height: 30px;
-        display: block;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .partners-logo {
-        min-width: 400px;
-    }
-    
-    .btn-detail {
-        color: white;
-    }
-    /*PAGE tour*/
-    /* ở đây cần chỉnh lại*/
-    
-    .tour_page .content {
-        padding-top: 50px;
-    }
-    /*PAGE book now*/
-    
-    .book_page .page__banner {
-        padding-top: 50px;
-        width: 100%;
-        height: auto;
-        margin-bottom: var(--space);
-    }
-    
-    .book_page .page__banner img {
-        width: 100%;
-        /* height: 310px; */
-    }
-    
-    .page__content--information {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-bottom: var(--space);
-    }
-    
-    .book_page .information--left {
-        background-color: rgb(238, 247, 248);
-        min-width: 400px;
-        flex: 1;
-        padding-top: var(--space);
-        padding-bottom: var(--space);
-        border: 2px dashed var(--mainColor);
-    }
-    
-    .book_page .flex {
-        display: flex;
-        margin-bottom: 5px;
-    }
-    
-    .book_page .information--right {
-        min-width: 400px;
-        flex: 1;
-        border: 2px dashed var(--mainColor);
-    }
-    
-    .book_page .page__content--book {
-        margin: 0 auto;
-        width: 400px;
-        background-color: wheat;
-        padding-bottom: var(--space);
-        margin-bottom: var(--space);
-    }
-    
-    .flex-sum {
-        margin-left: 20%;
-    }
-    
-    .flex-sum label {
-        width: 150px;
-    }
-    
-    .page__content--book .btn {
-        margin-top: var(--space);
-    }
-    /*PAGE about us*/
-    
-    .aboutus_page .page__content {
-        padding-top: 100px;
-        width: 100%;
-        height: 990px;
-        z-index: 1;
-        margin-bottom: var(--space);
-    }
-    
-    .aboutus_page .page__content--content {
-        background-color: var(--infColor);
-        width: 100%;
-        height: 990px;
-    }
-    
-    .aboutus_page .page__content--content h1 {
-        text-align: center;
-    }
-    
-    .aboutus_page .page__content--content>p {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    
-    .aboutus_page .page__content--content>h2 {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    
-    .aboutus_page .page__content--content ul {
-        padding-left: 100px;
-    }
-    /*PAGE review*/
-    
-    .p1--review {
-        padding-top: 100px;
-    }
-    
-    .review_page .page__content--slide {
-        width: 900px;
-        height: 420px;
-    }
-    
-    .review_page .page__content--slide img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .review_page .content__best {
-        display: flex;
-        width: 300px;
-        margin-bottom: var(--space);
-        margin-left: var(--space);
-    }
-    
-    .review_page .page__content--best img {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .page__content--image {
-        width: 430px;
-        height: 680px;
-        background-color: var(--infColor);
-    }
-    
-    .review_page h2 {
-        text-align: center;
-        margin-top: -20px;
-        margin-bottom: 10px;
-    }
-    
-    .review_page .page__content--image img {
-        width: 180px;
-        height: 200px;
-        margin-left: 20px;
-        margin-top: 20px;
-    }
-    
-    .review_page .page__content--review {
-        width: 760px;
-        margin-left: var(--space);
-        background-color: var(--infColor);
-        height: 680px;
-    }
-    
-    .review_page .page__content--review iframe {
-        height: 680px;
-        width: 100%;
-    }
-    /*PAGE detail*/
-    
-    .detail_page .page__banner {
-        padding-top: 50px;
-        width: 100%;
-        height: auto;
-        margin-bottom: var(--space);
-    }
-    
-    .detail_page .page__banner img {
-        width: 100%;
-    }
-    
-    .part--right {
-        margin-left: var(--space);
-        width: 400px;
-    }
-    
-    .part--left {
-        width: 800px;
-    }
-    
-    .page__content--video img {
-        height: 600px;
-        width: 100%;
-    }
-    
-    .page__content--book {
-        border: 1px solid rgb(50, 99, 235);
-        width: 397px;
-        height: auto;
-        background-color: var(--infColor);
-    }
-    
-    .content__book--price {
-        background-color: #BA81CE;
-        font-size: xx-large;
-        text-align: center;
-        line-height: 110px;
-        color: white;
-        width: 400px;
-        height: 100px;
-        margin-bottom: var(--space);
-    }
-    
-    .detail_page input,
-    .detail_page textarea {
-        margin-left: 20px;
-        margin-bottom: 20px;
-        border: 1px solid black;
-        border-radius: 20px;
-        padding-left: 10px;
-    }
-    
-    .content__book--inf input {
-        height: 45px;
-        width: 135;
-        border: 1px solid black;
-        border-radius: 20px;
-    }
-    
-    .content__book--infphone input {
-        height: 45px;
-        width: 310px;
-    }
-    
-    .content__book--send {
-        background-color: #BA81CE;
-        text-align: center;
-        line-height: 45px;
-        width: 310px;
-        height: 45px;
-        font-size: x-large;
-        color: white;
-        margin: 0 auto;
-        border-radius: 20px;
-        margin-bottom: var(--space);
-    }
-    
-    .page__content--discription {
-        background-color: var(--infColor);
-        height: 900px;
-    }
-    
-    .page__content--photos img {
-        height: 250px;
-        width: 400px;
-        margin-bottom: var(--space);
-    }
-    
-    h3 {
+      /*PHẦN RIÊNG TỪNG PAGE*/
+      /*PAGE home*/
+      
+      .page--slide {
+          padding-top: 50px;
+      }
+      
+      .input-search {
+          border-radius: 15px;
+          border-left: 1px solid white;
+          border-top: 1px solid white;
+          border-bottom: 1px solid white;
+          width: 200px;
+          height: 26px;
+          padding-left: 10px;
+          background-color: inherit;
+          margin: auto 0;
+      }
+      
+      .fa-search {
+          margin-left: 10px;
+          margin: auto 0;
+          color: rgb(255, 255, 255);
+      }
+      
+      .fa-search:hover {
+          cursor: pointer;
+      }
+      
+      .page--slide img {
+          width: 100%;
+      }
+      
+      .page__content--tour {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+      
+      .tour--item {
+          width: 380px;
+          min-width: 300px;
+          border: 2px solid steelblue;
+          margin-bottom: var(--space);
+          position: relative;
+          padding-bottom: 50px;
+      }
+      
+      .tour--item .btn-detail {
+          position: absolute;
+          bottom: 10px;
+          left: 40px;
+          right: 40px;
+      }
+      
+      .tour--item img {
+          width: 100%;
+      }
+      
+      .tour--item--content {
+          font-size: 15px;
+          text-align: justify;
+          margin: 5px;
+      }
+      
+      .tour--item--content .title {
+          font-size: 25px;
+          font-weight: bold;
+      }
+      
+      .tour--item--content .title_province {
+          font-size: 20px;
+          font-weight: bold;
+      }
+      
+      .tour--item--content--right {
+          margin: auto 0;
+      }
+      
+      .page__transition {
+          width: 100%;
+          position: relative;
+          z-index: 1;
+      }
+      
+      .page__transition img {
+          width: 100%;
+          height: 100%;
+      }
+      
+      .home_page .page__content--review {
+          width: 100%;
+          background-color: violet;
+          margin-left: 0px;
+          margin-top: var(--space);
+          margin-bottom: var(--space);
+      }
+      /*PAGE tour*/
+      /* ở đây cần chỉnh lại*/
+      
+      .tour_page .content {
+          padding-top: 50px;
+      }
+      /*PAGE book now*/
+      
+      .book_page .page__banner {
+          padding-top: 50px;
+          width: 100%;
+          height: auto;
+          margin-bottom: var(--space);
+      }
+      
+      .book_page .page__banner img {
+          width: 100%;
+          /* height: 310px; */
+      }
+      
+      .page__content--information {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          margin-bottom: var(--space);
+      }
+      
+      .book_page .information--left {
+          background-color: rgb(238, 247, 248);
+          min-width: 400px;
+          flex: 1;
+          padding-top: var(--space);
+          padding-bottom: var(--space);
+          border: 2px dashed var(--mainColor);
+      }
+      
+      .book_page .flex {
+          display: flex;
+          margin-bottom: 5px;
+      }
+      
+      .book_page .information--right {
+          min-width: 400px;
+          flex: 1;
+          border: 2px dashed var(--mainColor);
+      }
+      
+      .book_page .page__content--book {
+          margin: 0 auto;
+          width: 400px;
+          background-color: wheat;
+          padding-bottom: var(--space);
+          margin-bottom: var(--space);
+      }
+      
+      .flex-sum {
+          margin-left: 20%;
+      }
+      
+      .flex-sum label {
+          width: 150px;
+      }
+      
+      .page__content--book .btn {
+          margin-top: var(--space);
+      }
+      /*PAGE about us*/
+      
+      .aboutus_page .page__content {
+          padding-top: 100px;
+          width: 100%;
+          height: 990px;
+          z-index: 1;
+          margin-bottom: var(--space);
+      }
+      
+      .aboutus_page .page__content--content {
+          background-color: var(--infColor);
+          width: 100%;
+          height: 990px;
+      }
+      
+      .aboutus_page .page__content--content h1 {
+          text-align: center;
+      }
+      
+      .aboutus_page .page__content--content>p {
+          padding-left: 30px;
+          padding-right: 30px;
+      }
+      
+      .aboutus_page .page__content--content>h2 {
+          padding-left: 30px;
+          padding-right: 30px;
+      }
+      
+      .aboutus_page .page__content--content ul {
+          padding-left: 100px;
+      }
+      /*PAGE review*/
+      
+      .p1--review {
+          padding-top: 100px;
+      }
+      
+      .review_page .page__content--slide {
+          width: 900px;
+          height: 420px;
+      }
+      
+      .review_page .page__content--slide img {
+          width: 100%;
+          height: auto;
+      }
+      
+      .review_page .content__best {
+          display: flex;
+          width: 300px;
+          margin-bottom: var(--space);
+          margin-left: var(--space);
+      }
+      
+      .review_page .page__content--best img {
+          width: 100px;
+          height: 100px;
+      }
+      
+      .page__content--image {
+          width: 430px;
+          height: 680px;
+          background-color: var(--infColor);
+      }
+      
+      .review_page h2 {
+          text-align: center;
+          margin-top: -20px;
+          margin-bottom: 10px;
+      }
+      
+      .review_page .page__content--image img {
+          width: 180px;
+          height: 200px;
+          margin-left: 20px;
+          margin-top: 20px;
+      }
+      
+      .review_page .page__content--review {
+          width: 760px;
+          margin-left: var(--space);
+          background-color: var(--infColor);
+          height: 680px;
+      }
+      
+      .review_page .page__content--review iframe {
+          height: 680px;
+          width: 100%;
+      }
+      /*PAGE detail*/
+      
+      .detail_page .page__banner {
+          padding-top: 50px;
+          width: 100%;
+          height: auto;
+          margin-bottom: var(--space);
+      }
+      
+      .detail_page .page__banner img {
+          width: 100%;
+      }
+      
+      .part--right {
+          margin-left: var(--space);
+          width: 400px;
+      }
+      
+      .part--left {
+          width: 800px;
+      }
+      
+      .page__content--video img {
+          height: 600px;
+          width: 100%;
+      }
+      
+      .page__content--book {
+          border: 1px solid rgb(50, 99, 235);
+          width: 397px;
+          height: auto;
+          background-color: var(--infColor);
+      }
+      
+      .content__book--price {
+          background-color: #BA81CE;
+          font-size: xx-large;
+          text-align: center;
+          line-height: 110px;
+          color: white;
+          width: 400px;
+          height: 100px;
+          margin-bottom: var(--space);
+      }
+      
+      .detail_page input,
+      .detail_page textarea {
+          margin-left: 20px;
+          margin-bottom: 20px;
+          border: 1px solid black;
+          border-radius: 20px;
+          padding-left: 10px;
+      }
+      
+      .content__book--inf input {
+          height: 45px;
+          width: 135;
+          border: 1px solid black;
+          border-radius: 20px;
+      }
+      
+      .content__book--infphone input {
+          height: 45px;
+          width: 310px;
+      }
+      
+      .content__book--send {
+          background-color: #BA81CE;
+          text-align: center;
+          line-height: 45px;
+          width: 310px;
+          height: 45px;
+          font-size: x-large;
+          color: white;
+          margin: 0 auto;
+          border-radius: 20px;
+          margin-bottom: var(--space);
+      }
+      
+      .page__content--discription {
+          background-color: var(--infColor);
+          height: 900px;
+      }
+      
+      .page__content--photos img {
+          height: 250px;
+          width: 400px;
+          margin-bottom: var(--space);
+      }
+      /*chỗ này không được để h3 không như vầy, nên t cmt lại, trang này của ai coi lại nha*/
+      /* h3 {
         margin-bottom: var(--space);
         margin-left: 40px;
-    }
-    
-    p {
-        margin-left: calc(var(--space)/3);
-        margin-right: calc(var(--space)/3);
-    }
-    
-    .content__best {
-        display: flex;
-        width: 300px;
-        margin-bottom: 60px;
-    }
-    
-    .page__content--best img {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .page__content--map img {
-        width: 100%;
-        height: 500px;
-    }
-    
-    .page__content--otherpack img {
-        height: 500px;
-    }
-    
-    .page__content--related h3 {
+    } */
+      
+      .content__best {
+          display: flex;
+          width: 300px;
+          margin-bottom: 60px;
+      }
+      
+      .page__content--best img {
+          width: 100px;
+          height: 100px;
+      }
+      
+      .page__content--map img {
+          width: 100%;
+          height: 500px;
+      }
+      
+      .page__content--otherpack img {
+          height: 500px;
+      }
+      
+      .page__content--related h3 {
+          text-align: center;
+      }
+      /*PAGE security*/
+      
+      .security_page .page__content {
+          padding-top: 100px;
+          width: 100%;
+          height: auto;
+          z-index: 1;
+      }
+      
+      .security_page .page__content--content {
+          background-color: var(--infColor);
+          width: 100%;
+          margin-bottom: var(--space);
+      }
+      
+      .security_page .page__content--content {
+          padding-left: 10px;
+      }
+      
+      .security_page .page__content--contentspan {
+          font-weight: bold;
+          font-size: 15px;
+      }
+      
+      .security_page .page__content--content p {
+          font-size: 14px;
+      }
+      
+      .security_page .page__content--content p:first-child {
+          padding-top: 5px;
+      }
+      /*PAGE provision*/
+      
+      .provision_page .page__content {
+          padding-top: 100px;
+          width: 100%;
+          height: auto;
+          z-index: 1;
+      }
+      
+      .provision_page .page__content--content {
+          background-color: var(--infColor);
+          width: 100%;
+          height: 990px;
+          margin-bottom: var(--space);
+      }
+      
+      .provision_page .page__content--content {
+          padding-left: 50px;
+          padding-right: 50px;
+      }
+      
+      .provision_page .page__content--content ul {
+          padding-left: 50px;
+      }
+      /* Page Send review */
+      
+      .page_content_slide_img img {
+          width: 100%;
+          height: 20%;
+      }
+      
+      .page__content--cusreview {
+          width: 100%;
+          justify-content: space-between;
+          margin-top: var(--space);
+          margin-bottom: var(--space);
+      }
+      
+      .page__content--cusreview-left {
+          width: 30%;
+          text-align: center;
+      }
+      
+      .page__content--cusreview-left img {
+          width: 100%;
+          margin-bottom: var(--space);
+      }
+      
+      .page__content--cusreview-right {
+          width: 70%;
+          text-align: center;
+      }
+      
+      #cusreview_text {
+          height: 240px;
+          width: 90%;
+          margin-left: 0;
+          padding-left: var(--space);
+          padding-right: 0;
+          margin-bottom: var(--space);
+      }
+      /*PAGE register and signin*/
+      
+      .register_page .page__content {
+          padding-top: 100px;
+          z-index: 1;
+      }
+      /*chỗ này không được để h3 không như vầy, nên t cmt lại, trang này của ai coi lại nha*/
+      /* h3 {
         text-align: center;
-    }
-    /*PAGE security*/
-    
-    .security_page .page__content {
-        padding-top: 100px;
-        width: 100%;
-        height: auto;
-        z-index: 1;
-    }
-    
-    .security_page .page__content--content {
-        background-color: var(--infColor);
-        width: 100%;
-        /* height: 990px; */
-        margin-bottom: var(--space);
-    }
-    
-    .security_page .page__content--content {
-        padding-left: 10px;
-    }
-    
-    .security_page .page__content--contentspan {
-        font-weight: bold;
-        font-size: 15px;
-    }
-    
-    .security_page .page__content--content p {
-        font-size: 14px;
-    }
-    
-    .security_page .page__content--content p:first-child {
-        padding-top: 5px;
-    }
-    /*PAGE provision*/
-    
-    .provision_page .page__content {
-        padding-top: 100px;
-        width: 100%;
-        height: auto;
-        z-index: 1;
-    }
-    
-    .provision_page .page__content--content {
-        background-color: var(--infColor);
-        width: 100%;
-        height: 990px;
-        margin-bottom: var(--space);
-    }
-    
-    .provision_page .page__content--content {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    
-    .provision_page .page__content--content ul {
-        padding-left: 50px;
-    }
-    /* Page Send review */
-    
-    .page_content_slide_img img {
-        width: 100%;
-        height: 20%;
-    }
-    
-    .page__content--cusreview {
-        width: 100%;
-        /* height: 300px; */
-        justify-content: space-between;
-        margin-top: var(--space);
-        margin-bottom: var(--space);
-    }
-    
-    .page__content--cusreview-left {
-        width: 30%;
-        text-align: center;
-    }
-    
-    .page__content--cusreview-left img {
-        width: 100%;
-        margin-bottom: var(--space);
-    }
-    
-    .page__content--cusreview-right {
-        width: 70%;
-        text-align: center;
-    }
-    
-    #cusreview_text {
-        height: 240px;
-        width: 90%;
-        margin-left: 0;
-        padding-left: var(--space);
-        padding-right: 0;
-        margin-bottom: var(--space);
-    }
-    /*PAGE register and signin*/
-    
-    .register_page .page__content {
-        padding-top: 100px;
-        z-index: 1;
-    }
-    
-    h3 {
-        text-align: center;
-    }
-    
-    .form__option {
-        width: 40%;
-        margin: 0 auto;
-        margin-bottom: var(--space);
-        border: 1px solid black;
-        height: auto;
-    }
-    
-    .form__option ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        text-transform: uppercase;
-    }
-    
-    .form__option li {
-        width: 200px;
-        margin-left: 30%;
-    }
-    
-    form {
-        margin-top: -20px;
-    }
-    
-    .form_row {
-        margin-bottom: 20px;
-    }
-    
-    .form__label {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    label,
-    input {
-        margin-left: 5%;
-    }
-    
-    .form__option input {
-        height: 30px;
-        margin-top: 5px;
-        width: 80%;
-        padding-left: 5px;
-    }
-    
-    input.accept {
-        padding-right: 5px;
-        height: 20px;
-        width: 20px;
-    }
-    
-    input.form__button {
-        width: 100px;
-        margin-left: 40%;
-        background-color: var(--menuColor);
-        color: white;
-        border-radius: 20px;
-    }
-    
-    .register_page p {
-        text-align: center;
-        font-size: medium;
-    }
-    
-    .link__other {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 20%;
-        margin-bottom: var(--space);
-    }
-    
-    .GG__link,
-    .FB__link {
-        width: 30%;
-    }
-    
-    .FB__link {
-        margin-left: 15%;
-    }
-    
-    .link__other p {
-        margin-top: -40px;
-        margin-left: 50px;
-    }
-    
-    .link__other a,
-    .form__option a {
-        text-decoration: none;
-    }
-    /*signin_page*/
-    
-    .other {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .other div:last-child {
-        margin-left: 20%;
-    }
-    
-    .other a {
-        text-decoration: none;
-    }
-    /*chiều rộng nhỏ hơn hoặc bằng 480px thì*/
-    /*chiều rộng nhỏ hơn hoặc bằng 1000px thì*/
-    
-    @media screen and (max-width: 1250px) {
-         :root {
-            --space: 20px;
-        }
-        .page__menu {
-            background-color: black;
-        }
-        .page__menu--ul {
-            display: none;
-        }
-        .page__content--section {
-            margin-bottom: var(--space);
-        }
-        .page__content--photo {
-            margin-bottom: var(--space);
-        }
-        /*review_page*/
-        .page__content--slide {
-            margin-bottom: var(--space);
-        }
-        .page__content--image {
-            margin-bottom: var(--space);
-        }
-        /*detail_page*/
-        .page__banner,
-        .page__content--video,
-        .page__content--discription,
-        .page__content--map,
-        .detail_page .tour--item {
-            margin-bottom: var(--space);
-        }
-        /*signin_page*/
-        .other div:last-child {
-            margin-left: 0px;
-        }
-    }
-    /*Ipad dọc(768 x 1024)*/
-    
-    @media screen and (max-width: 768px) {
-        .page__menu {
-            justify-content: space-around;
-            background-color: brown;
-        }
-         :root {
-            --space: 10px;
-        }
-        .btn-booknow {
-            width: 100px;
-            font-size: 15px;
-        }
-        .page__menu--ul,
-        .page__menu--icon {
-            display: none;
-        }
-        .page__content--section {
-            margin-bottom: var(--space);
-        }
-        .page__content--photo {
-            margin-bottom: var(--space);
-        }
-        /*review_page*/
-        .page__content--slide {
-            margin-bottom: var(--space);
-        }
-        .page__content--image {
-            margin-bottom: var(--space);
-        }
-        /*detail_page*/
-        .page__banner,
-        .page__content--video,
-        .page__content--discription,
-        .page__content--map,
-        .detail_page.tour--item {
-            margin-bottom: var(--space);
-        }
-        /*register_page*/
-        .FB__link,
-        .GG__link {
-            width: 70%;
-            margin-bottom: var(--space);
-        }
-        .FB__link {
-            margin-left: 0px;
-        }
-        /*signin_page*/
-        .other div:last-child {
-            margin-left: 0px;
-        }
-    }
-    /*Điện thoại bản nhỏ 320px*/
-    
-    @media screen and (max-width: 320px) {
-        .btn-booknow,
-        .page__menu--logo {
-            display: none;
-        }
-        .page__menu {
-            justify-content: space-around;
-        }
-         :root {
-            --space: 5px;
-        }
-        .page__menu {
-            background-color: rgb(0, 255, 21);
-        }
-        .page__content--section {
-            margin-bottom: var(--space);
-        }
-        .page__content--photo {
-            margin-bottom: var(--space);
-        }
-        /*review_page*/
-        .page__content--slide {
-            margin-bottom: var(--space);
-        }
-        .page__content--image {
-            margin-bottom: var(--space);
-        }
-        /*detail_page*/
-        .page__banner,
-        .page__content--video,
-        .page__content--discription,
-        .page__content--map,
-        .tour--item {
-            margin-bottom: var(--space);
-        }
-    }
+    } */
+      
+      .form__option {
+          width: 40%;
+          margin: 0 auto;
+          margin-bottom: var(--space);
+          border: 1px solid black;
+          height: auto;
+      }
+      
+      .form__option ul {
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          text-transform: uppercase;
+      }
+      
+      .form__option li {
+          width: 200px;
+          margin-left: 30%;
+      }
+      /*chỗ này không được để form,label,input không như vầy, coi lại nha*/
+      
+      form {
+          margin-top: -20px;
+      }
+      
+      .form_row {
+          margin-bottom: 20px;
+      }
+      
+      .form__label {
+          display: flex;
+          flex-direction: column;
+      }
+      
+      label,
+      input {
+          margin-left: 5%;
+      }
+      
+      .form__option input {
+          height: 30px;
+          margin-top: 5px;
+          width: 80%;
+          padding-left: 5px;
+      }
+      
+      input.accept {
+          padding-right: 5px;
+          height: 20px;
+          width: 20px;
+      }
+      
+      input.form__button {
+          width: 100px;
+          margin-left: 40%;
+          background-color: var(--menuColor);
+          color: white;
+          border-radius: 20px;
+      }
+      
+      .register_page p {
+          text-align: center;
+          font-size: medium;
+      }
+      
+      .link__other {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 20%;
+          margin-bottom: var(--space);
+      }
+      
+      .GG__link,
+      .FB__link {
+          width: 30%;
+      }
+      
+      .FB__link {
+          margin-left: 15%;
+      }
+      
+      .link__other p {
+          margin-top: -40px;
+          margin-left: 50px;
+      }
+      
+      .link__other a,
+      .form__option a {
+          text-decoration: none;
+      }
+      /*signin_page*/
+      
+      .other {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      
+      .other div:last-child {
+          margin-left: 20%;
+      }
+      
+      .other a {
+          text-decoration: none;
+      }
+      
+      @media screen and (max-width: 1250px) {
+           :root {
+              --space: 20px;
+          }
+          .page__content--section {
+              margin-bottom: var(--space);
+          }
+          .page__content--photo {
+              margin-bottom: var(--space);
+          }
+          /*review_page*/
+          .page__content--slide {
+              margin-bottom: var(--space);
+          }
+          .page__content--image {
+              margin-bottom: var(--space);
+          }
+          /*detail_page*/
+          .page__banner,
+          .page__content--video,
+          .page__content--discription,
+          .page__content--map,
+          .detail_page .tour--item {
+              margin-bottom: var(--space);
+          }
+          /*signin_page*/
+          .other div:last-child {
+              margin-left: 0px;
+          }
+      }
+      /*Ipad dọc(768 x 1024)*/
+      
+      @media screen and (max-width: 768px) {
+           :root {
+              --space: 10px;
+          }
+          .page__content--section {
+              margin-bottom: var(--space);
+          }
+          .page__content--photo {
+              margin-bottom: var(--space);
+          }
+          /*review_page*/
+          .page__content--slide {
+              margin-bottom: var(--space);
+          }
+          .page__content--image {
+              margin-bottom: var(--space);
+          }
+          /*detail_page*/
+          .page__banner,
+          .page__content--video,
+          .page__content--discription,
+          .page__content--map,
+          .detail_page.tour--item {
+              margin-bottom: var(--space);
+          }
+          /*register_page*/
+          .FB__link,
+          .GG__link {
+              width: 70%;
+              margin-bottom: var(--space);
+          }
+          .FB__link {
+              margin-left: 0px;
+          }
+          /*signin_page*/
+          .other div:last-child {
+              margin-left: 0px;
+          }
+      }
+      /*Điện thoại bản nhỏ 320px*/
+      
+      @media screen and (max-width: 320px) {
+           :root {
+              --space: 5px;
+          }
+          .page__content--section {
+              margin-bottom: var(--space);
+          }
+          .page__content--photo {
+              margin-bottom: var(--space);
+          }
+          /*review_page*/
+          .page__content--slide {
+              margin-bottom: var(--space);
+          }
+          .page__content--image {
+              margin-bottom: var(--space);
+          }
+          /*detail_page*/
+          .page__banner,
+          .page__content--video,
+          .page__content--discription,
+          .page__content--map,
+          .tour--item {
+              margin-bottom: var(--space);
+          }
+      }

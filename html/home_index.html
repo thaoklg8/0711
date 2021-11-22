@@ -7,50 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="/CSS/footer-menu.css">
     <title>Group6-Website</title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/main.js" defer></script>
+
 </head>
 
 <body>
     <div class="home_page page">
-
-        <div class="page__menu flexrow">
-            <div class="page__menu--logo">
-                <img src="../img/logo.png" alt="">
-            </div>
-            <div class="page__menu--ul">
-                <ul>
-                    <li><a href="./home_index.html">home</a></li>
-                    <li><a href="./tour.html">tour</a></li>
-                    <li><a href="./review.html">review</a></li>
-                    <li><a href="./aboutus.html">about us</a></li>
-                </ul>
-            </div>
-            <!-- btn search
-                <div class="btn-search flexrow">
-                <input type="text" class="input-search " placeholder="Bạn tìm gì..." name="key" class="fas fa-search">
-                <span class="fas fa-search"></span>
-            </div> -->
-            <div class="btn btn-booknow btn-medium">
-                <a href="./booknow.html">BOOK NOW</a>
-            </div>
-            <div class="page__menu--icon flexrow">
-                <div class="btn-signin icon">
-                    <a href="/html/signin_email.html"><i class="far fa-user-circle"></i> Sign in</a>
-                </div>
-                <div class="btn-register icon"><a href="/html/register_email.html"><i class="far fa-edit"></i> Register</a></div>
-            </div>
-
-            <div class="page__menu--icon-menu ">
-                <a href="#"><i class="fas fa-align-justify"></i></a>
-            </div>
-        </div>
-
+        <div id="page__menu"></div>
         <div class="page--slide">
-            <img src="/img/img1.jpg" alt="">
+            <a href="./home_index.html"><img src="/img/img1.jpg" alt=""></a>
 
         </div>
         <div class="page__content">
-            <h2 class="title">BEST PACKAGES</h2>
+            <h2 class="title text-center">BEST PACKAGES</h2>
             <div class="page__content--tour">
                 <div class="tour--item">
                     <div class="tour--item-pic">
@@ -66,7 +39,6 @@
                                 $700
                             </div>
                         </div>
-
                         <p class="title-script">Nằm ngay bên bờ sông Hương thơ mộng, Đại nội Huế là một quần thế di tích văn hoá được công nhận là di tích văn hoá thế giới. Địa điểm du lịch này hội tụ các nét đẹp kiến trúc đỉnh cao của thời đại phong kiến nhà Nguyễn, được xây
                             dựng cách đây hàng trăm năm với diện tích vô cùng đồ sộ, có hơn 100 công trình kiến trúc lộng lẫy như: Ngọ Môn, Cung Diên Thọ, Tử Cấm Thành, Điện Thái Hòa được bố trí hài hòa, hợp lý.</p>
                     </div>
@@ -205,91 +177,9 @@
                 </div>
             </div>
         </div>
-        <div class="page__partner flexrow">
-            <div class="plane ">
-                <p class="text-center">PARTNER PLANE</p>
-                <div class="flexrow partners-logo">
-                    <img src="/img/logo_partners/1.png" alt="">
-                    <img src="/img/logo_partners/2.png" alt="">
-                    <img src="/img/logo_partners/3.png" alt="">
-                    <img src="/img/logo_partners/4.png" alt="">
-                    <img src="/img/logo_partners/5.png" alt="">
-                </div>
-
-            </div>
-            <div class="hotel">
-                <p class="text-center">PARTNER HOTEL</p>
-                <div class="flexrow partners-logo">
-                    <img src="/img/logo_partners/6.png" alt="">
-                    <img src="/img/logo_partners/7.jpeg" alt="">
-                    <img src="/img/logo_partners/8.png" alt="">
-                    <img src="/img/logo_partners/9.png" alt="">
-                    <img src="/img/logo_partners/10.png" alt="">
-                </div>
-            </div>
-            <div class="payment">
-                <p class="text-center">PARTNER PAYMENT</p>
-                <div class="flexrow partners-logo">
-                    <img src="/img/logo_partners/11.png" alt="">
-                    <img src="/img/logo_partners/12.png" alt="">
-                    <img src="/img/logo_partners/13.png" alt="">
-                    <img src="/img/logo_partners/14.png" alt="">
-                    <img src="/img/logo_partners/15.png" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="page__footer">
-            <div class="page__footer--left">
-                <h2 class="text-center">Travel with us</h2>
-                <img src="/img/logo.png" alt="">
-                <div class="footer-icon-contact">
-                    <a href="">
-                        <i class="fab fa-facebook footer-icon"></i>
-                    </a>
-                    <a href="">
-                        <i class="fab fa-instagram footer-icon"></i>
-                    </a>
-                    <a href="">
-                        <i class="fab fa-youtube footer-icon"></i>
-                    </a>
-                    <a href="">
-                        <i class="fas fa-envelope footer-icon"></i>
-                    </a>
-                    <a href="">
-                        <i class="fab fa-twitter footer-icon"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="page__footer--right">
-                <div class="footer--right--menu">
-                    <ul class="flexrow">
-                        <li>
-                            <a href="./aboutus.html">About us</a>
-                        </li>
-                        <li>
-                            <a href="./tour.html">Tour</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                        <li>
-                            <a href="./provision.html">Provision</a>
-                        </li>
-                        <li>
-                            <a href="./security.html">Security</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer--information">
-                    <p>Địa chỉ: Lầu 2, 3 và 7, Tòa nhà An Phú Plaza, 117-119 Lý Chính Thắng, Phường 7, Quận 3, Tp. Hồ Chí Minh, Việt Nam</p>
-                    <p>Là công ty du lịch trực tuyến hàng đầu Đông Nam Á, EIV đáp ứng đa dạng các nhu cầu du lịch trên cùng một nền tảng, giúp khách hàng có được những chuyến du lịch tuyệt vời với người thân yêu.</p>
-                    <p style="font-family: 'Courier New', Courier, monospace; margin-top: 30px;">The every where in Vina</p>
-                </div>
-                <p style="color: white; font-style: italic; font-size: 15px; margin-top: var(--space);">@Copyright Group6_VIA</p>
-            </div>
-        </div>
-
+        <div id="page__partner"></div>
+        <div id="page__partner--slide"></div>
+        <div id="page__footer"></div>
     </div>
 </body>
 

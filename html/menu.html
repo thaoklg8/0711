@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <title>Menu</title>
+</head>
+
+<body>
+    <div class="page page1" id="menu_page">
+        <div class="page__menu flexrow">
+            <div class="page__menu--logo">
+                <img src="../img/logo.png" alt="">
+            </div>
+            <div class="page__menu--ul">
+                <ul>
+                    <li><a href="./home_index.html">home</a></li>
+                    <li><a href="./tour.html">tour</a></li>
+                    <li><a href="./review.html">review</a></li>
+                    <li><a href="./aboutus.html">about us</a></li>
+                </ul>
+            </div>
+            <div class="btn-search flexrow">
+                <input type="text" class="input-search " placeholder="Bạn tìm gì..." name="key" class="fas fa-search">
+                <span class="fas fa-search" style="margin-left: 5px;"></span>
+            </div>
+            <div class="page__menu--icon flexrow">
+                <div class="btn-signin icon">
+                    <a href="/html/signin_email.html"><i class="far fa-user-circle"></i> Sign in</a>
+                </div>
+                <div class="btn-register icon"><a href="/html/register_email.html"><i class="far fa-edit"></i> Register</a></div>
+            </div>
+
+            <div class="page__menu--icon-menu ">
+                <a href="#" onclick="hiddenMenu()"><i class="fas fa-align-justify"></i></a>
+            </div>
+        </div>
+        <div id="page__menu--right">
+            <div class="page__menu--ul">
+                <ul>
+                    <li><a href="./home_index.html">Home</a></li>
+                    <li><a href="./tour.html">Tour</a></li>
+                    <li><a href="./review.html">Review</a></li>
+                    <li><a href="./aboutus.html">About us</a></li>
+                    <li><a href="./signin_email.html">Sign in</a></li>
+                    <li><a href="./register_email.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function hiddenMenu() {
+        var hidden = document.getElementById('page__menu--right');
+        if (hidden.style.display === 'none') {
+            hidden.style.display = 'block';
+        } else hidden.style.display = 'none';
+    }
+</script>
+
+</html>
