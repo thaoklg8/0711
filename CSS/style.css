@@ -165,36 +165,22 @@
       /*PAGE about us*/
       
       .aboutus_page .page__content {
-          padding-top: 100px;
-          width: 100%;
-          height: 990px;
-          z-index: 1;
-          margin-bottom: var(--space);
-      }
-      
-      .aboutus_page .page__content--content {
-          background-color: var(--infColor);
-          width: 100%;
-          height: 990px;
-      }
-      
-      .aboutus_page .page__content--content h1 {
-          text-align: center;
-      }
-      
-      .aboutus_page .page__content--content>p {
-          padding-left: 30px;
-          padding-right: 30px;
-      }
-      
-      .aboutus_page .page__content--content>h2 {
-          padding-left: 30px;
-          padding-right: 30px;
-      }
-      
-      .aboutus_page .page__content--content ul {
-          padding-left: 100px;
-      }
+        padding-top: 80px;
+        width: 100%;
+        z-index: 1;
+        margin-bottom: var(--space);
+    }
+    
+    .aboutus_page .page__content h2 {
+        text-align: center;
+    }
+    
+    .aboutus_page .page__content ul {
+        padding-left: 50px;
+    }
+    .aboutus_page h3, .aboutus_page p{
+        margin-top: 5px;
+    }
       /*PAGE review*/
       
       .p1--review {
@@ -372,60 +358,51 @@
           text-align: center;
       }
       /*PAGE security*/
-      
       .security_page .page__content {
-          padding-top: 100px;
-          width: 100%;
-          height: auto;
-          z-index: 1;
-      }
-      
-      .security_page .page__content--content {
-          background-color: var(--infColor);
-          width: 100%;
-          margin-bottom: var(--space);
-      }
-      
-      .security_page .page__content--content {
-          padding-left: 10px;
-      }
-      
-      .security_page .page__content--contentspan {
-          font-weight: bold;
-          font-size: 15px;
-      }
-      
-      .security_page .page__content--content p {
-          font-size: 14px;
-      }
-      
-      .security_page .page__content--content p:first-child {
-          padding-top: 5px;
-      }
+        padding-top: 80px;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+    
+    .security_page .page__content--content {
+        margin-bottom: var(--space);
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .security_page h5{
+        margin-top: 5px;
+    }
+    .security_page .page__content--content p {
+        padding-top: 5px;
+    }
+    .security_page h6{
+        color: red;
+        text-align: center;
+        margin-top: var(--space);
+    }
+
       /*PAGE provision*/
-      
       .provision_page .page__content {
-          padding-top: 100px;
-          width: 100%;
-          height: auto;
-          z-index: 1;
-      }
+        padding-top: 80px;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        margin-bottom: var(--space);
+        padding-left: var(--space);
+        padding-right: var(--space);
+    }
+    
+    .provision_page .page__content ul {
+        padding-left: var(--space);
+    }
+    .provision_page h5{
+        color: red;
+        text-align: center;
+        margin-top: var(--space);
+    }
       
-      .provision_page .page__content--content {
-          background-color: var(--infColor);
-          width: 100%;
-          height: 990px;
-          margin-bottom: var(--space);
-      }
-      
-      .provision_page .page__content--content {
-          padding-left: 50px;
-          padding-right: 50px;
-      }
-      
-      .provision_page .page__content--content ul {
-          padding-left: 50px;
-      }
       /* Page Send review */
       
       .page_content_slide_img img {
@@ -465,118 +442,140 @@
       }
       /*PAGE register and signin*/
       
-      .register_page .page__content {
+      .register_page .page__content,
+      .signin_page .page__content {
           padding-top: 100px;
-          z-index: 1;
       }
-      /*chỗ này không được để h3 không như vầy, nên t cmt lại, trang này của ai coi lại nha*/
-      /* h3 {
-        text-align: center;
-    } */
       
-      .form__option {
+      .register_page h3,
+      .signin_page h3 {
+         text-align: center;
+      }
+      
+      #email,
+      #phone {
+          color: red;
+      }
+      
+      .form__option--re,
+      .form__option--si {
           width: 40%;
           margin: 0 auto;
           margin-bottom: var(--space);
           border: 1px solid black;
           height: auto;
+          background-color: white;
       }
       
-      .form__option ul {
+      .form__option--re ul,
+      .form__option--si ul {
           list-style: none;
           display: flex;
           flex-wrap: wrap;
           text-transform: uppercase;
+          justify-content: space-around;
       }
       
-      .form__option li {
-          width: 200px;
-          margin-left: 30%;
-      }
-      /*chỗ này không được để form,label,input không như vầy, coi lại nha*/
-      
-      form {
-          margin-top: -20px;
+      .register_page hr,
+      .signin_page hr {
+          width: 60%;
+          margin: 0 auto;
+          border: 0.1px solid black;
       }
       
-      .form_row {
+      .register_page form,
+      .signin_page form {
+          margin-top: 10px;
+      }
+      
+      .register_page .form_row,
+      .signin_page .form_row {
           margin-bottom: 20px;
       }
       
-      .form__label {
+      .register_page .form__label,
+      .signin_page .form__label {
           display: flex;
           flex-direction: column;
+          margin-left: var(--space);
       }
       
-      label,
-      input {
-          margin-left: 5%;
-      }
-      
-      .form__option input {
+      .register_page .form__input,
+      .signin_page .form__input {
           height: 30px;
           margin-top: 5px;
           width: 80%;
-          padding-left: 5px;
+          margin-left: var(--space);
       }
       
-      input.accept {
-          padding-right: 5px;
-          height: 20px;
-          width: 20px;
+      .accept {
+          display: flex;
       }
       
-      input.form__button {
-          width: 100px;
+      .accept input {
+          margin-left: var(--space);
+      }
+      
+      .accept p {
+          margin-top: -5px;
+      }
+      
+      .register_page .form__button,
+      .signin_page .form__button {
+          width: 20%;
+          height: 30px;
           margin-left: 40%;
           background-color: var(--menuColor);
-          color: white;
           border-radius: 20px;
+          color: white;
       }
       
-      .register_page p {
+      p#match {
           text-align: center;
           font-size: medium;
       }
       
-      .link__other {
-          display: flex;
-          flex-wrap: wrap;
-          margin-left: 20%;
+      ul.other_method{
           margin-bottom: var(--space);
       }
-      
-      .GG__link,
-      .FB__link {
-          width: 30%;
+      #gg p, #fb p{
+          margin-left: 45px;
+          margin-top:-35px;
       }
       
-      .FB__link {
-          margin-left: 15%;
-      }
-      
-      .link__other p {
-          margin-top: -40px;
-          margin-left: 50px;
-      }
-      
-      .link__other a,
-      .form__option a {
+      .register_page .form__option--re a,
+      .signin_page .form__option--si a {
           text-decoration: none;
-      }
-      /*signin_page*/
-      
-      .other {
-          display: flex;
-          flex-wrap: wrap;
+          color: black;
       }
       
-      .other div:last-child {
-          margin-left: 20%;
+      .verify a {
+          color: white;
       }
-      
-      .other a {
-          text-decoration: none;
+
+      ul.reason{
+          margin-left: -35px;
+      }
+
+      .form__regis p {
+        margin-left: 5%;
+        font-size: small;
+        margin-bottom: -10px;
+        color: red;
+    }
+
+    .form__regis p#notaccept {
+        margin-bottom: 15px;
+        margin-top: -15px;
+    }
+
+      .signin_page p#notemail,
+      .signin_page p#notphone,
+      .signin_page p#notpass {
+          margin-left: 5%;
+          font-size: small;
+          margin-bottom: -10px;
+          color: red;
       }
       
       @media screen and (max-width: 1250px) {
@@ -603,10 +602,6 @@
           .page__content--map,
           .detail_page .tour--item {
               margin-bottom: var(--space);
-          }
-          /*signin_page*/
-          .other div:last-child {
-              margin-left: 0px;
           }
       }
       /*Ipad dọc(768 x 1024)*/
@@ -636,19 +631,73 @@
           .detail_page.tour--item {
               margin-bottom: var(--space);
           }
-          /*register_page*/
-          .FB__link,
-          .GG__link {
+
+           /*aboutus_page*/
+        .aboutus_page .page__content{
+            width: 100%;
+            
+        }
+        .aboutus_page h3, .aboutus_page p, .aboutus_page ul{
+            margin: 5px var(--space);
+        }
+
+          /*security_page*/
+        .security_page .page__content{
+            width: 100%;
+        }
+
+        .security_page h5, .security_page p{
+            margin: 5px var(--space);
+        }
+          /*provision*/
+          .provision_page .page__content{
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 60px;
+        }
+
+        .provision_page h4, .provision_page li{
+            margin-left: var(--space);
+        }
+
+        .provision_page ul li{
+            margin-left: 0;
+        }
+
+          /*register_page & signin_page*/
+          .form__option--re {
               width: 70%;
-              margin-bottom: var(--space);
+              margin-bottom: 20px;
           }
-          .FB__link {
-              margin-left: 0px;
+
+          .form__option--si {
+              width: 70%;
+              margin-bottom: 113px;
           }
-          /*signin_page*/
-          .other div:last-child {
-              margin-left: 0px;
+    
+          .register_page .form__input,
+          .signin_page .form__input,
+          .register_page .form__label,
+          .register_page .form__input {
+              width: 80%;
+              height: 30px;
+              padding-top: 4px;
+              margin-left: var(--space);
           }
+          .register_page .form__input,
+          .signin_page .form__input {
+              border: 1px solid black;
+          }
+          .accept input {
+              margin-left: var(--space);
+          }
+          
+          .register_page .form__button,
+          .signin_page .form__button {
+              font-size: large;
+          }
+         
       }
       /*Điện thoại bản nhỏ 320px*/
       
@@ -676,5 +725,114 @@
           .page__content--map,
           .tour--item {
               margin-bottom: var(--space);
+          }
+
+          /*aboutus*/
+        .aboutus_page .page__content{
+            width: 100%;
+            font-size: medium;
+            padding-top: 80px;
+        }
+        .aboutus_page h3, .aboutus_page p{
+            margin: 0 20px;
+        }
+        .aboutus_page ul{
+            margin: 0;
+        }
+
+          /*security_page*/
+        .security_page .page__content{
+            width: 100%;
+            font-size: medium;
+            padding-top: 80px;
+        }
+
+        .security_page h5, .security_page p{
+            margin: 5px var(--space);
+        }
+        
+          /*provision_page*/
+        .provision_page .page__content{
+            width: 100%;
+            padding-top: 80px;
+            font-size: medium;
+        }
+
+        .provision_page h4, .provision_page li{
+            margin-left: var(--space);
+            padding-top: 5px;
+        }
+
+        .provision_page .page__li li{
+            margin-left: -25px;
+        }
+
+          /*register_page & signin_page*/
+          .register_page .page__content,
+          .signin_page .page__content {
+              padding-top: 80px;
+          }
+          .register_page .page__content {
+              width: 100%;
+          }
+          .form__option--re,
+          .form__option--si {
+              width: 100%;
+              border: none;
+          }
+          
+          .register_page h3,
+          .signin_page h3 {
+              font-size: large;
+              text-align: center;
+          }
+
+          .register_page .form__input,
+          .signin_page .form__input,
+          .register_page .form__label,
+          .signin_page .form__label {
+              width: 75%;
+              height: 20px;
+              margin-top: 3%;
+              margin-left: var(--space);
+          }
+
+          .register_page .form__input,
+          .signin_page .form__input {
+              border: 1px solid black;
+          }
+
+          .accept input {
+              margin-left: var(--space);
+          }
+
+          .register_page .form__button,
+          .signin_page .form__button {
+              font-size: large;
+              width: 30%;
+              margin-left: 35%;
+          }
+          
+          ul.other_method{
+            padding-bottom: 10px;
+        }
+
+          #gg p, #fb p{
+            font-size: medium;
+        }
+
+        ul.reason{
+            font-size: small;
+            margin-left: 3px
+        }
+
+          .form__regis p {
+              margin-left: var(--space);
+          }
+
+        .signin_page p#notemail,
+          .signin_page p#notphone,
+          .signin_page p#notpass {
+              margin-left: var(--space);
           }
       }

@@ -15,55 +15,56 @@
 </head>
 
 <body>
-    <div class="register_page page">
+    <div class="signin_page page">
         <div id="page__menu"></div>
 
         <div class="page__content">
-            <div class="form__option">
+            <div class="form__option--si">
                 <ul>
                     <div>
-                        <li><a href="">Email</a></li>
+                        <li><a href="" id="email">Email</a></li>
                     </div>
                     <div>
                         <li><a href="/html/signin_phone.html">Di động</a></li>
                     </div>
                 </ul>
+                <hr>
                 <h3>Đăng nhập với EIV</h3>
-                <form action="#">
+                <form class="form__sign">
                     <div class="form_row">
-                        <label class="form__label" for="email">Email</label>
-                        <input class="form__input" type="text" id="email" placeholder="Email">
+                        <label class="form__label" for="Email">Email</label>
+                        <input class="form__input" type="text" id="Email" placeholder="Email">
+                        <p id="notemail"></p>
                     </div>
                     <div class="form_row">
                         <label class="form__label" for="pass">Mật khẩu</label>
-                        <input class="form__input" type="text" id="pass" placeholder="Mật khẩu">
+                        <input class="form__input" type="password" id="pass" placeholder="Mật khẩu">
+                        <p id="notpass"></p>
                     </div>
-                    <div class="form_row other">
+                    <ul class="reason">
                         <div>
-                            <p><a href="./signin_email.html">Tạo tài khoản mới</a></p>
+                            <li><a href="/html/register_email.html">Tạo tài khoản</a></li>
                         </div>
                         <div>
-                            <p><a href="">Quên mật khẩu?</a></p>
+                            <li><a href="">Quên mật khẩu?</a></li>
                         </div>
-                    </div>
+                    </ul>
                     <div class="form_row verify">
-                        <input class="form__button" type="submit" name="submit" value="Đăng nhập">
+                        <input class="form__button" type="button" name="submit" value="Đăng nhập" onclick="chuyenTrang()" onmouseenter="checkSignEmail()">
                     </div>
-                    <p>hoặc tiếp tục với</p>
-                    <div class="link__other">
-                        <div class="GG__link">
-                            <a href="">
-                                <img src="/img/Detail/GGLogo.png" alt="">
-                                <p>Google</p>
-                            </a>
+                    <p id="match">hoặc tiếp tục với</p>
+                    <ul class="other_method">
+                        <div>
+                            <li><a href="" id="gg">
+                                <img src="/img/Detail/GGLogo.png" alt=""><p>Google</p>
+                            </a></li>
                         </div>
-                        <div class="FB__link">
-                            <a href="">
-                                <img src="/img/Detail/FBLogo.png" alt="">
-                                <p>Facebook</p>
-                            </a>
+                        <div>
+                            <li><a href="" id="fb">
+                                <img src="/img/Detail/FBLogo.png" alt=""><p>Facebook</p>
+                            </a></li>
                         </div>
-                    </div>
+                    </ul>
                 </form>
             </div>
         </div>
