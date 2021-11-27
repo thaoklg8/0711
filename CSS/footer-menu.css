@@ -18,6 +18,11 @@
                 --space: 30px;
                 --infColor: #f3fbfd;
                 --menuRight: rgba(110, 102, 102, 0.9);
+                --space90: 90px;
+                --space350: 350px;
+                --space250: 250px;
+                --space150: 150px;
+                --space200: 200px;
             }
             
             .text-center {

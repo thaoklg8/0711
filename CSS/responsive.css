@@ -1,0 +1,268 @@
+@media screen and (max-width:1024px) {
+    /* Page book now */
+    .page__select{
+        padding-top: var(--space);
+        height: 200px;  
+        min-width: 300px;
+        left: var(--space250);
+        right: var(--space250);
+        top: var(--space150); 
+    }
+    .page__select__search__place  {
+        padding-left:var(--space);
+        padding-bottom: var(--space);
+    }
+    .page__select__search__date{
+        padding-left:var(--space);
+        padding-bottom: var(--space);
+    }
+    .page__select__search__price {
+        padding-bottom: var(--space);
+        padding-left:var(--space);
+    }
+    #search_place {
+        min-width: 150px;
+        height: 30px; 
+    }
+    #sub_search_place {
+        min-width: 180px;
+        height: 30px;
+    }
+    #book_datefrom {
+        min-width: none;
+        height: 20px;    
+       }
+    #book_dateto {
+        min-width: none;
+        height: 20px;
+       }
+    #pricefrom {
+        min-width: none;
+        height: 20px; 
+       }
+    #priceto {
+        min-width: none;
+        height: 20px;
+       }
+    .page__content{
+        padding-top: var(--space150);
+
+    }
+    
+
+}
+/*máy tính bảng, hiện thị chiều ngang*/
+
+@media screen and (max-width: 800px) {
+    /* Page book now */
+    .page__select{
+        padding-top: var(--space);
+        height: 200px;  
+        min-width: 300px;
+        left: var(--space150);
+        right: var(--space150);
+        top: var(--space150); 
+    }
+    .page__select__search__place  {
+        padding-left:var(--space);
+        padding-bottom: var(--space);
+    }
+    .page__select__search__date{
+        padding-left:var(--space);
+        padding-bottom: var(--space);
+    }
+    .page__select__search__price {
+        padding-bottom: var(--space);
+        padding-left:var(--space);
+    }
+    #search_place {
+        min-width: 150px;
+        height: 30px; 
+    }
+    #sub_search_place {
+        min-width: 160px;
+        height: 30px;
+    }
+    #book_datefrom {
+        min-width: none;
+        height: 20px;    
+       }
+    #book_dateto {
+        min-width: none;
+        height: 20px;
+       }
+    #pricefrom {
+        min-width: none;
+        height: 20px; 
+       }
+    #priceto {
+        min-width: none;
+        height: 20px;
+       }
+    .page__content{
+        padding-top: 200px;
+
+    }
+}
+/*máy tính bảng loại to, hiện thị chiều dọc*/
+
+@media screen and (max-width: 768px) {
+    /* Page book now */
+    .page__select{
+        padding-top: var(--space);
+        height: 180px;  
+        min-width: 300px;
+        left: var(--space150);
+        right: var(--space150);
+        top: var(--space150); 
+    }
+    .page__select__search__place  {
+        padding-left:var(--space);
+        padding-bottom: var(--space);
+    }
+    .page__select__search__date{
+        padding-left:var(--space);
+        padding-bottom: var(--space);
+    }
+    .page__select__search__price {
+        padding-bottom: var(--space);
+        padding-left:var(--space);
+    }
+    #search_place {
+        min-width: 120px;
+        height: 30px; 
+    }
+    #sub_search_place {
+        min-width: 140px;
+        height: 30px;
+    }
+    #book_datefrom {
+        min-width: none;
+        height: 20px;    
+       }
+    #book_dateto {
+        min-width: none;
+        height: 20px;
+       }
+    #pricefrom {
+        min-width: none;
+        height: 20px; 
+       }
+    #priceto {
+        min-width: none;
+        height: 20px;
+       }
+    .page__content{
+        padding-top: 160px;
+
+    }
+}
+/*máy tính bảng, hiện thị chiều dọc*/
+
+@media screen and (max-width: 600px) {
+        /* Page book now */
+    .page__select{
+        padding-top: var(--space);
+        height: 180px;  
+        min-width: 500px;
+        left: 30px;
+        right: 30px;
+        top: 100px; 
+    }
+    .page__select__search__place  {
+        padding-left: 40px;
+    }
+    .page__select__search__date{
+        padding-left:var(--space);
+    }
+    .page__select__search__price {
+        padding-left:var(--space);
+    }
+    .page__content{
+        padding-top: 160px;
+
+    }
+}
+/*điện thoại, hiện thị chiều ngang*/
+
+@media screen and (max-width: 480px) {
+    /* Page book now */
+    .page__select{
+        padding-top: var(--space);
+        height: 180px;  
+        min-width: 300px;
+        left: 15px;
+        right: 15px;
+        top: 80px; 
+    }
+    .page__select__search__place  {
+        padding-left: 10px;
+    }
+    .page__select__search__date{
+        padding-left:var(--space);
+    }
+    .page__select__search__price {
+        padding-left:var(--space);
+    }
+    #search_place {
+        min-width: 50px;
+        height: 30px; 
+    }
+    #sub_search_place {
+        min-width: 90px;
+        height: 30px;
+    }
+    #book_datefrom {
+        min-width: 40px;
+        height: 20px;    
+       }
+    #book_dateto {
+        min-width: 40px;
+        height: 20px;
+       }
+    #pricefrom {
+        min-width: 40px;
+        height: 20px;
+    }
+    #priceto {
+        min-width: 40px;
+        height: 20px;
+    }
+    .page__content{
+        padding-top: 150px;
+
+    }
+}
+/*điện thoại, hiện thị chiều dọc*/
+
+@media screen and (max-width: 320px) {
+    /* Page book now */
+    .page__select{
+        display: none;
+    }
+    .page__content{
+        padding-top: 0px;
+
+    }
+    .book_page .page__content--book {
+        min-width: 250px;
+        
+    }
+    
+    .page__content--book .flex-input{
+        width: 100px;
+        outline-style: none;
+        border:none;
+    }
+    #number_book {
+        width: 20px;
+    }
+    #place_book {
+        width: 60px ;
+
+    }
+    .page__content--book .btn {
+        margin-top: var(--space);
+    }
+    
+}
