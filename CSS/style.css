@@ -102,6 +102,18 @@
       .tour_page .content {
           padding-top: 50px;
       }
+      .tour_page .title--header{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        color: rgb(37, 37, 100)
+    }
+    .tour_page .title_province{
+        color: rgb(37, 37, 100);
+    }
+    .tour_page .text-center{
+        color: rgb(37, 37, 100);
+    }
      /*PAGE book now*/
     .book_page {
         margin: 0;
@@ -270,15 +282,7 @@
         border: 2px dashed var(--mainColor);
     }
     
-    .book_page .page__content--book {
-        margin: 0 auto;
-        min-width: 300px;
-        background-color: #44a1cf;;
-        padding-bottom: var(--space);
-        margin-bottom: var(--space);
-        color: white;
-        border-radius: 20px;
-    }
+   
     .page__content--book .flex_row{
         padding : 8px 5px;
         display: flex;
@@ -389,147 +393,231 @@
           width: 100%;
       }
       /*PAGE detail*/
-      
+      .detail_page .page__content{
+          padding-top: 0px;
+      }
       .detail_page .page__banner {
-          padding-top: 50px;
-          width: 100%;
-          height: auto;
-          margin-bottom: var(--space);
-      }
-      
-      .detail_page .page__banner img {
-          width: 100%;
-      }
-      
-      .part--right {
-          margin-left: var(--space);
-          width: 400px;
-      }
-      
-      .part--left {
-          width: 800px;
-      }
-      
-      .page__content--video img {
-          height: 600px;
-          width: 100%;
-      }
-      
-      .page__content--book {
-          border: 1px solid rgb(50, 99, 235);
-          width: 397px;
-          height: auto;
-          background-color: var(--infColor);
-      }
-      
-      .content__book--price {
-          background-color: #BA81CE;
-          font-size: xx-large;
-          text-align: center;
-          line-height: 110px;
-          color: white;
-          width: 400px;
-          height: 100px;
-          margin-bottom: var(--space);
-      }
-      
-      .detail_page input,
-      .detail_page textarea {
-          margin-left: 20px;
-          margin-bottom: 20px;
-          border: 1px solid black;
-          border-radius: 20px;
-          padding-left: 10px;
-      }
-      
-      .content__book--inf input {
-          height: 45px;
-          width: 135;
-          border: 1px solid black;
-          border-radius: 20px;
-      }
-      
-      .content__book--infphone input {
-          height: 45px;
-          width: 310px;
-      }
-      
-      .content__book--send {
-          background-color: #BA81CE;
-          text-align: center;
-          line-height: 45px;
-          width: 310px;
-          height: 45px;
-          font-size: x-large;
-          color: white;
-          margin: 0 auto;
-          border-radius: 20px;
-          margin-bottom: var(--space);
-      }
-      
-      .page__content--discription {
-          background-color: var(--infColor);
-          height: 900px;
-      }
-      
-      .page__content--photos img {
-          height: 250px;
-          width: 400px;
-          margin-bottom: var(--space);
-      }
-      /*chỗ này không được để h3 không như vầy, nên t cmt lại, trang này của ai coi lại nha*/
-      /* h3 {
+        /* padding-top: 50px; */
+        width: 100%;
+        height: auto;
         margin-bottom: var(--space);
-        margin-left: 40px;
-    } */
-      
-      .content__best {
-          display: flex;
-          width: 300px;
-          margin-bottom: 60px;
-      }
-      
-      .page__content--best img {
-          width: 100px;
-          height: 100px;
-      }
-      
-      .page__content--map img {
-          width: 100%;
-          height: 500px;
-      }
-      
-      .page__content--otherpack img {
-          height: 500px;
-      }
-      
-      .page__content--related h3 {
-          text-align: center;
-      }
-      /*PAGE security*/
-      .security_page .page__content {
-        padding-top: 80px;
+    }
+    
+    .detail_page .page__banner img {
+        width: 100%;
+    }
+    
+    
+    .part--right {  
+        margin-left: var(--space);
+        width: 400px;
+    }
+    
+    .part--left {
+        width: 800px;
+    }
+    
+    .page__content--video video {
+        width: 100%;
+        display: block;
+    }
+    .detail_page .page__content--book {
+        margin: 0 auto;
+        min-width: 300px;
+        padding-bottom: var(--space);
+        margin-bottom: var(--space);
+        color: white;
+        
+    }
+    .page__content--book {
+        border: 1px solid rgb(50, 99, 235);
+        width: 397px;
+        height: auto;
+        background-color: var(--infColor);
+    }
+    
+    .content__book--price {
+        background-color: #BA81CE;
+        font-size: xx-large;
+        text-align: center;
+        line-height: 110px;
+        color: white;
+        width: 400px;
+        height: 100px;
+        margin-bottom: var(--space);
+    }
+    
+    .detail_page input,
+    .detail_page textarea {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        border-radius: 20px;
+        padding-left: 10px;
+    }
+    
+    .content__book--inf input {
+        height: 45px;
+        width: 135;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+    
+    .content__book--infphone input {
+        height: 45px;
+        width: 310px;
+    }
+    
+    .content__book--send {
+        background-color: #BA81CE;
+        text-align: center;
+        line-height: 45px;
+        width: 310px;
+        height: 45px;
+        font-size: x-large;
+        color: white;
+        margin: 0 auto;
+        border-radius: 20px;
+        margin-bottom: var(--space);
+    }
+    
+    .page__content--discription {
+        background-color: var(--infColor);
+        height: 900px;
+    }
+    /* thêm vô */
+    .page__content--section .part--left h1{
+        text-align: center;
+        margin-top:20px;
+        margin-bottom: 20px;
+    }
+    .page__content--section .part--left ul{
+        padding-left: 50px;
+    }
+    .detail_page .page__content--discription {
+        overflow: auto;
+    }
+    /*  */
+    .page__content--photos img {
+        /* height: 250px; */
+        /* width: 400px; */
+        width: 100%;
+        margin-bottom: var(--space);
+        display: block;
+    }
+    
+    
+    p {
+        margin-left: calc(var(--space)/3);
+        margin-right: calc(var(--space)/3);
+    }
+    
+    .content__best {
+        display: flex;
+        width: 300px;
+        margin-bottom: 60px;
+    }
+    /*  */
+    .detail_page  h3{
+        text-align: center;
+        margin:  auto;
+        margin-bottom: var(--space);
+        
+    }
+    /*  */
+    .page__content--best img {
+        width: 100px;
+        height: 100px;
+    }
+    /*  */
+    .page__content--best .content__best .tour--item--content--right{
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .page__content--best .content__best .title_province:first-child{
+        margin-left: 0px;
+        margin-top: 5px;
+    } 
+    .page__content--best .content__best .title_province{
+        margin-left: 60px;
+        margin-top: 5px;
+    } 
+    
+    .detail_page .part--flewbox .page__content--photos{
+        order: 1;
+    }
+    .detail_page .part--flewbox .page__content--best{
+        order: 2;
+    }
+    .detail_page .part--flewbox .btn-booknowdetail{
+        order: 3;
+    }
+    .page__content--best .content__best h4 {
+         margin-left: 30px; 
+    }
+    .page__content--otherpack img {
+        height: 500px;
+    }
+
+    .container--card{
+        position: relative;
+    }
+    .card{
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+    }
+    .side{
+        position:relative;
+        backface-visibility: hidden;
+        overflow: hidden;
+    }
+    .sideback{
+        position: relative;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        margin-top: -500px;
+    }
+   .card:hover{
+       transform: rotateY(180deg);
+   }
+   /* .flipCard{
+       transform: rotateY(180deg);
+   } */
+    .page__content--related h3 {
+        text-align: center;
+    }
+    /*PAGE security*/
+    
+    .security_page .page__content {
+        padding-top: 100px;
         width: 100%;
         height: auto;
         z-index: 1;
     }
     
     .security_page .page__content--content {
+        background-color: var(--infColor);
+        width: 100%;
+        /* height: 990px; */
         margin-bottom: var(--space);
-        padding-left: 50px;
-        padding-right: 50px;
     }
     
-    .security_page h5{
-        margin-top: 5px;
+    .security_page .page__content--content {
+        padding-left: 10px;
     }
+    
+    .security_page .page__content--contentspan {
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
     .security_page .page__content--content p {
-        padding-top: 5px;
+        font-size: 14px;
     }
-    .security_page h6{
-        color: red;
-        text-align: center;
-        margin-top: var(--space);
+    
+    .security_page .page__content--content p:first-child {
+        padding-top: 5px;
     }
 
       /*PAGE provision*/
@@ -752,6 +840,22 @@
           .detail_page .tour--item {
               margin-bottom: var(--space);
           }
+             /* Responsive thứ tự */
+        .part--flewbox{
+            display: flex;
+            flex-direction: column;
+        }
+        .detail_page .part--flewbox .page__content--photos{
+            order: 1;
+        }
+        .detail_page .part--flewbox .page__content--best{
+            order: 3;
+        }
+        .detail_page .part--flewbox .btn-booknowdetail{
+            order: 2;
+            margin-bottom: 40px;
+        }
+        
       }
       /*Ipad dọc(768 x 1024)*/
       
@@ -772,6 +876,11 @@
           .page__content--image {
               margin-bottom: var(--space);
           }
+          /* tour_page */
+        .tour_page.tour--item{
+            width: 300px;
+            padding: 5px;
+        }
           /*detail_page*/
           .page__banner,
           .page__content--video,
@@ -780,6 +889,80 @@
           .detail_page.tour--item {
               margin-bottom: var(--space);
           }
+          .detail_page.page__banner img{
+              padding-top: 0px;
+          }
+            /* Responsive lại content chi tiết  */
+        .detail_page .page__content--section .page__content--discription p {
+            margin-left: 8px;
+        }
+        .detail_page .page__content--section .page__content--discription{
+            /* margin-left: 10px; */
+            width: 768px;
+        }
+        .detail_page .page__content--section .part--left ul{
+            padding-left: 30px;
+        }
+          /*Responsive lại best package  */
+          .detail_page .page__content--best{
+            margin-left: 0;
+        }
+        .detail_page .page__content--besth3{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+        }
+        .detail_page .page__content--besth3 h3{
+            margin-left: 0px;
+        }
+        .detail_page .btn-booknow{
+            margin-top: 20px;
+        }
+        .detail_page .page__content--related h3{
+            margin-top: 10px;
+        }
+          /* Responsive thứ tự part--right */
+        .part--flewbox{
+            display: flex;
+            flex-direction: column;
+        }
+        .detail_page .part--flewbox .page__content--photos{
+            order: 1;
+        }
+        .detail_page .part--flewbox .page__content--best{
+            order: 3;
+        }
+        .detail_page .part--flewbox .btn-booknowdetail{
+            order: 2;
+        }
+        .detail_page .page__content--section .page__content--map iframe{
+            width: 100%;
+            height: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+          /* Căn chỉnh nằm giữa */
+        .detail_page .part--flewbox{
+            margin-left: 0;
+        }
+        .detail_page .part--flewbox .page__content--photos img{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        .detail_page .page__content--best .content__image--best{
+            margin-left: 25px;
+        }
+          /* Không hiển thị hình ảnh other package */
+          .detail_page .page__content--otherpack {
+            display: none;
+        }
+        /* Responsive related tour */
+        .detail_page .tour--item {
+            width: 340px ;
+        }
+
 
            /*aboutus_page*/
         .aboutus_page .page__content{
@@ -868,13 +1051,106 @@
               margin-bottom: var(--space);
           }
           /*detail_page*/
-          .page__banner,
+          .page__content,
           .page__content--video,
           .page__content--discription,
           .page__content--map,
           .tour--item {
               margin-bottom: var(--space);
           }
+             /* Responsive lại form send now */
+        
+        .detail_page #hidden{
+            display: none;
+        }
+        .detail_page .page__content--book{
+            /* width: 250px; */
+            width: 300px;
+        }
+        .detail_page .page__content--book .content__book--price{
+            /* width: 250px; */
+            width: 300px;
+        }
+        .detail_page .page__content--book  input{
+            /* width: 200px; */
+            width: 250px;
+        }
+        .detail_page textarea{
+            /* width: 15em; */
+            width: 19em;;
+        }
+        .detail_page .page__content--book .content__book--send{
+            /* width: 155px; */
+            width: 200px;
+        }
+        .detail_page .page__content--section .page__content--map{
+            padding-top: 0px;
+        }
+
+           /* Responsive lại content chi tiết  */
+        .detail_page .page__content--section .page__content--discription p {
+            margin-left: 8px;
+        }
+        .detail_page .page__content--section .page__content--discription{
+            height: auto;
+            margin-left: 0;
+        }
+        .detail_page .page__content--section .part--left ul{
+            padding-left: 30px;
+        }
+
+          /*Responsive lại best package  */
+        .detail_page .page__content--best{
+            margin-left: 0;
+        }
+        .detail_page .page__content--besth3{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+        }
+        .detail_page .page__content--besth3 h3{
+            margin-left: 0px;
+        }
+        .detail_page .btn-booknow{
+            margin-top: 20px;
+        }
+        .detail_page .page__content--related h3{
+            margin-top: 40px;
+        }
+          /* Responsive thứ tự part--right */
+        .part--flewbox{
+            display: flex;
+            flex-direction: column;
+        }
+        .detail_page .part--flewbox .page__content--photos{
+            order: 1;
+        }
+        .detail_page .part--flewbox .page__content--best{
+            order: 3;
+        }
+        .detail_page .part--flewbox .btn-booknowdetail{
+            order: 2;
+        }
+          /* Căn chỉnh nằm giữa */
+        .detail_page .part--flewbox{
+            margin-left: 0;
+        }
+        .detail_page .part--flewbox .page__content--photos img{
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
+        .detail_page .page__content--best .content__image--best{
+            margin-left: 25px;
+        }
+          /* Không hiển thị hình ảnh other package */
+        .detail_page .page__content--otherpack {
+            display: none;
+        }
+        /* Responisve related tour */
+        .detail_page .tour--item{
+            width: 300px;
+        }
 
           /*aboutus*/
         .aboutus_page .page__content{
