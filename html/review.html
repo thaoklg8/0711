@@ -12,14 +12,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/main.js" defer></script>
+    <script>
+        function resizeIframe(obj) {
+          obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+       </script>
 </head>
-
 <body>
     <div class="review_page page">
         <div id="page__menu"></div>
-
         <div class="page__content">
-            <div class="page__content--section p1--review">
+            <div class="page__content--section">
                 <div class="page__content--slide">
                     <img src="/img/Detail/16c_HaLong.png" alt="">
                 </div>
@@ -27,34 +30,126 @@
                     <h3> Best package</h3>
                     <div class="content__image--best">
                         <div class="content__best">
-                            <img src="/img/Detail/2d_HaNoi.jpg" alt="">
-                            <p>Hà Nội</p>
+                            <img src="/img/bestpackage/4d_sapa.jpg" alt="" usemap="#mymap1">
+                            <map name="mymap1">
+                                <area target="" href="detail.html" coords="-1,-1,766,511" shape="rect">
+                            </map>
+                            <p class="content__best-location">Sapa</p> 
+                            <div class="price">
+                               <p>$600</p> 
+                            </div>
+                        </div>     
+                            
+                        <div class="content__best">
+                            <img src="/img/bestpackage/5f_NhaTrang.jpg" alt="" usemap="#mymap2">
+                            <map name="mymap2">
+                                <area target="blank" href="detail.html" coords="-2,5,4581,3441" shape="rect">
+                            </map>
+                            <p class="content__best-location">Nha Trang</p>
+                            <div class="price">
+                                <p>$700</p> 
+                             </div>
                         </div>
                         <div class="content__best">
-                            <img src="/img/Detail/sapa.png" alt="">
-                            <p>SaPa</p>
-                        </div>
-                        <div class="content__best">
-                            <img src="/img/Detail/VT.png" alt="">
-                            <p>Vũng Tàu</p>
+                            <img src="/img/bestpackage/6b_VT.jpg" alt="" usemap="#mymap3">
+                            <map name="mymap3">
+                                <area target="blank" href="detail.html" coords="0,4,1349,898" shape="rect">
+                            </map>
+                            <p class="content__best-location">Vũng Tàu</p>
+                            <div class="price">
+                                <p>$600</p> 
+                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        
+            <div class="" >
+                <img style="width: 100%; height: 250px; margin-bottom: 20px;" src="/img/paner.png" alt="">
+            </div>
+        <div class="page__content">
             <h2>REVIEWS FROM CUSTOMER</h2>
             <div class="page__content--section p2--review">
-                <div class="page__content--image">
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/Detail/16b_HaLong.jpg" alt="" title="Hạ Long"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/Detail/15a_BinhThuan.jpg" alt="" title="Bình Thuận"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/Detail/4d_sapa.jpg" alt="" title="SaPa"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/Detail/17d_Phú Yên.png" alt="" title="Phú Yên"></a>
+                <div class="page__content--image" style="overflow-y: scroll;">
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/1f-hue_c.png" alt="" title="huế"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/2c_HaNoi_c.png" alt="" title="Hà nội"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/3b_BinhDinh_c.png" alt="" title="Bình định"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/4a_sapa_c.png" alt="" title="Sa pa"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/5h_NhaTrangc.png" alt="" title="Nha Trang"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/6m_VTc.png" alt="" title="Vũng tàu"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/7b_CanTho-c.png" alt="" title="Cần thơ"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/8d_DaLatc.png" alt="" title="Đà lạc"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/9a_YenBaic.png" alt="" title="Yên Bái"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/10c_KienGiangc.png" alt="" title="Kiên Giang"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/11c_AnGiangc.png" alt="" title="An Giang"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/12c_BinhThuanc.png" alt="" title="Bình Thuận"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/13b_HaLong.png" alt="" title="Hạ Long"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/14c_Phú Yênc.png" alt="" title="Phú Yên"></a>
+                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/15_DakLakc.png" alt="" title="Đắk Lắk"></a>
                 </div>
                 <div class="page__content--review">
-                    <iframe name="myreview" src=""></iframe>
+                    <!-- <iframe name="myreview" src=""></iframe> -->
+                    <iframe name="myreview" onload="resizeIframe(this)"></iframe> 
                 </div>
             </div>
+            <div class="page__content--btn btn">
+                <a href="cusreview.html">Send review</a>
+            </div>
+            <div class="page-review--comment">
+                <h1>COMMENTS</h1>
+                <div class="comment__items flexrow" >
+                    <div><img src="/img/user-img-1-100x100.png" alt=""></div>
+                    <div class="comment__items--infor">        <p><b> Jenny</b></p> 
+                        <div class="rely-comment"><a href="">rely</a></div> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi repudiandae similique inventore expedita, eos vel minima ipsa perspiciatis aspernatur quis? Fuga voluptatum aspernatur quae voluptates sit illo maxime dolores  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, optio facilis vitae quidem hic illo repellendus ex a ullam sit vel aliquam dolorum possimus, debitis totam eos cum facere. Numquam.</p>
+                        <b>21/11/2021 at 8h30</b> 
+                    </div>
+                </div>
+                <div class="comment__items--rely flexrow" >
+                    <div><img src="/img/user-img-5-100x100.png" alt=""></div>
+                    <div class="comment__items--infor"><p><b>David</b> </p> 
+                        <div class="rely-comment"><a href="">rely</a></div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum asperiores impedit ipsum vero, voluptatibus facilis, blanditiis odit ut at recusandae tenetur, distinctio qui facere ad pariatur perspiciatis explicabo mollitia dolorum?</p>
+                        <b><b>20/11/2021 lúc 8h</b></b>
+                       </div>
+                </div>
+                <div class="comment__items flexrow" >
+                    <div><img src="/img/user-img-4-100x100.png" alt=""></div>
+                    <div class="comment__items--infor">  <p><b>Jessica</b></p> 
+                        <div class="rely-comment"><a href="">rely</a></div> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quisquam illo voluptatem voluptates quasi vero incidunt molestias error, aliquam obcaecati quaerat soluta minus. Quos nihil eveniet doloremque expedita aperiam explicabo.</p>
+                        <b>21/11/2021 at 16h30</b>
+                    </div>
+                </div>
+                <div class="comment__items flexrow" >
+                    <div><img src="/img/user-ad.png" alt="">
+                    </div>
+                    <div class="comment__items--infor">           <p><b>Ẩn Danh</b></p> 
+                        <div class="rely-comment"><a href="">rely</a></div> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quisquam illo voluptatem voluptates quasi vero incidunt molestias error, aliquam obcaecati quaerat soluta minus. Quos nihil eveniet doloremque expedita aperiam explicabo.</p>
+                        <b>21/11/2021 at 16h30</b>
+                    </div>
+                </div>
+            </div>
+            <div class="post--comment">
+                <form action="" method="post">
+                    <div class="post--comment-header">
+                        <h2>Nhập comment </h2>
+                    </div>
+                    <div class="post--comment-row">
+                        <textarea name="" id=""  placeholder="nhập comment vào đây"></textarea>
+                    </div>
+                    <div class="post--comment-row">
+                        <input type="checkbox" id="save-infor--comment" name="save-infor--comment" value="yes">
+                        <label for="save-infor--comment">Đăng với chế độ ẩn danh</label>
+                    </div>
+                    <div class="post--comment-btn">
+                        <input type="submit" value="Đăng bài" id="post--comment-button">
+                    </div>
+                </form>
+            </div>
         </div>
-
         <div id="page__footer"></div>
     </div>
 </body>

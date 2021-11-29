@@ -335,63 +335,221 @@
         margin-top: 5px;
     }
       /*PAGE review*/
-      
-      .p1--review {
-          padding-top: 100px;
-      }
-      
-      .review_page .page__content--slide {
-          width: 900px;
-          height: 420px;
-      }
-      
-      .review_page .page__content--slide img {
-          width: 100%;
-          height: auto;
-      }
-      
-      .review_page .content__best {
-          display: flex;
-          width: 300px;
-          margin-bottom: var(--space);
-          margin-left: var(--space);
-      }
-      
-      .review_page .page__content--best img {
-          width: 100px;
-          height: 100px;
-      }
-      
-      .page__content--image {
-          width: 430px;
-          height: 680px;
-          background-color: var(--infColor);
-      }
-      
-      .review_page h2 {
-          text-align: center;
-          margin-top: -20px;
-          margin-bottom: 10px;
-      }
-      
-      .review_page .page__content--image img {
-          width: 180px;
-          height: 200px;
-          margin-left: 20px;
-          margin-top: 20px;
-      }
-      
-      .review_page .page__content--review {
-          width: 760px;
-          margin-left: var(--space);
-          background-color: var(--infColor);
-          height: 680px;
-      }
-      
-      .review_page .page__content--review iframe {
-          height: 680px;
-          width: 100%;
-      }
+    .review_page .page__content--slide {
+        width: 900px;
+        height: auto;
+    }
+    
+    .review_page .page__content--slide img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .review_page .content__best {
+        display: flex;
+        width: 300px;
+        margin-bottom: var(--space);
+        margin-left: var(--space);
+    }
+    .page__content--best h3{
+        text-align: center;
+        padding-bottom: var(--space)
+    }
+    .review_page .page__content--best img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .page__content--image {
+        width: 430px;
+        height: 680px;
+        background-color: var(--infColor);
+    }
+    
+    .review_page h2 {
+        text-align: center;
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+    
+    .review_page .page__content--image img {
+        width: 180px;
+        height: 200px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    
+    .review_page .page__content--review {
+        width: 760px;
+        /* margin-left: var(--space); */
+        background-color: var(--infColor);
+        height: 680px;
+        overflow-y: scroll;
+        
+    }
+    
+    .review_page .page__content--review iframe {
+        height: 680px;
+        width: 99%;
+        
+    }
+    
+    .page__content--btn {
+        min-width: 25%;
+        height: 36px;
+        margin-bottom: 20px;
+    }
+    
+    .page__content--btn>a {
+        line-height: 36px;
+    }
+    
+    .content__best-location {
+        min-width: 95px;
+    }
+    
+    .page-review--comment {
+        margin-left: 0px;
+        margin-top: var(--space);
+        margin-bottom: var(--space);
+        background-color: var(--infColor);
+        padding-left: 5px;
+    }
+    
+    .comment__items,
+    .comment__items--rely {
+        margin: 20px 0px;
+    }
+    
+    .comment__items--rely {
+        padding-left: 80px;
+    }
+    
+    .rely-comment {
+        text-align: right;
+        padding: 10px;
+    }
+    
+    .rely-comment>a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .rely-comment>a:hover {
+        color: aqua;
+        text-decoration: none;
+    }
+    
+    .comment__items--infor>b:last-child {
+        font-size: small;
+        opacity: 50%;
+    }
+    
+    .post--comment {
+        margin: 20px auto;
+        border: black solid 1px;
+    }
+    
+    .post--comment-header>h2 {
+        margin-top: 30px;
+    }
+    
+    .post--comment-row {
+        padding: 10px;
+    }
+    
+    .post--comment-row .comment--input {
+        width: 100%;
+        height: 50px;
+        margin: 0;
+    }
+    
+    .post--comment-row>textarea {
+        width: 100%;
+        height: 200px;
+    }
+    
+    #post--comment-button {
+        margin: 0px auto;
+        display: block;
+        width: 50%;
+        background-color: var(--menuColor);
+        height: 50px;
+        margin-bottom: 20px;
+        font-size: large;
+        color: white;
+    }
+    /* Page Send review */
+
+.page_content_slide_img img {
+    width: 100%;
+    height: 20%;
+}
+
+.page__content--cusreview {
+    width: 100%;
+    /* height: 300px; */
+    justify-content: space-between;
+    margin-top: var(--space);
+    margin-bottom: var(--space);
+}
+
+.page__content--cusreview-left {
+    width: 30%;
+    text-align: center;
+}
+
+.page__content--cusreview-left div:nth-of-type(1) {
+    width: 100%;
+    height: 240px;
+    border: 1px solid black;
+    margin-bottom: var(--space);
+}
+
+.page__content--cusreview-right {
+    width: 70%;
+    text-align: center;
+    padding-left: var(--space);
+    padding-right: 0;
+    margin-bottom: var(--space);
+}
+
+#cusreview_text {
+    height: 240px;
+    width: 100%;
+    margin-bottom: var(--space);
+}
+
+.content__btn--cusreview {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+}.page__content--cusreview-right button {
+    width: 80%;
+}
+
+
+/*REVIEW TO CUSTOMER*/
+
+.content__date--cusreview {
+    text-align: right;
+}
+
+.content__date--cusreview p {
+    font-weight: bold;
+}
+
+.content--infor-cusreiew {
+    margin: 30px;
+    background-color: white;
+    border: 1px solid black;
+}.content--infor-cusreiew img {
+    width: 70px;
+    height: 70px;
+}
+
+
+        
       /*PAGE detail*/
       .detail_page .page__content{
           padding-top: 0px;
@@ -639,44 +797,6 @@
         text-align: center;
         margin-top: var(--space);
     }
-      
-      /* Page Send review */
-      
-      .page_content_slide_img img {
-          width: 100%;
-          height: 20%;
-      }
-      
-      .page__content--cusreview {
-          width: 100%;
-          justify-content: space-between;
-          margin-top: var(--space);
-          margin-bottom: var(--space);
-      }
-      
-      .page__content--cusreview-left {
-          width: 30%;
-          text-align: center;
-      }
-      
-      .page__content--cusreview-left img {
-          width: 100%;
-          margin-bottom: var(--space);
-      }
-      
-      .page__content--cusreview-right {
-          width: 70%;
-          text-align: center;
-      }
-      
-      #cusreview_text {
-          height: 240px;
-          width: 90%;
-          margin-left: 0;
-          padding-left: var(--space);
-          padding-right: 0;
-          margin-bottom: var(--space);
-      }
       /*PAGE register and signin*/
       
       .register_page .page__content,
@@ -840,6 +960,49 @@
           .detail_page .tour--item {
               margin-bottom: var(--space);
           }
+           /*send review*/
+    .page_content_slide_img img {
+        width: 100%;
+        height: 20%;
+    }
+    
+    .page__content--cusreview {
+        width: 100%;
+        /* height: 300px; */
+        justify-content: space-between;
+        margin-top: var(--space);
+        margin-bottom: var(--space);
+    }
+    
+    .page__content--cusreview-left {
+        width: 30%;
+        text-align: center;
+    }
+    
+    .page__content--cusreview-left div:nth-of-type(1) {
+        width: 100%;
+        margin-bottom: var(--space);
+    }
+    
+    .page__content--cusreview-right {
+        width: 70%;
+        text-align: center;
+        padding-left: var(--space);
+        padding-right: 0;
+        margin-bottom: var(--space);
+    }
+    
+    #cusreview_text {
+        height: 240px;
+        width: 99%;
+        margin-bottom: var(--space);
+    }
+    
+    .content__btn--cusreview {
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+    }
              /* Responsive thứ tự */
         .part--flewbox{
             display: flex;
@@ -870,12 +1033,50 @@
               margin-bottom: var(--space);
           }
           /*review_page*/
-          .page__content--slide {
-              margin-bottom: var(--space);
-          }
-          .page__content--image {
-              margin-bottom: var(--space);
-          }
+        .page__content--slide {
+        margin-bottom: var(--space);
+        }
+        .page__content--image {
+        margin-bottom: var(--space);
+        }
+        .page__content--btn {
+        min-width: 40%;
+
+        }.comment__items, .comment__items--rely {
+        font-size: 20px;
+        }
+        .commnt__items--infor>p:nth-of-type(1) {
+        text-align: center;
+        }
+        .page-review--comment img {
+        width: 70px;
+        height: 70px;
+        } /*send review page*/
+        .page__content--cusreview {
+          margin-bottom: var(--space);
+          flex-direction: column;
+          text-align: center;
+        }.page__content--cusreview-left{
+          margin-bottom: var(--space);
+
+        }#cusreview_text{
+          width: 99%;
+   
+        }.page__content--cusreview-left {
+          width: 99%;
+          text-align: center;
+
+        }.page__content--cusreview-left button, .page__content--cusreview-right button {
+          width: 80%;
+        }
+        .page__content--cusreview-right {
+          width: 100%;
+          padding-right: 0;
+          padding-left: 0px;
+          margin-bottom: var(--space);
+        }
+
+
           /* tour_page */
         .tour_page.tour--item{
             width: 300px;
@@ -1031,6 +1232,26 @@
           }
          
       }
+      @media screen and (max-width: 404px) {
+        /*page review*/
+        .review_page .page__content--image img {
+            width: 180px;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }.comment__items,
+        .comment__items--rely {
+            font-size: 15px;
+        }
+        .comment__items--infor>p:nth-of-type(1) {
+            text-align: center;
+        }
+        .page-review--comment img {
+            width: 50px;
+            height: 50px;
+        }
+    }    
       /*Điện thoại bản nhỏ 320px*/
       
       @media screen and (max-width: 320px) {
@@ -1045,11 +1266,77 @@
           }
           /*review_page*/
           .page__content--slide {
-              margin-bottom: var(--space);
+           margin-bottom: var(--space);
           }
           .page__content--image {
-              margin-bottom: var(--space);
+            margin-bottom: var(--space);
           }
+          .review_page .page__content--image img {
+            width: 180px;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+          }
+          .review_page .page__content--review {
+           width: 100%;
+           /* margin-left: var(--space); */
+           background-color: var(--infColor);
+           height: auto;
+          }
+          .review_page .page__content--review iframe {
+            height: 100%;
+            width: 100%;
+            overflow: none;
+          }
+          .page__content--btn {
+            min-width: 70%;
+           margin: 10px auto;
+          }
+          .comment__items,
+          .comment__items--rely {
+            font-size: 12px;
+          }
+          .comment__items--infor>p:nth-of-type(1) {
+            text-align: center;
+          }
+          .page-review--comment img {
+            width: 50px;
+            height: 50px;
+          }
+         /*send review page*/
+         .page__content--cusreview {
+           margin-bottom: var(--space);
+           flex-direction: column;
+           text-align: center;
+         }.page__content--cusreview-left{
+           margin-bottom: var(--space);
+
+         }#cusreview_text{
+           width: 99%;
+    
+         }.page__content--cusreview-left {
+           width: 99%;
+           text-align: center;
+
+         }.page__content--cusreview-left button, .page__content--cusreview-right button {
+           width: 80%;
+         }
+         .page__content--cusreview-right {
+           width: 100%;
+           padding-right: 0;
+           padding-left: 0px;
+           margin-bottom: var(--space);
+         }
+
+
+       /*review to page*/
+       .content--infor-cusreiew>div:nth-of-type(2){
+        font-size: 12px;
+        }.content--infor-cusreiew>div:nth-of-type(1)>img{
+        width: 50px;
+        height: 50px;
+        }
           /*detail_page*/
           .page__content,
           .page__content--video,
