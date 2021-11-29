@@ -102,701 +102,734 @@
       .tour_page .content {
           padding-top: 50px;
       }
-      .tour_page .title--header{
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 30px;
-        color: rgb(37, 37, 100)
-    }
-    .tour_page .title_province{
-        color: rgb(37, 37, 100);
-    }
-    .tour_page .text-center{
-        color: rgb(37, 37, 100);
-    }
-     /*PAGE book now*/
-    .book_page {
-        margin: 0;
-        padding: 0;
-    }
-    .page__select{
-        padding-top: var(--space);
-        flex-wrap: wrap;
-        border-radius: 20px;
-        color: white;
-        background-color: #144496;
-        position: absolute;
-        z-index: 2;
-        height: 300px;  
-        min-width: 500px;
-        left: var(--space250);
-        right: var(--space250);
-        top: var(--space200);
-        
-    }
-    .img_slidego img{
-        
-        width: 100%;
-        height: 100%;
-        position: relative;
-        z-index: 1;
-    }
-    .page__select label {
-        font-size: large;
-        padding-right: var(--space);
-    }
-     .page__select__search__place  {
-        padding-left:var(--space150);
-        padding-bottom: var(--space);
-    }
-    .page__select__search__place input {
-        position: relative;
-        font-size: 20px;
-        box-sizing: border-box;
-        transition: .5s;
-
-    }
-    .page__select__search__date{
-        padding-left:var(--space90);
-        padding-bottom: var(--space);
-    }
-    .page__select__search__price {
-        padding-left:var(--space90);
-        padding-bottom: var(--space);
-    }
-    
-   .page__select h5{
-       font-size: x-large;
-       text-align: center;
-       padding-bottom: var(--space);
-   }
-    #search_place {
-       min-width: 150px;
-       height: 50px;
-       outline-style: none;
-       border:none;
-       padding: 0 25px;
-       border-radius: 25px 0 0 25px;
-       
-   }
-   #sub_search_place {
-       border-radius: 0 25px 25px 0;
-       min-width: 150px;
-       height: 50px;
-       outline-style: none;
-       border:none;
-       padding-left: 0%;
-       margin-left: 0%;
-       background: linear-gradient(0, #b25fc7, #f7c65d);
-       color: white;
-   }
-  
-   #book_datefrom {
-    min-width: 170px;
-    height: 50px;
-    outline-style: none;
-    border:none;
-    padding: 0 25px;
-    border-radius: 25px 0 0 25px;
-    padding-left: 0%;
-    margin-left: 0%;
-   }
-   #book_dateto {
-    min-width: 170px;
-    height: 50px;
-    outline-style: none;
-    border:none;
-    padding: 0 25px;
-    border-radius: 0 25px 25px 0;
-    padding-left: 0%;
-    margin-left: 0%;
-   }
-   #pricefrom {
-    min-width: 170px;
-    height: 50px;
-    outline-style: none;
-    border:none;
-    padding: 0 25px;
-    border-radius: 25px 0 0 25px;
-    padding-left: 0%;
-    margin-left: 0%;
-   }
-   #priceto {
-    min-width: 170px;
-    height: 50px;
-    outline-style: none;
-    border:none;
-    padding: 0 25px;
-    border-radius: 0 25px 25px 0;
-    padding-left: 0%;
-    margin-left: 0%;
-   }
-
-    .page__content--information {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-bottom: var(--space);
-    }
-    .information--right img {
-        width: 100%;
-    }
-    .book_page .information--left {
-        background-color: rgb(238, 247, 248);
-        min-width: 300px;
-        flex: 1;
-        padding-top: var(--space);
-        padding-bottom: var(--space);
-        border: 2px dashed var(--mainColor);
-        
-       
-    }
-    .page__content{
-        padding-top: var(--space250);
-
-    }
-    .information--left .flex_row{
-        padding : 8px 5px;
-        display: flex;
-        text-align: left;
-       
-    }
-    .information--left .flex-label{
-        display: inline-block;
-        width: 500px;
-
-    }
-    .information--left .flex-input{
-        width: 300%;
-        outline-style: none;
-        border:none;
-        
-    }
-    .information--left #note {
-        height: 100px;
-    }
-
-    .book_page .information--right {
-        min-width: 300px;
-        flex: 1;
-        border: 2px dashed var(--mainColor);
-    }
-    
-   
-    .page__content--book .flex_row{
-        padding : 8px 5px;
-        display: flex;
-        text-align: left;
-       
-    }
-    .page__content--book .flex_row label {
-        display: inline-block;
-        width: 200px;
-    }
-    .page__content--book .flex-input{
-        width: 200px;
-        outline-style: none;
-        border:none;
-    }
-    #number_book {
-        width: 40px;
-        padding-right: 10px;
-        text-align: center;
-    }
-    #place_book {
-        width: 140px ;
-        padding-right: 10px;
-        text-align: right;
-
-    }
-    .page__content--book .btn {
-        margin-top: var(--space);
-    }
-
-
-    
+      
+      .tour_page .title--header {
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 30px;
+          color: rgb(37, 37, 100)
+      }
+      
+      .tour_page .title_province {
+          color: rgb(37, 37, 100);
+      }
+      
+      .tour_page .text-center {
+          color: rgb(37, 37, 100);
+      }
+      /*PAGE book now*/
+      
+      .book_page {
+          margin: 0;
+          padding: 0;
+      }
+      
+      .page__select {
+          padding-top: var(--space);
+          flex-wrap: wrap;
+          border-radius: 20px;
+          color: white;
+          background-color: #144496;
+          position: absolute;
+          z-index: 2;
+          height: 300px;
+          min-width: 500px;
+          left: var(--space250);
+          right: var(--space250);
+          top: var(--space200);
+      }
+      
+      .img_slidego img {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          z-index: 1;
+      }
+      
+      .page__select label {
+          font-size: large;
+          padding-right: var(--space);
+      }
+      
+      .page__select__search__place {
+          padding-left: var(--space150);
+          padding-bottom: var(--space);
+      }
+      
+      .page__select__search__place input {
+          position: relative;
+          font-size: 20px;
+          box-sizing: border-box;
+          transition: .5s;
+      }
+      
+      .page__select__search__date {
+          padding-left: var(--space90);
+          padding-bottom: var(--space);
+      }
+      
+      .page__select__search__price {
+          padding-left: var(--space90);
+          padding-bottom: var(--space);
+      }
+      
+      .page__select h5 {
+          font-size: x-large;
+          text-align: center;
+          padding-bottom: var(--space);
+      }
+      
+      #search_place {
+          min-width: 150px;
+          height: 50px;
+          outline-style: none;
+          border: none;
+          padding: 0 25px;
+          border-radius: 25px 0 0 25px;
+      }
+      
+      #sub_search_place {
+          border-radius: 0 25px 25px 0;
+          min-width: 150px;
+          height: 50px;
+          outline-style: none;
+          border: none;
+          padding-left: 0%;
+          margin-left: 0%;
+          background: linear-gradient(0, #b25fc7, #f7c65d);
+          color: white;
+      }
+      
+      #book_datefrom {
+          min-width: 170px;
+          height: 50px;
+          outline-style: none;
+          border: none;
+          padding: 0 25px;
+          border-radius: 25px 0 0 25px;
+          padding-left: 0%;
+          margin-left: 0%;
+      }
+      
+      #book_dateto {
+          min-width: 170px;
+          height: 50px;
+          outline-style: none;
+          border: none;
+          padding: 0 25px;
+          border-radius: 0 25px 25px 0;
+          padding-left: 0%;
+          margin-left: 0%;
+      }
+      
+      #pricefrom {
+          min-width: 170px;
+          height: 50px;
+          outline-style: none;
+          border: none;
+          padding: 0 25px;
+          border-radius: 25px 0 0 25px;
+          padding-left: 0%;
+          margin-left: 0%;
+      }
+      
+      #priceto {
+          min-width: 170px;
+          height: 50px;
+          outline-style: none;
+          border: none;
+          padding: 0 25px;
+          border-radius: 0 25px 25px 0;
+          padding-left: 0%;
+          margin-left: 0%;
+      }
+      
+      .page__content--information {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          margin-bottom: var(--space);
+      }
+      
+      .information--right img {
+          width: 100%;
+      }
+      
+      .book_page .information--left {
+          background-color: rgb(238, 247, 248);
+          min-width: 300px;
+          flex: 1;
+          padding-top: var(--space);
+          padding-bottom: var(--space);
+          border: 2px dashed var(--mainColor);
+      }
+      
+      .book_page .page__content {
+          padding-top: var(--space250);
+      }
+      
+      .information--left .flex_row {
+          padding: 8px 5px;
+          display: flex;
+          text-align: left;
+      }
+      
+      .information--left .flex-label {
+          display: inline-block;
+          width: 500px;
+      }
+      
+      .information--left .flex-input {
+          width: 300%;
+          outline-style: none;
+          border: none;
+      }
+      
+      .information--left #note {
+          height: 100px;
+      }
+      
+      .book_page .information--right {
+          min-width: 300px;
+          flex: 1;
+          border: 2px dashed var(--mainColor);
+      }
+      
+      .page__content--book .flex_row {
+          padding: 8px 5px;
+          display: flex;
+          text-align: left;
+      }
+      
+      .page__content--book .flex_row label {
+          display: inline-block;
+          width: 200px;
+      }
+      
+      .page__content--book .flex-input {
+          width: 200px;
+          outline-style: none;
+          border: none;
+      }
+      
+      #number_book {
+          width: 40px;
+          padding-right: 10px;
+          text-align: center;
+      }
+      
+      #place_book {
+          width: 140px;
+          padding-right: 10px;
+          text-align: right;
+      }
+      
+      .page__content--book .btn {
+          margin-top: var(--space);
+      }
       /*PAGE about us*/
       
       .aboutus_page .page__content {
-        padding-top: 80px;
-        width: 100%;
-        z-index: 1;
-        margin-bottom: var(--space);
-    }
-    
-    .aboutus_page .page__content h2 {
-        text-align: center;
-    }
-    
-    .aboutus_page .page__content ul {
-        padding-left: 50px;
-    }
-    .aboutus_page h3, .aboutus_page p{
-        margin-top: 5px;
-    }
+          padding-top: 80px;
+          width: 100%;
+          z-index: 1;
+          margin-bottom: var(--space);
+      }
+      
+      .aboutus_page .page__content h2 {
+          text-align: center;
+      }
+      
+      .aboutus_page .page__content ul {
+          padding-left: 50px;
+      }
+      
+      .aboutus_page h3,
+      .aboutus_page p {
+          margin-top: 5px;
+      }
       /*PAGE review*/
-    .review_page .page__content--slide {
-        width: 900px;
-        height: auto;
-    }
-    
-    .review_page .page__content--slide img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .review_page .content__best {
-        display: flex;
-        width: 300px;
-        margin-bottom: var(--space);
-        margin-left: var(--space);
-    }
-    .page__content--best h3{
-        text-align: center;
-        padding-bottom: var(--space)
-    }
-    .review_page .page__content--best img {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .page__content--image {
-        width: 430px;
-        height: 680px;
-        background-color: var(--infColor);
-    }
-    
-    .review_page h2 {
-        text-align: center;
-        margin-top: -20px;
-        margin-bottom: 10px;
-    }
-    
-    .review_page .page__content--image img {
-        width: 180px;
-        height: 200px;
-        margin-left: 20px;
-        margin-top: 20px;
-    }
-    
-    .review_page .page__content--review {
-        width: 760px;
-        /* margin-left: var(--space); */
-        background-color: var(--infColor);
-        height: 680px;
-        overflow-y: scroll;
-        
-    }
-    
-    .review_page .page__content--review iframe {
-        height: 680px;
-        width: 99%;
-        
-    }
-    
-    .page__content--btn {
-        min-width: 25%;
-        height: 36px;
-        margin-bottom: 20px;
-    }
-    
-    .page__content--btn>a {
-        line-height: 36px;
-    }
-    
-    .content__best-location {
-        min-width: 95px;
-    }
-    
-    .page-review--comment {
-        margin-left: 0px;
-        margin-top: var(--space);
-        margin-bottom: var(--space);
-        background-color: var(--infColor);
-        padding-left: 5px;
-    }
-    
-    .comment__items,
-    .comment__items--rely {
-        margin: 20px 0px;
-    }
-    
-    .comment__items--rely {
-        padding-left: 80px;
-    }
-    
-    .rely-comment {
-        text-align: right;
-        padding: 10px;
-    }
-    
-    .rely-comment>a {
-        color: black;
-        text-decoration: none;
-    }
-    
-    .rely-comment>a:hover {
-        color: aqua;
-        text-decoration: none;
-    }
-    
-    .comment__items--infor>b:last-child {
-        font-size: small;
-        opacity: 50%;
-    }
-    
-    .post--comment {
-        margin: 20px auto;
-        border: black solid 1px;
-    }
-    
-    .post--comment-header>h2 {
-        margin-top: 30px;
-    }
-    
-    .post--comment-row {
-        padding: 10px;
-    }
-    
-    .post--comment-row .comment--input {
-        width: 100%;
-        height: 50px;
-        margin: 0;
-    }
-    
-    .post--comment-row>textarea {
-        width: 100%;
-        height: 200px;
-    }
-    
-    #post--comment-button {
-        margin: 0px auto;
-        display: block;
-        width: 50%;
-        background-color: var(--menuColor);
-        height: 50px;
-        margin-bottom: 20px;
-        font-size: large;
-        color: white;
-    }
-    /* Page Send review */
-
-.page_content_slide_img img {
-    width: 100%;
-    height: 20%;
-}
-
-.page__content--cusreview {
-    width: 100%;
-    /* height: 300px; */
-    justify-content: space-between;
-    margin-top: var(--space);
-    margin-bottom: var(--space);
-}
-
-.page__content--cusreview-left {
-    width: 30%;
-    text-align: center;
-}
-
-.page__content--cusreview-left div:nth-of-type(1) {
-    width: 100%;
-    height: 240px;
-    border: 1px solid black;
-    margin-bottom: var(--space);
-}
-
-.page__content--cusreview-right {
-    width: 70%;
-    text-align: center;
-    padding-left: var(--space);
-    padding-right: 0;
-    margin-bottom: var(--space);
-}
-
-#cusreview_text {
-    height: 240px;
-    width: 100%;
-    margin-bottom: var(--space);
-}
-
-.content__btn--cusreview {
-    width: 100%;
-    height: 36px;
-    line-height: 36px;
-}.page__content--cusreview-right button {
-    width: 80%;
-}
-
-
-/*REVIEW TO CUSTOMER*/
-
-.content__date--cusreview {
-    text-align: right;
-}
-
-.content__date--cusreview p {
-    font-weight: bold;
-}
-
-.content--infor-cusreiew {
-    margin: 30px;
-    background-color: white;
-    border: 1px solid black;
-}.content--infor-cusreiew img {
-    width: 70px;
-    height: 70px;
-}
-
-
-        
+      
+      .review_page .page__content--slide {
+          width: 900px;
+          height: auto;
+      }
+      
+      .review_page .page__content--slide img {
+          width: 100%;
+          height: auto;
+      }
+      
+      .review_page .content__best {
+          display: flex;
+          width: 300px;
+          margin-bottom: var(--space);
+          margin-left: var(--space);
+      }
+      
+      .page__content--best h3 {
+          text-align: center;
+          padding-bottom: var(--space)
+      }
+      
+      .review_page .page__content--best img {
+          width: 100px;
+          height: 100px;
+      }
+      
+      .page__content--image {
+          width: 430px;
+          height: 680px;
+          background-color: var(--infColor);
+      }
+      
+      .review_page h2 {
+          text-align: center;
+          margin-top: -20px;
+          margin-bottom: 10px;
+      }
+      
+      .review_page .page__content--image img {
+          width: 180px;
+          height: 200px;
+          margin-left: 20px;
+          margin-top: 20px;
+      }
+      
+      .review_page .page__content--review {
+          width: 760px;
+          /* margin-left: var(--space); */
+          background-color: var(--infColor);
+          height: 680px;
+          overflow-y: scroll;
+      }
+      
+      .review_page .page__content--review iframe {
+          height: 680px;
+          width: 99%;
+      }
+      
+      .page__content--btn {
+          min-width: 25%;
+          height: 36px;
+          margin-bottom: 20px;
+      }
+      
+      .page__content--btn>a {
+          line-height: 36px;
+      }
+      
+      .content__best-location {
+          min-width: 95px;
+      }
+      
+      .page-review--comment {
+          margin-left: 0px;
+          margin-top: var(--space);
+          margin-bottom: var(--space);
+          background-color: var(--infColor);
+          padding-left: 5px;
+      }
+      
+      .comment__items,
+      .comment__items--rely {
+          margin: 20px 0px;
+      }
+      
+      .comment__items--rely {
+          padding-left: 80px;
+      }
+      
+      .rely-comment {
+          text-align: right;
+          padding: 10px;
+      }
+      
+      .rely-comment>a {
+          color: black;
+          text-decoration: none;
+      }
+      
+      .rely-comment>a:hover {
+          color: aqua;
+          text-decoration: none;
+      }
+      
+      .comment__items--infor>b:last-child {
+          font-size: small;
+          opacity: 50%;
+      }
+      
+      .post--comment {
+          margin: 20px auto;
+          border: black solid 1px;
+      }
+      
+      .post--comment-header>h2 {
+          margin-top: 30px;
+      }
+      
+      .post--comment-row {
+          padding: 10px;
+      }
+      
+      .post--comment-row .comment--input {
+          width: 100%;
+          height: 50px;
+          margin: 0;
+      }
+      
+      .post--comment-row>textarea {
+          width: 100%;
+          height: 200px;
+      }
+      
+      #post--comment-button {
+          margin: 0px auto;
+          display: block;
+          width: 50%;
+          background-color: var(--menuColor);
+          height: 50px;
+          margin-bottom: 20px;
+          font-size: large;
+          color: white;
+      }
+      /* Page Send review */
+      
+      .page_content_slide_img img {
+          width: 100%;
+          height: 20%;
+      }
+      
+      .page__content--cusreview {
+          width: 100%;
+          /* height: 300px; */
+          justify-content: space-between;
+          margin-top: var(--space);
+          margin-bottom: var(--space);
+      }
+      
+      .page__content--cusreview-left {
+          width: 30%;
+          text-align: center;
+      }
+      
+      .page__content--cusreview-left div:nth-of-type(1) {
+          width: 100%;
+          height: 240px;
+          border: 1px solid black;
+          margin-bottom: var(--space);
+      }
+      
+      .page__content--cusreview-right {
+          width: 70%;
+          text-align: center;
+          padding-left: var(--space);
+          padding-right: 0;
+          margin-bottom: var(--space);
+      }
+      
+      #cusreview_text {
+          height: 240px;
+          width: 100%;
+          margin-bottom: var(--space);
+      }
+      
+      .content__btn--cusreview {
+          width: 100%;
+          height: 36px;
+          line-height: 36px;
+      }
+      
+      .page__content--cusreview-right button {
+          width: 80%;
+      }
+      /*REVIEW TO CUSTOMER*/
+      
+      .content__date--cusreview {
+          text-align: right;
+      }
+      
+      .content__date--cusreview p {
+          font-weight: bold;
+      }
+      
+      .content--infor-cusreiew {
+          margin: 30px;
+          background-color: white;
+          border: 1px solid black;
+      }
+      
+      .content--infor-cusreiew img {
+          width: 70px;
+          height: 70px;
+      }
       /*PAGE detail*/
-      .detail_page .page__content{
+      
+      .detail_page .page__content {
           padding-top: 0px;
       }
+      
       .detail_page .page__banner {
-        /* padding-top: 50px; */
-        width: 100%;
-        height: auto;
-        margin-bottom: var(--space);
-    }
-    
-    .detail_page .page__banner img {
-        width: 100%;
-    }
-    
-    
-    .part--right {  
-        margin-left: var(--space);
-        width: 400px;
-    }
-    
-    .part--left {
-        width: 800px;
-    }
-    
-    .page__content--video video {
-        width: 100%;
-        display: block;
-    }
-    .detail_page .page__content--book {
-        margin: 0 auto;
-        min-width: 300px;
-        padding-bottom: var(--space);
-        margin-bottom: var(--space);
-        color: white;
-        
-    }
-    .page__content--book {
-        border: 1px solid rgb(50, 99, 235);
-        width: 397px;
-        height: auto;
-        background-color: var(--infColor);
-    }
-    
-    .content__book--price {
-        background-color: #BA81CE;
-        font-size: xx-large;
-        text-align: center;
-        line-height: 110px;
-        color: white;
-        width: 400px;
-        height: 100px;
-        margin-bottom: var(--space);
-    }
-    
-    .detail_page input,
-    .detail_page textarea {
-        margin-left: 20px;
-        margin-bottom: 20px;
-        border: 1px solid black;
-        border-radius: 20px;
-        padding-left: 10px;
-    }
-    
-    .content__book--inf input {
-        height: 45px;
-        width: 135;
-        border: 1px solid black;
-        border-radius: 20px;
-    }
-    
-    .content__book--infphone input {
-        height: 45px;
-        width: 310px;
-    }
-    
-    .content__book--send {
-        background-color: #BA81CE;
-        text-align: center;
-        line-height: 45px;
-        width: 310px;
-        height: 45px;
-        font-size: x-large;
-        color: white;
-        margin: 0 auto;
-        border-radius: 20px;
-        margin-bottom: var(--space);
-    }
-    
-    .page__content--discription {
-        background-color: var(--infColor);
-        height: 900px;
-    }
-    /* thêm vô */
-    .page__content--section .part--left h1{
-        text-align: center;
-        margin-top:20px;
-        margin-bottom: 20px;
-    }
-    .page__content--section .part--left ul{
-        padding-left: 50px;
-    }
-    .detail_page .page__content--discription {
-        overflow: auto;
-    }
-    /*  */
-    .page__content--photos img {
-        /* height: 250px; */
-        /* width: 400px; */
-        width: 100%;
-        margin-bottom: var(--space);
-        display: block;
-    }
-    
-    
-    p {
-        margin-left: calc(var(--space)/3);
-        margin-right: calc(var(--space)/3);
-    }
-    
-    .content__best {
-        display: flex;
-        width: 300px;
-        margin-bottom: 60px;
-    }
-    /*  */
-    .detail_page  h3{
-        text-align: center;
-        margin:  auto;
-        margin-bottom: var(--space);
-        
-    }
-    /*  */
-    .page__content--best img {
-        width: 100px;
-        height: 100px;
-    }
-    /*  */
-    .page__content--best .content__best .tour--item--content--right{
-        margin-left: 30px;
-        margin-top: 10px;
-    }
-    .page__content--best .content__best .title_province:first-child{
-        margin-left: 0px;
-        margin-top: 5px;
-    } 
-    .page__content--best .content__best .title_province{
-        margin-left: 60px;
-        margin-top: 5px;
-    } 
-    
-    .detail_page .part--flewbox .page__content--photos{
-        order: 1;
-    }
-    .detail_page .part--flewbox .page__content--best{
-        order: 2;
-    }
-    .detail_page .part--flewbox .btn-booknowdetail{
-        order: 3;
-    }
-    .page__content--best .content__best h4 {
-         margin-left: 30px; 
-    }
-    .page__content--otherpack img {
-        height: 500px;
-    }
-
-    .container--card{
-        position: relative;
-    }
-    .card{
-        position: absolute;
-        transform-style: preserve-3d;
-        transition: all 1s ease;
-    }
-    .side{
-        position:relative;
-        backface-visibility: hidden;
-        overflow: hidden;
-    }
-    .sideback{
-        position: relative;
-        backface-visibility: hidden;
-        transform: rotateY(180deg);
-        margin-top: -500px;
-    }
-   .card:hover{
-       transform: rotateY(180deg);
-   }
-   /* .flipCard{
+          /* padding-top: 50px; */
+          width: 100%;
+          height: auto;
+          margin-bottom: var(--space);
+      }
+      
+      .detail_page .page__banner img {
+          width: 100%;
+      }
+      
+      .part--right {
+          margin-left: var(--space);
+          width: 400px;
+      }
+      
+      .part--left {
+          width: 800px;
+      }
+      
+      .page__content--video video {
+          width: 100%;
+          display: block;
+      }
+      
+      .detail_page .page__content--book {
+          margin: 0 auto;
+          min-width: 300px;
+          padding-bottom: var(--space);
+          margin-bottom: var(--space);
+          color: white;
+      }
+      
+      .page__content--book {
+          border: 1px solid rgb(50, 99, 235);
+          width: 397px;
+          height: auto;
+          background-color: var(--infColor);
+      }
+      
+      .content__book--price {
+          background-color: #BA81CE;
+          font-size: xx-large;
+          text-align: center;
+          line-height: 110px;
+          color: white;
+          width: 400px;
+          height: 100px;
+          margin-bottom: var(--space);
+      }
+      
+      .detail_page input,
+      .detail_page textarea {
+          margin-left: 20px;
+          margin-bottom: 20px;
+          border: 1px solid black;
+          border-radius: 20px;
+          padding-left: 10px;
+      }
+      
+      .content__book--inf input {
+          height: 45px;
+          width: 135;
+          border: 1px solid black;
+          border-radius: 20px;
+      }
+      
+      .content__book--infphone input {
+          height: 45px;
+          width: 310px;
+      }
+      
+      .content__book--send {
+          background-color: #BA81CE;
+          text-align: center;
+          line-height: 45px;
+          width: 310px;
+          height: 45px;
+          font-size: x-large;
+          color: white;
+          margin: 0 auto;
+          border-radius: 20px;
+          margin-bottom: var(--space);
+      }
+      
+      .page__content--discription {
+          background-color: var(--infColor);
+          height: 900px;
+      }
+      /* thêm vô */
+      
+      .page__content--section .part--left h1 {
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 20px;
+      }
+      
+      .page__content--section .part--left ul {
+          padding-left: 50px;
+      }
+      
+      .detail_page .page__content--discription {
+          overflow: auto;
+      }
+      /*  */
+      
+      .page__content--photos img {
+          /* height: 250px; */
+          /* width: 400px; */
+          width: 100%;
+          margin-bottom: var(--space);
+          display: block;
+      }
+      
+      p {
+          margin-left: calc(var(--space)/3);
+          margin-right: calc(var(--space)/3);
+      }
+      
+      .content__best {
+          display: flex;
+          width: 300px;
+          margin-bottom: 60px;
+      }
+      /*  */
+      
+      .detail_page h3 {
+          text-align: center;
+          margin: auto;
+          margin-bottom: var(--space);
+      }
+      /*  */
+      
+      .page__content--best img {
+          width: 100px;
+          height: 100px;
+      }
+      /*  */
+      
+      .page__content--best .content__best .tour--item--content--right {
+          margin-left: 30px;
+          margin-top: 10px;
+      }
+      
+      .page__content--best .content__best .title_province:first-child {
+          margin-left: 0px;
+          margin-top: 5px;
+      }
+      
+      .page__content--best .content__best .title_province {
+          margin-left: 60px;
+          margin-top: 5px;
+      }
+      
+      .detail_page .part--flewbox .page__content--photos {
+          order: 1;
+      }
+      
+      .detail_page .part--flewbox .page__content--best {
+          order: 2;
+      }
+      
+      .detail_page .part--flewbox .btn-booknowdetail {
+          order: 3;
+      }
+      
+      .page__content--best .content__best h4 {
+          margin-left: 30px;
+      }
+      
+      .page__content--otherpack img {
+          height: 500px;
+      }
+      
+      .container--card {
+          position: relative;
+      }
+      
+      .card {
+          position: absolute;
+          transform-style: preserve-3d;
+          transition: all 1s ease;
+      }
+      
+      .side {
+          position: relative;
+          backface-visibility: hidden;
+          overflow: hidden;
+      }
+      
+      .sideback {
+          position: relative;
+          backface-visibility: hidden;
+          transform: rotateY(180deg);
+          margin-top: -500px;
+      }
+      
+      .card:hover {
+          transform: rotateY(180deg);
+      }
+      /* .flipCard{
        transform: rotateY(180deg);
    } */
-    .page__content--related h3 {
-        text-align: center;
-    }
-    /*PAGE security*/
-    
-    .security_page .page__content {
-        padding-top: 100px;
-        width: 100%;
-        height: auto;
-        z-index: 1;
-    }
-    
-    .security_page .page__content--content {
-        background-color: var(--infColor);
-        width: 100%;
-        /* height: 990px; */
-        margin-bottom: var(--space);
-    }
-    
-    .security_page .page__content--content {
-        padding-left: 10px;
-    }
-    
-    .security_page .page__content--contentspan {
-        font-weight: bold;
-        font-size: 15px;
-    }
-    
-    .security_page .page__content--content p {
-        font-size: 14px;
-    }
-    
-    .security_page .page__content--content p:first-child {
-        padding-top: 5px;
-    }
-
+      
+      .page__content--related h3 {
+          text-align: center;
+      }
+      /*PAGE security*/
+      
+      .security_page .page__content {
+          padding-top: 100px;
+          width: 100%;
+          height: auto;
+          z-index: 1;
+      }
+      
+      .security_page .page__content--content {
+          background-color: var(--infColor);
+          width: 100%;
+          /* height: 990px; */
+          margin-bottom: var(--space);
+      }
+      
+      .security_page .page__content--content {
+          padding-left: 10px;
+      }
+      
+      .security_page .page__content--contentspan {
+          font-weight: bold;
+          font-size: 15px;
+      }
+      
+      .security_page .page__content--content p {
+          font-size: 14px;
+      }
+      
+      .security_page .page__content--content p:first-child {
+          padding-top: 5px;
+      }
       /*PAGE provision*/
+      
       .provision_page .page__content {
-        padding-top: 80px;
-        width: 100%;
-        height: auto;
-        z-index: 1;
-        margin-bottom: var(--space);
-        padding-left: var(--space);
-        padding-right: var(--space);
-    }
-    
-    .provision_page .page__content ul {
-        padding-left: var(--space);
-    }
-    .provision_page h5{
-        color: red;
-        text-align: center;
-        margin-top: var(--space);
-    }
+          padding-top: 80px;
+          width: 100%;
+          height: auto;
+          z-index: 1;
+          margin-bottom: var(--space);
+          padding-left: var(--space);
+          padding-right: var(--space);
+      }
+      
+      .provision_page .page__content ul {
+          padding-left: var(--space);
+      }
+      
+      .provision_page h5 {
+          color: red;
+          text-align: center;
+          margin-top: var(--space);
+      }
       /*PAGE register and signin*/
       
       .register_page .page__content,
@@ -806,7 +839,7 @@
       
       .register_page h3,
       .signin_page h3 {
-         text-align: center;
+          text-align: center;
       }
       
       #email,
@@ -892,12 +925,14 @@
           font-size: medium;
       }
       
-      ul.other_method{
+      ul.other_method {
           margin-bottom: var(--space);
       }
-      #gg p, #fb p{
+      
+      #gg p,
+      #fb p {
           margin-left: 45px;
-          margin-top:-35px;
+          margin-top: -35px;
       }
       
       .register_page .form__option--re a,
@@ -909,23 +944,23 @@
       .verify a {
           color: white;
       }
-
-      ul.reason{
+      
+      ul.reason {
           margin-left: -35px;
       }
-
+      
       .form__regis p {
-        margin-left: 5%;
-        font-size: small;
-        margin-bottom: -10px;
-        color: red;
-    }
-
-    .form__regis p#notaccept {
-        margin-bottom: 15px;
-        margin-top: -15px;
-    }
-
+          margin-left: 5%;
+          font-size: small;
+          margin-bottom: -10px;
+          color: red;
+      }
+      
+      .form__regis p#notaccept {
+          margin-bottom: 15px;
+          margin-top: -15px;
+      }
+      
       .signin_page p#notemail,
       .signin_page p#notphone,
       .signin_page p#notpass {
@@ -960,65 +995,58 @@
           .detail_page .tour--item {
               margin-bottom: var(--space);
           }
-           /*send review*/
-    .page_content_slide_img img {
-        width: 100%;
-        height: 20%;
-    }
-    
-    .page__content--cusreview {
-        width: 100%;
-        /* height: 300px; */
-        justify-content: space-between;
-        margin-top: var(--space);
-        margin-bottom: var(--space);
-    }
-    
-    .page__content--cusreview-left {
-        width: 30%;
-        text-align: center;
-    }
-    
-    .page__content--cusreview-left div:nth-of-type(1) {
-        width: 100%;
-        margin-bottom: var(--space);
-    }
-    
-    .page__content--cusreview-right {
-        width: 70%;
-        text-align: center;
-        padding-left: var(--space);
-        padding-right: 0;
-        margin-bottom: var(--space);
-    }
-    
-    #cusreview_text {
-        height: 240px;
-        width: 99%;
-        margin-bottom: var(--space);
-    }
-    
-    .content__btn--cusreview {
-        width: 100%;
-        height: 36px;
-        line-height: 36px;
-    }
-             /* Responsive thứ tự */
-        .part--flewbox{
-            display: flex;
-            flex-direction: column;
-        }
-        .detail_page .part--flewbox .page__content--photos{
-            order: 1;
-        }
-        .detail_page .part--flewbox .page__content--best{
-            order: 3;
-        }
-        .detail_page .part--flewbox .btn-booknowdetail{
-            order: 2;
-            margin-bottom: 40px;
-        }
-        
+          /*send review*/
+          .page_content_slide_img img {
+              width: 100%;
+              height: 20%;
+          }
+          .page__content--cusreview {
+              width: 100%;
+              /* height: 300px; */
+              justify-content: space-between;
+              margin-top: var(--space);
+              margin-bottom: var(--space);
+          }
+          .page__content--cusreview-left {
+              width: 30%;
+              text-align: center;
+          }
+          .page__content--cusreview-left div:nth-of-type(1) {
+              width: 100%;
+              margin-bottom: var(--space);
+          }
+          .page__content--cusreview-right {
+              width: 70%;
+              text-align: center;
+              padding-left: var(--space);
+              padding-right: 0;
+              margin-bottom: var(--space);
+          }
+          #cusreview_text {
+              height: 240px;
+              width: 99%;
+              margin-bottom: var(--space);
+          }
+          .content__btn--cusreview {
+              width: 100%;
+              height: 36px;
+              line-height: 36px;
+          }
+          /* Responsive thứ tự */
+          .part--flewbox {
+              display: flex;
+              flex-direction: column;
+          }
+          .detail_page .part--flewbox .page__content--photos {
+              order: 1;
+          }
+          .detail_page .part--flewbox .page__content--best {
+              order: 3;
+          }
+          .detail_page .part--flewbox .btn-booknowdetail {
+              order: 2;
+              margin-bottom: 40px;
+          }
       }
       /*Ipad dọc(768 x 1024)*/
       
@@ -1033,55 +1061,57 @@
               margin-bottom: var(--space);
           }
           /*review_page*/
-        .page__content--slide {
-        margin-bottom: var(--space);
-        }
-        .page__content--image {
-        margin-bottom: var(--space);
-        }
-        .page__content--btn {
-        min-width: 40%;
-
-        }.comment__items, .comment__items--rely {
-        font-size: 20px;
-        }
-        .commnt__items--infor>p:nth-of-type(1) {
-        text-align: center;
-        }
-        .page-review--comment img {
-        width: 70px;
-        height: 70px;
-        } /*send review page*/
-        .page__content--cusreview {
-          margin-bottom: var(--space);
-          flex-direction: column;
-          text-align: center;
-        }.page__content--cusreview-left{
-          margin-bottom: var(--space);
-
-        }#cusreview_text{
-          width: 99%;
-   
-        }.page__content--cusreview-left {
-          width: 99%;
-          text-align: center;
-
-        }.page__content--cusreview-left button, .page__content--cusreview-right button {
-          width: 80%;
-        }
-        .page__content--cusreview-right {
-          width: 100%;
-          padding-right: 0;
-          padding-left: 0px;
-          margin-bottom: var(--space);
-        }
-
-
+          .page__content--slide {
+              margin-bottom: var(--space);
+          }
+          .page__content--image {
+              margin-bottom: var(--space);
+          }
+          .page__content--btn {
+              min-width: 40%;
+          }
+          .comment__items,
+          .comment__items--rely {
+              font-size: 20px;
+          }
+          .commnt__items--infor>p:nth-of-type(1) {
+              text-align: center;
+          }
+          .page-review--comment img {
+              width: 70px;
+              height: 70px;
+          }
+          /*send review page*/
+          .page__content--cusreview {
+              margin-bottom: var(--space);
+              flex-direction: column;
+              text-align: center;
+          }
+          .page__content--cusreview-left {
+              margin-bottom: var(--space);
+          }
+          #cusreview_text {
+              width: 99%;
+          }
+          .page__content--cusreview-left {
+              width: 99%;
+              text-align: center;
+          }
+          .page__content--cusreview-left button,
+          .page__content--cusreview-right button {
+              width: 80%;
+          }
+          .page__content--cusreview-right {
+              width: 100%;
+              padding-right: 0;
+              padding-left: 0px;
+              margin-bottom: var(--space);
+          }
           /* tour_page */
-        .tour_page.tour--item{
-            width: 300px;
-            padding: 5px;
-        }
+          .tour_page.tour--item {
+              width: 300px;
+              padding: 5px;
+          }
           /*detail_page*/
           .page__banner,
           .page__content--video,
@@ -1090,125 +1120,119 @@
           .detail_page.tour--item {
               margin-bottom: var(--space);
           }
-          .detail_page.page__banner img{
+          .detail_page.page__banner img {
               padding-top: 0px;
           }
-            /* Responsive lại content chi tiết  */
-        .detail_page .page__content--section .page__content--discription p {
-            margin-left: 8px;
-        }
-        .detail_page .page__content--section .page__content--discription{
-            /* margin-left: 10px; */
-            width: 768px;
-        }
-        .detail_page .page__content--section .part--left ul{
-            padding-left: 30px;
-        }
+          /* Responsive lại content chi tiết  */
+          .detail_page .page__content--section .page__content--discription p {
+              margin-left: 8px;
+          }
+          .detail_page .page__content--section .page__content--discription {
+              /* margin-left: 10px; */
+              width: 768px;
+          }
+          .detail_page .page__content--section .part--left ul {
+              padding-left: 30px;
+          }
           /*Responsive lại best package  */
-          .detail_page .page__content--best{
-            margin-left: 0;
-        }
-        .detail_page .page__content--besth3{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 0px;
-        }
-        .detail_page .page__content--besth3 h3{
-            margin-left: 0px;
-        }
-        .detail_page .btn-booknow{
-            margin-top: 20px;
-        }
-        .detail_page .page__content--related h3{
-            margin-top: 10px;
-        }
+          .detail_page .page__content--best {
+              margin-left: 0;
+          }
+          .detail_page .page__content--besth3 {
+              margin-top: 10px;
+              margin-bottom: 10px;
+              margin-left: 0px;
+          }
+          .detail_page .page__content--besth3 h3 {
+              margin-left: 0px;
+          }
+          .detail_page .btn-booknow {
+              margin-top: 20px;
+          }
+          .detail_page .page__content--related h3 {
+              margin-top: 10px;
+          }
           /* Responsive thứ tự part--right */
-        .part--flewbox{
-            display: flex;
-            flex-direction: column;
-        }
-        .detail_page .part--flewbox .page__content--photos{
-            order: 1;
-        }
-        .detail_page .part--flewbox .page__content--best{
-            order: 3;
-        }
-        .detail_page .part--flewbox .btn-booknowdetail{
-            order: 2;
-        }
-        .detail_page .page__content--section .page__content--map iframe{
-            width: 100%;
-            height: 450px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
+          .part--flewbox {
+              display: flex;
+              flex-direction: column;
+          }
+          .detail_page .part--flewbox .page__content--photos {
+              order: 1;
+          }
+          .detail_page .part--flewbox .page__content--best {
+              order: 3;
+          }
+          .detail_page .part--flewbox .btn-booknowdetail {
+              order: 2;
+          }
+          .detail_page .page__content--section .page__content--map iframe {
+              width: 100%;
+              height: 450px;
+              margin-left: auto;
+              margin-right: auto;
+              display: block;
+          }
           /* Căn chỉnh nằm giữa */
-        .detail_page .part--flewbox{
-            margin-left: 0;
-        }
-        .detail_page .part--flewbox .page__content--photos img{
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-        }
-        .detail_page .page__content--best .content__image--best{
-            margin-left: 25px;
-        }
+          .detail_page .part--flewbox {
+              margin-left: 0;
+          }
+          .detail_page .part--flewbox .page__content--photos img {
+              margin-left: auto;
+              margin-right: auto;
+              width: 100%;
+          }
+          .detail_page .page__content--best .content__image--best {
+              margin-left: 25px;
+          }
           /* Không hiển thị hình ảnh other package */
           .detail_page .page__content--otherpack {
-            display: none;
-        }
-        /* Responsive related tour */
-        .detail_page .tour--item {
-            width: 340px ;
-        }
-
-
-           /*aboutus_page*/
-        .aboutus_page .page__content{
-            width: 100%;
-            
-        }
-        .aboutus_page h3, .aboutus_page p, .aboutus_page ul{
-            margin: 5px var(--space);
-        }
-
+              display: none;
+          }
+          /* Responsive related tour */
+          .detail_page .tour--item {
+              width: 340px;
+          }
+          /*aboutus_page*/
+          .aboutus_page .page__content {
+              width: 100%;
+          }
+          .aboutus_page h3,
+          .aboutus_page p,
+          .aboutus_page ul {
+              margin: 5px var(--space);
+          }
           /*security_page*/
-        .security_page .page__content{
-            width: 100%;
-        }
-
-        .security_page h5, .security_page p{
-            margin: 5px var(--space);
-        }
+          .security_page .page__content {
+              width: 100%;
+          }
+          .security_page h5,
+          .security_page p {
+              margin: 5px var(--space);
+          }
           /*provision*/
-          .provision_page .page__content{
-            width: 100%;
-            padding-left: 0;
-            padding-right: 0;
-            padding-top: 60px;
-        }
-
-        .provision_page h4, .provision_page li{
-            margin-left: var(--space);
-        }
-
-        .provision_page ul li{
-            margin-left: 0;
-        }
-
+          .provision_page .page__content {
+              width: 100%;
+              padding-left: 0;
+              padding-right: 0;
+              padding-top: 60px;
+          }
+          .provision_page h4,
+          .provision_page li {
+              margin-left: var(--space);
+          }
+          .provision_page ul li {
+              margin-left: 0;
+          }
           /*register_page & signin_page*/
           .form__option--re {
               width: 70%;
               margin-bottom: 20px;
           }
-
           .form__option--si {
               width: 70%;
               margin-bottom: 113px;
           }
-    
           .register_page .form__input,
           .signin_page .form__input,
           .register_page .form__label,
@@ -1225,33 +1249,33 @@
           .accept input {
               margin-left: var(--space);
           }
-          
           .register_page .form__button,
           .signin_page .form__button {
               font-size: large;
           }
-         
       }
+      
       @media screen and (max-width: 404px) {
-        /*page review*/
-        .review_page .page__content--image img {
-            width: 180px;
-            height: 200px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }.comment__items,
-        .comment__items--rely {
-            font-size: 15px;
-        }
-        .comment__items--infor>p:nth-of-type(1) {
-            text-align: center;
-        }
-        .page-review--comment img {
-            width: 50px;
-            height: 50px;
-        }
-    }    
+          /*page review*/
+          .review_page .page__content--image img {
+              width: 180px;
+              height: 200px;
+              margin-left: auto;
+              margin-right: auto;
+              display: block;
+          }
+          .comment__items,
+          .comment__items--rely {
+              font-size: 15px;
+          }
+          .comment__items--infor>p:nth-of-type(1) {
+              text-align: center;
+          }
+          .page-review--comment img {
+              width: 50px;
+              height: 50px;
+          }
+      }
       /*Điện thoại bản nhỏ 320px*/
       
       @media screen and (max-width: 320px) {
@@ -1266,77 +1290,78 @@
           }
           /*review_page*/
           .page__content--slide {
-           margin-bottom: var(--space);
+              margin-bottom: var(--space);
           }
           .page__content--image {
-            margin-bottom: var(--space);
+              margin-bottom: var(--space);
           }
           .review_page .page__content--image img {
-            width: 180px;
-            height: 200px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
+              width: 180px;
+              height: 200px;
+              margin-left: auto;
+              margin-right: auto;
+              display: block;
           }
           .review_page .page__content--review {
-           width: 100%;
-           /* margin-left: var(--space); */
-           background-color: var(--infColor);
-           height: auto;
+              width: 100%;
+              /* margin-left: var(--space); */
+              background-color: var(--infColor);
+              height: auto;
           }
           .review_page .page__content--review iframe {
-            height: 100%;
-            width: 100%;
-            overflow: none;
+              height: 100%;
+              width: 100%;
+              overflow: none;
           }
           .page__content--btn {
-            min-width: 70%;
-           margin: 10px auto;
+              min-width: 70%;
+              margin: 10px auto;
           }
           .comment__items,
           .comment__items--rely {
-            font-size: 12px;
+              font-size: 12px;
           }
           .comment__items--infor>p:nth-of-type(1) {
-            text-align: center;
+              text-align: center;
           }
           .page-review--comment img {
-            width: 50px;
-            height: 50px;
+              width: 50px;
+              height: 50px;
           }
-         /*send review page*/
-         .page__content--cusreview {
-           margin-bottom: var(--space);
-           flex-direction: column;
-           text-align: center;
-         }.page__content--cusreview-left{
-           margin-bottom: var(--space);
-
-         }#cusreview_text{
-           width: 99%;
-    
-         }.page__content--cusreview-left {
-           width: 99%;
-           text-align: center;
-
-         }.page__content--cusreview-left button, .page__content--cusreview-right button {
-           width: 80%;
-         }
-         .page__content--cusreview-right {
-           width: 100%;
-           padding-right: 0;
-           padding-left: 0px;
-           margin-bottom: var(--space);
-         }
-
-
-       /*review to page*/
-       .content--infor-cusreiew>div:nth-of-type(2){
-        font-size: 12px;
-        }.content--infor-cusreiew>div:nth-of-type(1)>img{
-        width: 50px;
-        height: 50px;
-        }
+          /*send review page*/
+          .page__content--cusreview {
+              margin-bottom: var(--space);
+              flex-direction: column;
+              text-align: center;
+          }
+          .page__content--cusreview-left {
+              margin-bottom: var(--space);
+          }
+          #cusreview_text {
+              width: 99%;
+          }
+          .page__content--cusreview-left {
+              width: 99%;
+              text-align: center;
+          }
+          .page__content--cusreview-left button,
+          .page__content--cusreview-right button {
+              width: 80%;
+          }
+          .page__content--cusreview-right {
+              width: 100%;
+              padding-right: 0;
+              padding-left: 0px;
+              margin-bottom: var(--space);
+          }
+          /*review to page*/
+          .content--infor-cusreiew>div:nth-of-type(2) {
+              font-size: 12px;
+          }
+          .content--infor-cusreiew>div:nth-of-type(1)>img {
+              width: 50px;
+              height: 50px;
+          }
           /*detail_page*/
           .page__content,
           .page__content--video,
@@ -1345,140 +1370,134 @@
           .tour--item {
               margin-bottom: var(--space);
           }
-             /* Responsive lại form send now */
-        
-        .detail_page #hidden{
-            display: none;
-        }
-        .detail_page .page__content--book{
-            /* width: 250px; */
-            width: 300px;
-        }
-        .detail_page .page__content--book .content__book--price{
-            /* width: 250px; */
-            width: 300px;
-        }
-        .detail_page .page__content--book  input{
-            /* width: 200px; */
-            width: 250px;
-        }
-        .detail_page textarea{
-            /* width: 15em; */
-            width: 19em;;
-        }
-        .detail_page .page__content--book .content__book--send{
-            /* width: 155px; */
-            width: 200px;
-        }
-        .detail_page .page__content--section .page__content--map{
-            padding-top: 0px;
-        }
-
-           /* Responsive lại content chi tiết  */
-        .detail_page .page__content--section .page__content--discription p {
-            margin-left: 8px;
-        }
-        .detail_page .page__content--section .page__content--discription{
-            height: auto;
-            margin-left: 0;
-        }
-        .detail_page .page__content--section .part--left ul{
-            padding-left: 30px;
-        }
-
+          /* Responsive lại form send now */
+          .detail_page #hidden {
+              display: none;
+          }
+          .detail_page .page__content--book {
+              /* width: 250px; */
+              width: 300px;
+          }
+          .detail_page .page__content--book .content__book--price {
+              /* width: 250px; */
+              width: 300px;
+          }
+          .detail_page .page__content--book input {
+              /* width: 200px; */
+              width: 250px;
+          }
+          .detail_page textarea {
+              /* width: 15em; */
+              width: 19em;
+              ;
+          }
+          .detail_page .page__content--book .content__book--send {
+              /* width: 155px; */
+              width: 200px;
+          }
+          .detail_page .page__content--section .page__content--map {
+              padding-top: 0px;
+          }
+          /* Responsive lại content chi tiết  */
+          .detail_page .page__content--section .page__content--discription p {
+              margin-left: 8px;
+          }
+          .detail_page .page__content--section .page__content--discription {
+              height: auto;
+              margin-left: 0;
+          }
+          .detail_page .page__content--section .part--left ul {
+              padding-left: 30px;
+          }
           /*Responsive lại best package  */
-        .detail_page .page__content--best{
-            margin-left: 0;
-        }
-        .detail_page .page__content--besth3{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 0px;
-        }
-        .detail_page .page__content--besth3 h3{
-            margin-left: 0px;
-        }
-        .detail_page .btn-booknow{
-            margin-top: 20px;
-        }
-        .detail_page .page__content--related h3{
-            margin-top: 40px;
-        }
+          .detail_page .page__content--best {
+              margin-left: 0;
+          }
+          .detail_page .page__content--besth3 {
+              margin-top: 10px;
+              margin-bottom: 10px;
+              margin-left: 0px;
+          }
+          .detail_page .page__content--besth3 h3 {
+              margin-left: 0px;
+          }
+          .detail_page .btn-booknow {
+              margin-top: 20px;
+          }
+          .detail_page .page__content--related h3 {
+              margin-top: 40px;
+          }
           /* Responsive thứ tự part--right */
-        .part--flewbox{
-            display: flex;
-            flex-direction: column;
-        }
-        .detail_page .part--flewbox .page__content--photos{
-            order: 1;
-        }
-        .detail_page .part--flewbox .page__content--best{
-            order: 3;
-        }
-        .detail_page .part--flewbox .btn-booknowdetail{
-            order: 2;
-        }
+          .part--flewbox {
+              display: flex;
+              flex-direction: column;
+          }
+          .detail_page .part--flewbox .page__content--photos {
+              order: 1;
+          }
+          .detail_page .part--flewbox .page__content--best {
+              order: 3;
+          }
+          .detail_page .part--flewbox .btn-booknowdetail {
+              order: 2;
+          }
           /* Căn chỉnh nằm giữa */
-        .detail_page .part--flewbox{
-            margin-left: 0;
-        }
-        .detail_page .part--flewbox .page__content--photos img{
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%;
-        }
-        .detail_page .page__content--best .content__image--best{
-            margin-left: 25px;
-        }
+          .detail_page .part--flewbox {
+              margin-left: 0;
+          }
+          .detail_page .part--flewbox .page__content--photos img {
+              margin-left: auto;
+              margin-right: auto;
+              width: 90%;
+          }
+          .detail_page .page__content--best .content__image--best {
+              margin-left: 25px;
+          }
           /* Không hiển thị hình ảnh other package */
-        .detail_page .page__content--otherpack {
-            display: none;
-        }
-        /* Responisve related tour */
-        .detail_page .tour--item{
-            width: 300px;
-        }
-
+          .detail_page .page__content--otherpack {
+              display: none;
+          }
+          /* Responisve related tour */
+          .detail_page .tour--item {
+              width: 300px;
+          }
           /*aboutus*/
-        .aboutus_page .page__content{
-            width: 100%;
-            font-size: medium;
-            padding-top: 80px;
-        }
-        .aboutus_page h3, .aboutus_page p{
-            margin: 0 20px;
-        }
-        .aboutus_page ul{
-            margin: 0;
-        }
-
+          .aboutus_page .page__content {
+              width: 100%;
+              font-size: medium;
+              padding-top: 80px;
+          }
+          .aboutus_page h3,
+          .aboutus_page p {
+              margin: 0 20px;
+          }
+          .aboutus_page ul {
+              margin: 0;
+          }
           /*security_page*/
-        .security_page .page__content{
-            width: 100%;
-            font-size: medium;
-            padding-top: 80px;
-        }
-
-        .security_page h5, .security_page p{
-            margin: 5px var(--space);
-        }
-        
+          .security_page .page__content {
+              width: 100%;
+              font-size: medium;
+              padding-top: 80px;
+          }
+          .security_page h5,
+          .security_page p {
+              margin: 5px var(--space);
+          }
           /*provision_page*/
-        .provision_page .page__content{
-            width: 100%;
-            padding-top: 80px;
-            font-size: medium;
-        }
-
-        .provision_page h4, .provision_page li{
-            margin-left: var(--space);
-            padding-top: 5px;
-        }
-
-        .provision_page .page__li li{
-            margin-left: -25px;
-        }
-
+          .provision_page .page__content {
+              width: 100%;
+              padding-top: 80px;
+              font-size: medium;
+          }
+          .provision_page h4,
+          .provision_page li {
+              margin-left: var(--space);
+              padding-top: 5px;
+          }
+          .provision_page .page__li li {
+              margin-left: -25px;
+          }
           /*register_page & signin_page*/
           .register_page .page__content,
           .signin_page .page__content {
@@ -1492,13 +1511,11 @@
               width: 100%;
               border: none;
           }
-          
           .register_page h3,
           .signin_page h3 {
               font-size: large;
               text-align: center;
           }
-
           .register_page .form__input,
           .signin_page .form__input,
           .register_page .form__label,
@@ -1508,41 +1525,34 @@
               margin-top: 3%;
               margin-left: var(--space);
           }
-
           .register_page .form__input,
           .signin_page .form__input {
               border: 1px solid black;
           }
-
           .accept input {
               margin-left: var(--space);
           }
-
           .register_page .form__button,
           .signin_page .form__button {
               font-size: large;
               width: 30%;
               margin-left: 35%;
           }
-          
-          ul.other_method{
-            padding-bottom: 10px;
-        }
-
-          #gg p, #fb p{
-            font-size: medium;
-        }
-
-        ul.reason{
-            font-size: small;
-            margin-left: 3px
-        }
-
+          ul.other_method {
+              padding-bottom: 10px;
+          }
+          #gg p,
+          #fb p {
+              font-size: medium;
+          }
+          ul.reason {
+              font-size: small;
+              margin-left: 3px
+          }
           .form__regis p {
               margin-left: var(--space);
           }
-
-        .signin_page p#notemail,
+          .signin_page p#notemail,
           .signin_page p#notphone,
           .signin_page p#notpass {
               margin-left: var(--space);
