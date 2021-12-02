@@ -621,15 +621,25 @@
           margin-bottom: var(--space);
       }
       
-      .detail_page input,
-      .detail_page textarea {
+      .detail_page .page__content--book .page__content--bookbody input{
           margin-left: 20px;
           margin-bottom: 20px;
           border: 1px solid black;
           border-radius: 20px;
           padding-left: 10px;
       }
-      
+      .detail_page .page__content--book .page__content--bookbody textarea{
+        margin-left: 20px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        border-radius: 20px;
+        padding-left: 10px;
+        width: 26em;
+    }
+      .detail_page .page__content--book .page__content--bookbody .content__book--inf input:last-child{
+          margin-left: 10px;
+      }
+
       .content__book--inf input {
           height: 45px;
           width: 135;
@@ -639,7 +649,7 @@
       
       .content__book--infphone input {
           height: 45px;
-          width: 310px;
+          width: 350px;
       }
       
       .content__book--send {
@@ -1386,15 +1396,16 @@
               /* width: 200px; */
               width: 250px;
           }
-          .detail_page textarea {
-              /* width: 15em; */
-              width: 19em;
-              ;
+          .detail_page .page__content--book .page__content--bookbody textarea {
+              width: 18em;
           }
           .detail_page .page__content--book .content__book--send {
               /* width: 155px; */
               width: 200px;
           }
+          .detail_page .page__content--book .page__content--bookbody .content__book--inf input:last-child{
+            margin-left: 20px;
+        }
           .detail_page .page__content--section .page__content--map {
               padding-top: 0px;
           }
