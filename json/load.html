@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .item {
+            width: 250px;
+            background-color: rgb(228, 137, 53);
+            margin: 5px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+    <script>
+        // function loadXML() {
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open('GET', "../data/products.xml", false);
+        //     xhr.onreadystatechange = function() {
+        //         if (xhr.readyState == 4 && xhr.status == 200) {
+        //             updatePageContent(this)
+        //         } else {
+        //             alert("Khong lay duoc du lieu")
+        //         }
+        //     }
+        //     xhr.send();
+        // }
+
+        // function updatePageContent(xhr) {
+        //     let html = "";
+        //     var xmlDoc = xhr.responseXML;
+        //     let products = xmlDoc.getElementsByTagName("product");
+        //     for (let p of products) {
+        //         html += '<div class="item">' +
+        //             p.getElementsByTagName("id")[0].childNodes[0].nodeValue + '<br>' +
+        //             p.getElementsByTagName("name")[0].childNodes[0].nodeValue + '<br>' +
+        //             p.getElementsByTagName("price")[0].childNodes[0].nodeValue + '</div>'
+        //     }
+        //     let element = document.getElementById("content")
+        //     element.innerHTML = html;
+        // }
+
+        function loadJSON() {
+            let products = [{
+                "id": 1,
+                "name": "Heniken",
+                "price": 1900
+
+            }, {
+                "id": 2,
+                "name": "Heniken",
+                "price": 1900
+            }, {
+                "id": 3,
+                "name": "Heniken",
+                "price": 1900
+
+            }, {
+                "id": 4,
+                "name": "Heniken",
+                "price": 19000
+
+            }, ];
+            let html = "";
+            for (let p of products) {
+                html += '<div class="item">' +
+                    p.id + '<br>' + p.name + '<br>' + p.price + '<br>' + '</div>'
+            }
+            let element = document.getElementById("content")
+            element.innerHTML = html;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <h2>XMLHttpRequest</h2> -->
+    <h2>JSON</h2>
+    <button type="button" onclick="loadJSON()">Get list of Products</button>
+    <div id="content" class="container">
+
+    </div>
+</body>
+
+</html>

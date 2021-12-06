@@ -5,152 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="/CSS/footer-menu.css">
-    <title>Group6-Website</title>
-
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="/CSS/footer_menu.css" type="text/css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Group6-Website</title>
 
 </head>
 
-<body>
+<body onload="loadInforTours(6)">
     <div class="home_page page">
-        <div id="page__menu"></div>
-       
+        <div id="page__menu">
+            <!--menu xong-->
+        </div>
         <div class="page--slide">
-            <a href="./home_index.html"><img src="/img/img1.jpg" alt=""></a>
+            <!--Phần slide chưa sửa được-->
+            <img src="/img/img111.jpg" alt="">
         </div>
         <div class="page__content">
+            <!--Phần inforTours xong-->
             <h2 class="title text-center">BEST PACKAGES</h2>
-            <div class="page__content--tour">
-                <div class="tour--item">
-                    <div class="tour--item-pic">
-                        <img src="/img/home/1b_hue.png" alt="">
-                    </div>
-                    <div class="tour--item--content">
-                        <div class="middle--item-content flexrow">
-                            <div class="tour--item--content--left">
-                                <p class="title text-center">Đại nội Huế</p>
-                                <p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> Huế</p>
-                            </div>
-                            <div class="tour--item--content--right price">
-                                $700
-                            </div>
-                        </div>
-                        <p class="title-script">Nằm ngay bên bờ sông Hương thơ mộng, Đại nội Huế là một quần thế di tích văn hoá được công nhận là di tích văn hoá thế giới. Địa điểm du lịch này hội tụ các nét đẹp kiến trúc đỉnh cao của thời đại phong kiến nhà Nguyễn, được xây
-                            dựng cách đây hàng trăm năm với diện tích vô cùng đồ sộ, có hơn 100 công trình kiến trúc lộng lẫy như: Ngọ Môn, Cung Diên Thọ, Tử Cấm Thành, Điện Thái Hòa được bố trí hài hòa, hợp lý.</p>
-                    </div>
-                    <div class="btn-detail btn-medium btn"><a href="./detail.html">Details</a>
-                    </div>
-                </div>
-
-                <div class="tour--item">
-                    <div class="tour--item-pic">
-                        <img src="/img/home/7b_NhaTrang.png" alt="">
-                    </div>
-                    <div class="tour--item--content">
-                        <div class="middle--item-content flexrow">
-                            <div class="tour--item--content--left">
-                                <p class="title text-center">Nha Trang</p>
-                                <p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> Nha Trang</p>
-                            </div>
-                            <div class="tour--item--content--right price">
-                                $1000
-                            </div>
-                        </div>
-
-                        <p class="title-script"> Đến với Nha Trang Bạn có thể đắm mình trong làn nước xanh ngắt, vùi mình trong bãi cát mịn, đi dạo dọc bờ biển ,nằm dài trên cát nghe tiếng sóng xô bờ hay có những giây phút nhìn ngắm bình minh, hoàng hôn đẹp đến ngỡ ngàng, những
-                            hoạt động vui chơi giải trí thú vị, hấp dẫn ngay tại bãi biển đang chờ bạn thử khám phá, sẽ giúp bạn có những giây phút thư giãn tuyệt vời</p>
-                    </div>
-                    <div class="btn-detail btn-medium btn"><a href="./detail.html">Details</a>
-                    </div>
-                </div>
-
-                <div class="tour--item">
-                    <div class="tour--item-pic">
-                        <img src="/img/home/6b_VT.png" alt="">
-                    </div>
-                    <div class="tour--item--content">
-                        <div class="middle--item-content flexrow">
-                            <div class="tour--item--content--left">
-                                <p class="title text-center"> Vũng tàu</p>
-                                <p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> Vũng Tàu</p>
-                            </div>
-                            <div class="tour--item--content--right price">
-                                $500
-                            </div>
-                        </div>
-
-                        <p class="title-script">Đến với Vũng Tàu bạn sẽ có thể nô đùa với những con sóng biển và đồng thời có được cảm giác bình yên, dễ chịu với những con đường rộng rãi, thoáng đãng. Dưới là biển xanh, trên là những ngọn núi to, núi nhỏ, cùng những ngôi chùa
-                            thanh tịnh… Tất cả tạo nên một Vũng Tàu đầy cuốn hút, một thành phố Vũng Tàu không chỉ hiền hòa bình dị mà còn vô vàn những danh lam thắng cảnh nổi tiếng.</p>
-                    </div>
-                    <div class="btn-detail btn-medium btn"><a href="./detail.html">Details</a>
-                    </div>
-                </div>
-                <div class="tour--item">
-                    <div class="tour--item-pic">
-                        <img src="/img/home/11b_DaLatc.png" alt="">
-                    </div>
-                    <div class="tour--item--content">
-                        <div class="middle--item-content flexrow">
-                            <div class="tour--item--content--left">
-                                <p class="title text-center">Đà Lạc</p>
-                                <p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> Đà Lạc</p>
-                            </div>
-                            <div class="tour--item--content--right price">
-                                $900
-                            </div>
-                        </div>
-
-                        <p class="title-script">Đà Lạt là một trong những địa điểm du lịch nổi tiếng thuộc tỉnh Lâm Đồng, Tây Nguyên. Thành phố được gọi với cái tên mỹ miều “thành phố ngàn hoa” vì cảnh sắc thiên nhiên tươi đẹp và khí hậu ôn hòa, mát mẻ. Nếu đang có ý định du
-                            lịch tại vùng đất này, bạn nên trang bị những kiến thức cần thiết để có trải nghiệm đáng nhớ và tuyệt vời nhất.</p>
-                    </div>
-                    <div class="btn-detail btn-medium btn"><a href="./detail.html">Details</a>
-                    </div>
-                </div>
-                <div class="tour--item">
-                    <div class="tour--item-pic">
-                        <img src="/img/home/13b_KienGiang.png" alt="">
-                    </div>
-                    <div class="tour--item--content">
-                        <div class="middle--item-content flexrow">
-                            <div class="tour--item--content--left">
-                                <p class="title text-center">Phú Quốc </p>
-                                <p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i>Kiên Giang</p>
-                            </div>
-                            <div class="tour--item--content--right price">
-                                $700
-                            </div>
-                        </div>
-
-                        <p class="title-script">Phú Quốc may mắn được thiên nhiên ưu đãi với làn nước trong, bờ cát trắng mịn, và những khu rừng hoang sơ. Cái nắng dịu nhẹ ở Bãi Dài phía tây Phú Quốc và Bãi Sao phía đông Phú Quốc. Du lịch Phú Quốc không chỉ có biển, hãy thử
-                            các trải nghiệm thú vị khác như khám phá hòn đảo bằng xe máy, tham quan công viên bảo tồn động vật Vinpearl Safari hay chèo thuyền kayak. Và lặn biển ngắm những bãi san hô đẹp tuyệt vời</p>
-                    </div>
-                    <div class="btn-detail btn-medium btn"><a href="./detail.html">Details</a>
-                    </div>
-                </div>
-                <div class="tour--item">
-                    <div class="tour--item-pic">
-                        <img src="/img/home/14b_AnGiang.png" alt="">
-                    </div>
-                    <div class="tour--item--content">
-                        <div class="middle--item-content flexrow">
-                            <div class="tour--item--content--left">
-                                <p class="title text-center">Núi Cô Tô</p>
-                                <p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> An Giang</p>
-                            </div>
-                            <div class="tour--item--content--right price">
-                                $700
-                            </div>
-                        </div>
-
-                        <p class="title-script">Được biết đến là một trong những ngọn núi cao nhất ở xứ An Giang, nằm trong dãy Thất Sơn, núi Cô Tô còn có cái tên khá mỹ miều là Phụng Hoàng Sơn. Từ đỉnh Cô Tô, bạn có thể ngắm trọn vẹn khung cảnh thiên nhiên hoang sơ, trù phú
-                            của mảnh đất hữu tình này. Núi Cô Tô cũng chính là nơi ngắm hoàng hôn lý tưởng nhất ở An Giang, hay xa xa là biên giới của nước bạn Campuchia tưởng chừng như rất gần.</p>
-                    </div>
-                    <div class="btn-detail btn-medium btn"><a href="./detail.html">Details</a>
-                    </div>
+            <div class="page__content">
+                <div class="page__content--tour" id="jsonData">
                 </div>
             </div>
         </div>
@@ -161,6 +38,7 @@
         </div>
         <div class="page__content">
             <div class="page__content--review">
+                <!--Phần review ở home page chưa xong-->
                 <div>
                     <p style="text-align: center;">Đại Nội Huế</p>
                     <p> Đại Nội Huế chính là nơi sinh hoạt và diễn ra các hoạt động của vua chúa Nguyễn cùng triều đình phong kiến cuối cùng của nước ta. Đại Nội Huế có thể xem là một công trình có quy mô đồ sộ nhất trong lịch sử Việt Nam từ trước đến nay.
@@ -178,9 +56,9 @@
             </div>
         </div>
         <div id="page__partner"></div>
-        <div id="page__partner--slide"></div>
         <div id="page__footer"></div>
     </div>
 </body>
+
 
 </html>

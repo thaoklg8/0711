@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="/CSS/footer_menu.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Group6-Website</title>
+    <script src="/js/main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body onload="loadJSON(6)">
+    <div class="home_page page">
+        <div class="page__content">
+            <h2 class="title text-center">BEST PACKAGES</h2>
+            <div class="page__content--tour" id="jsonData">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // function loadJSON(n) {
+    //     fetch("../json/inforTours.json")
+    //         .then(function(response) {
+    //             if (!response.ok) {
+    //                 throw new Error("HTTP error, status: " + response.status)
+    //             }
+    //             return response.json();
+    //         })
+    //         .then(function(data) {
+    //             if (n === 0) {
+    //                 n = data.inforTours.length;
+    //             }
+    //             for (let i = 0; i < n; i++) {
+    //                 p = data.inforTours[i];
+    //                 var left = document.createElement("div");
+    //                 left.className = 'tour--item';
+    //                 left.innerHTML = '<div class="tour--item-pic"><img src="' + p.img + '" alt=""></div>' +
+    //                     '<div class="tour--item--content"><div class="middle--item-content flexrow"><div class="tour--item--content--left">' + '<p class="title text-center">' + p.title + '</p>' +
+    //                     '<p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> ' + p.province + '</p>' +
+    //                     '</div><div class="tour--item--content--right price">' + p.price + ' </div></div>' +
+    //                     '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn"><a href="' + p.detail + '">DETAILS</a></div>';
+    //                 document.getElementById("jsonData").appendChild(left);
+    //             }
+    //         }).catch(function(error) {
+    //             alert("Error:" + error.message);
+    //         })
+    // }
+</script>
+
+</html>
