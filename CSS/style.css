@@ -39,6 +39,7 @@
       }
       
       .tour--item {
+          /* background-color: #0cd2ff; */
           width: 380px;
           min-width: 300px;
           border: 2px solid steelblue;
@@ -621,25 +622,27 @@
           margin-bottom: var(--space);
       }
       
-      .detail_page .page__content--book .page__content--bookbody input{
+      .detail_page .page__content--book .page__content--bookbody input {
           margin-left: 20px;
           margin-bottom: 20px;
           border: 1px solid black;
           border-radius: 20px;
           padding-left: 10px;
       }
-      .detail_page .page__content--book .page__content--bookbody textarea{
-        margin-left: 20px;
-        margin-bottom: 20px;
-        border: 1px solid black;
-        border-radius: 20px;
-        padding-left: 10px;
-        width: 26em;
-    }
-      .detail_page .page__content--book .page__content--bookbody .content__book--inf input:last-child{
+      
+      .detail_page .page__content--book .page__content--bookbody textarea {
+          margin-left: 20px;
+          margin-bottom: 20px;
+          border: 1px solid black;
+          border-radius: 20px;
+          padding-left: 10px;
+          width: 26em;
+      }
+      
+      .detail_page .page__content--book .page__content--bookbody .content__book--inf input:last-child {
           margin-left: 10px;
       }
-
+      
       .content__book--inf input {
           height: 45px;
           width: 135;
@@ -1403,9 +1406,9 @@
               /* width: 155px; */
               width: 200px;
           }
-          .detail_page .page__content--book .page__content--bookbody .content__book--inf input:last-child{
-            margin-left: 20px;
-        }
+          .detail_page .page__content--book .page__content--bookbody .content__book--inf input:last-child {
+              margin-left: 20px;
+          }
           .detail_page .page__content--section .page__content--map {
               padding-top: 0px;
           }
