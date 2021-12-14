@@ -12,14 +12,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/main.js" defer></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 </head>
 
 <body>
     <div class="cusreview_page page">
         <div id="page__menu"></div>
         
-        <div class="page__content content">
-            <div class="page_content_slide_img">
+        <div class="page__content content" >
+            <div class="page_content_slide_img" >
                <img src="/img/img111.jpg" alt="">
                
             </div>
@@ -27,10 +41,11 @@
             <div class="page__content--cusreview flexrow">
                 
                <div class="page__content--cusreview-left">
-                   <div>chèn ảnh</div>
-                   
-                   <button class="btn content__btn--cusreview">Đăng ảnh</button>
-                   
+                   <div class="cusreview__uploadfile">
+                    <input type='file' onchange="readURL(this);" />
+                    <img  id="blah" src="http://placehold.it/180" alt="your image" />
+                   </div>
+                    <button class="btn content__btn--cusreview">Đăng ảnh</button>
                </div>
 
                <div class="page__content--cusreview-right">

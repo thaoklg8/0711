@@ -350,6 +350,9 @@
           margin-top: 5px;
       }
       /*PAGE review*/
+      .p1--review {
+        padding-top: 100px;
+    }
       
       .review_page .page__content--slide {
           width: 900px;
@@ -541,10 +544,14 @@
           height: 36px;
           line-height: 36px;
       }
+      .page__content--cusreview-left img {
+        max-width: 250px;
+        height: auto;
+    }
+    .page__content--cusreview-right button, .page__content--cusreview-left button {
+        width: 80%;
+    }
       
-      .page__content--cusreview-right button {
-          width: 80%;
-      }
       /*REVIEW TO CUSTOMER*/
       
       .content__date--cusreview {
@@ -564,7 +571,18 @@
       .content--infor-cusreiew img {
           width: 70px;
           height: 70px;
-      }
+      }.container-reviewofcustomer__content img{
+          width: 100%;
+      }.container-reviewofcustomer__content h2{
+          text-align: center;
+          color: aquamarine;
+          margin-top: 30px;
+    }.container-reviewofcustomer h3{
+        margin-bottom: 5px;
+        text-align: center;
+        color: red;
+    }
+    
       /*PAGE detail*/
       
       .detail_page .page__content {
@@ -1044,7 +1062,10 @@
               width: 100%;
               height: 36px;
               line-height: 36px;
-          }
+          }.page__content--cusreview-left img {
+            max-width: 250px;
+            height: auto;
+        }
           /* Responsive thứ tự */
           .part--flewbox {
               display: flex;
@@ -1061,6 +1082,40 @@
               margin-bottom: 40px;
           }
       }
+      @media screen and (max-width: 825px) {
+        /*send review page*/
+        .page__content--cusreview {
+         margin-bottom: var(--space);
+         flex-direction: column;
+         text-align: center;
+     }
+     .page__content--cusreview-left {
+         margin-bottom: var(--space);
+     }
+     #cusreview_text {
+         width: 99%;
+     }
+     .page__content--cusreview-left {
+         width: 99%;
+         text-align: center;
+     }
+     .page__content--cusreview-left button,
+     .page__content--cusreview-right button {
+         width: 80%;
+     }
+     .page__content--cusreview-right {
+         width: 100%;
+         padding-right: 0;
+         padding-left: 0px;
+         margin-bottom: var(--space);
+     }.page__content--cusreview-left img {
+       max-width: 250px;
+       height: auto;
+     }.cusreview__uploadfile img {
+         /* display: block; */
+         padding-top: 30px;
+     }
+   }
       /*Ipad dọc(768 x 1024)*/
       
       @media screen and (max-width: 768px) {
@@ -1120,6 +1175,13 @@
               padding-left: 0px;
               margin-bottom: var(--space);
           }
+          .page__content--cusreview-left img {
+            max-width: 250px;
+            height: auto;
+        }.cusreview__uploadfile img {
+            /* display: block; */
+            padding-top: 10px;
+        }
           /* tour_page */
           .tour_page.tour--item {
               width: 300px;
@@ -1324,7 +1386,7 @@
           .review_page .page__content--review iframe {
               height: 100%;
               width: 100%;
-              overflow: none;
+              /* overflow: none; */
           }
           .page__content--btn {
               min-width: 70%;
