@@ -14,23 +14,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/main.js" defer></script>
 
-    <script>
-        function hiddenSend(){
-            
-            var hidden = document.getElementById('hidden')
-            if (hidden.style.display === 'none'){
-                hidden.style.display = 'block';
-            } 
-            else hidden.style.display = 'none'; 
-        }
-
-
-        const card = document.getElementById("card")
-        card.addEventListener("Click",flipCard);
-        function flipCard(){
-            card.classList.toggle("filpCard");
-        }
-    </script>
+    
 
 </head>
 
@@ -142,26 +126,20 @@
                 </div>
             </div>
 
-            <div class="page__content--section">
+            <div class="page__content--section sectionwrap">
                 <div class="page__content--map part--left">
                     <h3>Tour Map</h3>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3826.124379751624!2d107.57570171481312!3d16.469238488634858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1637631083644!5m2!1svi!2s" width="800" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
                 </div>
-                <!-- <div class="page__content--otherpack part--right">
-                    <h3>Other Package</h3>
-                    <img id="imgOther" src="../img/Detail/ninhthuan.png" alt="" title="Nha Trang">
-                </div> -->
+                
                 <div class="container--card page__content--otherpack part--right">
                     <h3>Other Package</h3>
-                    <div class="card">
-                        <div class="side"><img id="imgOther" src="../img/Detail/ninhthuan.png" alt="" title="Nha Trang"></div>
-                        <div class=" sideback">
-                            <img src="../img/Detail/book.png" alt="" usemap="#image-map">
-                            <map name="image-map">
-                                <area target="" alt="" title="" href="../html/tour.html" coords="119,222,280,279" shape="rect">
-                            </map>
-                        </div>
+                    <div>
+                        <img id="imgOther" src="../img/Detail/ninhthuan.png" alt="" title="Nha Trang" usemap="#imageother">
+                        <map name="imageother" >
+                            <area target="" alt="" title="" href="tour.html" coords="1,498,398,1" shape="rect">
+                        </map>
                     </div>
                 </div>
             </div>

@@ -793,36 +793,10 @@
       .page__content--otherpack img {
           height: 500px;
       }
-      
-      .container--card {
-          position: relative;
+      .detail_page .sectionwrap{
+          height: auto;
       }
       
-      .card {
-          position: absolute;
-          transform-style: preserve-3d;
-          transition: all 1s ease;
-      }
-      
-      .side {
-          position: relative;
-          backface-visibility: hidden;
-          overflow: hidden;
-      }
-      
-      .sideback {
-          position: relative;
-          backface-visibility: hidden;
-          transform: rotateY(180deg);
-          margin-top: -500px;
-      }
-      
-      .card:hover {
-          transform: rotateY(180deg);
-      }
-      /* .flipCard{
-       transform: rotateY(180deg);
-   } */
       
       .page__content--related h3 {
           text-align: center;

@@ -54,13 +54,7 @@
     }
     
 }
-@media screen and (min-width: 1025px) {
-    /* Không hiển thị hình ảnh other package */
-    .detail_page .page__content--otherpack {
-        display: none;
-    }
-    
-}
+
 /*máy tính bảng, hiện thị chiều ngang*/
 
 @media screen and (max-width: 800px) {
@@ -118,7 +112,7 @@
         display: none;
     }
 }
- 
+
 /*máy tính bảng loại to, hiện thị chiều dọc*/
 
 @media screen and (max-width: 768px) {
