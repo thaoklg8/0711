@@ -620,6 +620,7 @@
           padding-bottom: var(--space);
           margin-bottom: var(--space);
           color: white;
+         
       }
       
       .page__content--book {
@@ -630,7 +631,7 @@
       }
       
       .content__book--price {
-          background-color: #BA81CE;
+          background-color: rgb(4, 20, 112);
           font-size: xx-large;
           text-align: center;
           line-height: 110px;
@@ -646,6 +647,7 @@
           border: 1px solid black;
           border-radius: 20px;
           padding-left: 10px;
+          position: relative;
       }
       
       .detail_page .page__content--book .page__content--bookbody textarea {
@@ -674,17 +676,31 @@
       }
       
       .content__book--send {
-          background-color: #BA81CE;
-          text-align: center;
-          line-height: 45px;
-          width: 310px;
-          height: 45px;
-          font-size: x-large;
-          color: white;
-          margin: 0 auto;
-          border-radius: 20px;
-          margin-bottom: var(--space);
-      }
+        
+        background-color: rgb(4, 20, 112);
+        text-align: center;
+        line-height: 45px;
+        width: 310px;
+        height: 45px;
+        /* margin: 0 auto; */
+        border-radius: 20px;
+        color: white;
+        font-size: x-large;
+        margin-bottom: var(--space);
+        margin-left: 40px;
+    }
+      
+    #sendnow{
+        color: rgb(4, 20, 112);
+        text-align: center;
+    }
+      .detail_page .page__content--book .page__content--bookbody span{
+        margin-left: 40px;
+        color: black;
+        position: absolute;
+        margin-top: -20px;
+        font-size: x-small;
+    }
       
       .page__content--discription {
           background-color: var(--infColor);
@@ -733,6 +749,9 @@
           margin-bottom: var(--space);
       }
       /*  */
+      .detail_page .page__content--best .tour--item--content--right{
+          width: 80px;
+      }
       
       .page__content--best img {
           width: 100px;
@@ -1026,6 +1045,7 @@
           .detail_page .tour--item {
               margin-bottom: var(--space);
           }
+          
           /*send review*/
           .page_content_slide_img img {
               width: 100%;
@@ -1082,6 +1102,7 @@
               margin-bottom: 40px;
           }
       }
+      
       @media screen and (max-width: 825px) {
         /*send review page*/
         .page__content--cusreview {
@@ -1470,6 +1491,10 @@
           }
           .detail_page .page__content--book .page__content--bookbody .content__book--inf input:last-child {
               margin-left: 20px;
+          }
+          #namespan,#emailspan{
+            position: absolute;
+            margin-top: -85px;
           }
           .detail_page .page__content--section .page__content--map {
               padding-top: 0px;

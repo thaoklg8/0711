@@ -215,3 +215,49 @@ function loadInforTours(n) {
             alert("Error:" + error.message);
         })
 }
+// Check nội dung send now
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var mess = document.getElementById("message").value;
+   if (name == null || name == "") {
+      document.getElementById("namespan").innerHTML = "<b>" + 'Bạn vui lòng điền tên' + "</b>";
+          return false;
+   } else if (email == null || email == "") {
+      document.getElementById("emailspan").innerHTML = "<b>" + 'Bạn vui lòng điền email' + "</b>";
+          return false;
+   } else if (phone == null || phone == "") {
+      document.getElementById("phonespan").innerHTML = "<b>" + 'Bạn vui lòng điền số điện thoại' + "</b>";
+          return false;
+   }else if (mess == null || mess == "") {
+      document.getElementById("messspan").innerHTML = "<b>" + 'Bạn vui lòng điền nội dung' + "</b>";
+          return false;
+   }
+
+   
+   var regExp =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+   var regExp1 = /^(0[234][0-9]{8}|1[89]00[0-9]{4})$/;
+   var email = document.getElementById("email").value;
+   var phone = document.getElementById("phone").value;
+   if (!regExp.test(email)) {
+       document.getElementById("emailspan").value ="";
+       document.getElementById("emailspan").innerHTML = "<b>" + 'email không hợp lệ' + "</b>";
+      document.getElementById("email").value ="";
+      document.getElementById("email").focus();
+
+      return false;
+   } else if (!regExp1.test(phone)){
+       document.getElementById("phonespan").value ="";
+       document.getElementById("phonespan").innerHTML = "<b>" + 'phone không hợp lệ' + "</b>";
+      document.getElementById("phone").value ="";
+      document.getElementById("phone").focus();
+
+      return false;
+   }
+   else {
+
+      document.getElementById("sendnow").innerHTML = "<b>" + 'Cảm ơn về tin nhắn này' + "</b>"
+      
+   }
+}
