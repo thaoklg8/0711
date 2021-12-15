@@ -52,19 +52,14 @@
      .detail_page .page__content--otherpack {
         display: none;
     }
-    .detail_page .page__content--discription{
-        width: fit-content;
-    }
-
+    
 }
 @media screen and (min-width: 1025px) {
     /* Không hiển thị hình ảnh other package */
     .detail_page .page__content--otherpack {
         display: none;
     }
-    .detail_page .page__content--discription{
-        width: fit-content;
-    }
+    
 }
 /*máy tính bảng, hiện thị chiều ngang*/
 
