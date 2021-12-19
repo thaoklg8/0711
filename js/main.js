@@ -1,5 +1,10 @@
 // check();
-
+function signout(){
+    localStorage.clickcount = 0;
+}
+//document.getElementById("sign--register").innerHTML = "";
+//document.getElementById("sign--register1").innerHTML = "<span style='color:red; margin-top:11px;margin-left:-50px'>Tố Nhi</span>";
+//document.getElementById("button__signout--submenu").innerHTML="Sign out";
 function hiddenMenu() {
     var hidden = document.getElementById('page__menu--right');
     if (hidden.style.display === 'none') {
@@ -19,159 +24,109 @@ $(function() {
     $("#page__partner--slide").load("/html/slide.html");
 });
 
-function chuyenTrang() {
-    window.location = "/html/home_index.html";
-};
-
-function checkRegisEmail() {
-    var data = new Array();
-    data[0] = document.getElementById('name').value;
-    data[1] = document.getElementById('surname').value;
-    data[2] = document.getElementById('Email').value;
-    data[3] = document.getElementById('pass').value;
-    data[4] = document.getElementById('repass').value;
-
-    var myerror = new Array();
-    myerror[0] = "Bạn chưa nhập Tên";
-    myerror[1] = "Bạn chưa nhập Họ";
-    myerror[2] = "Bạn chưa nhập Email";
-    myerror[3] = "Bạn chưa nhập Mật khẩu";
-    myerror[4] = "Bạn chưa xác nhận lại mật khẩu";
-
-    var nearby = new Array("notname", "notsurname", "notemail", "notpass", "notrepass");
-
-    for (i in data) {
-        var error = myerror[i];
-        var div = nearby[i];
-        if (data[i] == "") {
-            document.getElementById(div).innerHTML = error;
-        } else {
-            document.getElementById(div).innerHTML = "";
-        }
-    }
-    if ((i = 4) && (data[i] == data[i - 1])) {
-        document.getElementById('notrepass').innerHTML = "<span style='color:black'>Mật khẩu đã khớp</span>";
-    } else {
-        document.getElementById('notrepass').innerHTML = "Mật khẩu chưa khớp";
-    }
-
-    if (document.getElementById('accept').checked == true) {
-        document.getElementById('notaccept').innerHTML = "<span style='color:black'>Bạn đã chấp nhận điều khoản sử dụng của công ty</span>";
-    } else {
-        document.getElementById('notaccept').innerHTML = "Bạn chưa chấp nhận điều khoản sử dụng của công ty";
-    }
-}
-
-function checkRegisPhone() {
-    var data = new Array();
-    data[0] = document.getElementById('name').value;
-    data[1] = document.getElementById('surname').value;
-    data[2] = document.getElementById('Phone').value;
-    data[3] = document.getElementById('pass').value;
-    data[4] = document.getElementById('repass').value;
-
-    var myerror = new Array();
-    myerror[0] = "Bạn chưa nhập Tên";
-    myerror[1] = "Bạn chưa nhập Họ";
-    myerror[2] = "Bạn chưa nhập Số di động";
-    myerror[3] = "Bạn chưa nhập Mật khẩu";
-    myerror[4] = "Bạn chưa xác nhận lại mật khẩu";
-
-    var nearby = new Array("notname", "notsurname", "notphone", "notpass", "notrepass");
-
-    for (i in data) {
-        var error = myerror[i];
-        var div = nearby[i];
-        if (data[i] == "") {
-            document.getElementById(div).innerHTML = error;
-        } else {
-            document.getElementById(div).innerHTML = "";
-        }
-    }
-    if ((i = 4) && (data[i] == data[i - 1])) {
-        document.getElementById('notrepass').innerHTML = "<span style='color:black'>Mật khẩu đã khớp</span>";
-    } else {
-        document.getElementById('notrepass').innerHTML = "Mật khẩu chưa khớp";
-    }
-
-    if (document.getElementById('accept').checked == true) {
-        document.getElementById('notaccept').innerHTML = "<span style='color:black'>Bạn đã chấp nhận điều khoản sử dụng của công ty</span>";
-    } else {
-        document.getElementById('notaccept').innerHTML = "Bạn chưa chấp nhận điều khoản sử dụng của công ty";
-    }
-}
-
-function checkRegisEmail() {
-    var data = new Array();
-    data[0] = document.getElementById('name').value;
-    data[1] = document.getElementById('surname').value;
-    data[2] = document.getElementById('Email').value;
-    data[3] = document.getElementById('pass').value;
-    data[4] = document.getElementById('repass').value;
-
-    var myerror = new Array();
-    myerror[0] = "Bạn chưa nhập Tên";
-    myerror[1] = "Bạn chưa nhập Họ";
-    myerror[2] = "Bạn chưa nhập Email";
-    myerror[3] = "Bạn chưa nhập Mật khẩu";
-    myerror[4] = "Bạn chưa xác nhận lại mật khẩu";
-
-    var nearby = new Array("notname", "notsurname", "notemail", "notpass", "notrepass");
-
-    for (i in data) {
-        var error = myerror[i];
-        var div = nearby[i];
-        if (data[i] == "") {
-            document.getElementById(div).innerHTML = error;
-        } else {
-            document.getElementById(div).innerHTML = "";
-        }
-    }
-    if ((i = 4) && (data[i] == data[i - 1])) {
-        document.getElementById('notrepass').innerHTML = "<span style='color:black'>Mật khẩu đã khớp</span>";
-    } else {
-        document.getElementById('notrepass').innerHTML = "Mật khẩu chưa khớp";
-    }
-
-    if (document.getElementById('accept').checked == true) {
-        document.getElementById('notaccept').innerHTML = "<span style='color:black'>Bạn đã chấp nhận điều khoản sử dụng của công ty</span>";
-    } else {
-        document.getElementById('notaccept').innerHTML = "Bạn chưa chấp nhận điều khoản sử dụng của công ty";
-    }
-}
-
-function checkSignEmail() {
-    var data = new Array();
-    data[0] = document.getElementById('Email').value;
-    data[1] = document.getElementById('pass').value;
+//kiểm tra đăng nhập bằng Email
+function checkSigninEmail(){
+    var dataInput = new Array();
+    dataInput[0] = document.getElementById('Email').value;
+    dataInput[1] = document.getElementById('pwd').value;
 
     var myerror = new Array();
     myerror[0] = "Bạn chưa nhập Email";
     myerror[1] = "Bạn chưa nhập Mật khẩu";
 
-    var nearby = new Array("notemail", "notpass");
-
-    for (i in data) {
+    var nearby = new Array("notemail", "notpwd");
+    for (i in dataInput) {
         var error = myerror[i];
         var div = nearby[i];
-        if (data[i] == "") {
+        if (dataInput[i] == "") {
             document.getElementById(div).innerHTML = error;
         } else {
             document.getElementById(div).innerHTML = "";
-        }
-    }
-}
+            fetch("/json/users.json")
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw new Error("HTTP error, status: " + response.status)}
+                    return response.json();
+                })
+                .then(function(data) {
+                    let n = data.users.length;
+                for (let j = 0; j < n; j++) {
+                    let emailUser = data.users[j];
+                    let pwdUser = data.users[j];
+                if ((dataInput[0]== emailUser.email) && (dataInput[1] == pwdUser.password)){
+                    localStorage.clickcount = 1;
+                    localStorage.email = dataInput[0];
+                    window.location="/html/home_index.html"; 
+                    break;  
+                }
+                else {
+                    if (j==n-1){
+                        document.getElementById("notpwd").innerHTML="Tài khoản không chính xác";
+                    }}
+                }});
+            }}
+};
 
-function checkSignPhone() {
-    var data = new Array();
-    data[0] = document.getElementById('Phone').value;
-    data[1] = document.getElementById('pass').value;
+//kiểm tra đăng nhập Signin bằng Số di động
+function checkSigninPhone() {
+    var dataInput = new Array();
+    dataInput[0] = document.getElementById('Phone').value;
+    dataInput[1] = document.getElementById('pwd').value;
 
     var myerror = new Array();
     myerror[0] = "Bạn chưa nhập Số di động";
     myerror[1] = "Bạn chưa nhập Mật khẩu";
 
-    var nearby = new Array("notphone", "notpass");
+    var nearby = new Array("notphone", "notpwd");
+
+    for (i in dataInput) {
+        var error = myerror[i];
+        var div = nearby[i];
+        if (dataInput[i] == "") {
+            document.getElementById(div).innerHTML = error;
+        } else {
+            document.getElementById(div).innerHTML = "";
+            fetch("/json/users.json")
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw new Error("HTTP error, status: " + response.status)}
+                    return response.json();
+                })
+                .then(function(data) {
+                    let n = data.users.length;
+                for (let j = 0; j < n; j++) {
+                    let phoneUser = data.users[j];
+                    let pwdUser = data.users[j];
+                if ((dataInput[0]== phoneUser.phone) && (dataInput[1] == pwdUser.password)){
+                    localStorage.clickcount = 1;
+                    window.location="/html/home_index.html"; 
+                    break;  
+                }
+                else {
+                    if (j==n-1){
+                        document.getElementById("notpwd").innerHTML="Tài khoản không chính xác";
+                    }}
+                }});
+            }}
+};
+
+//kiểm tra đăng ký
+function checkRegister() {
+    var data = new Array();
+    data[0] = document.getElementById('name').value;
+    data[1] = document.getElementById('Email').value;
+    data[2] = document.getElementById('Phone').value;
+    data[3] = document.getElementById('pwd').value;
+    data[4] = document.getElementById('repwd').value;
+
+    var myerror = new Array();
+    myerror[0] = "Bạn chưa nhập Tên";
+    myerror[1] = "Bạn chưa nhập Email";
+    myerror[2] = "Bạn chưa nhập Số điện thoại";
+    myerror[3] = "Bạn chưa nhập Mật khẩu";
+    myerror[4] = "Bạn chưa xác nhận lại mật khẩu";
+
+    var nearby = new Array("notname", "notemail", "notphone", "notpwd", "notrepwd");
 
     for (i in data) {
         var error = myerror[i];
@@ -180,6 +135,16 @@ function checkSignPhone() {
             document.getElementById(div).innerHTML = error;
         } else {
             document.getElementById(div).innerHTML = "";
+            if ((i = 4) && (data[i] == data[i - 1]) && (data[i] !="")) {
+                if (document.getElementById('accept').checked == true) {
+                    localStorage.clickcount = 1;
+                    window.location = "/html/home_index.html";
+                } else {
+                    document.getElementById('notaccept').innerHTML = "Bạn chưa chấp nhận điều khoản sử dụng của công ty";
+                }
+            } else {
+                document.getElementById('notrepwd').innerHTML = "Mật khẩu chưa khớp";
+            }
         }
     }
 }
@@ -210,10 +175,28 @@ function loadInforTours(n) {
                     '</div><div class="tour--item--content--right price">' + p.price + ' </div></div>' +
                     '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn"><a href="' + p.detail + '">DETAILS</a></div>';
                 document.getElementById("jsonData").appendChild(left);
-            }
+                }
+                fetch("/json/users.json")
+                    .then(response => response.json())
+                    .then(function(data){
+                    for (let i = 0; i < data.users.length; i++) {
+                        u = data.users[i];
+                        if(u.email == localStorage.email)
+                            {localStorage.userName= u.userName;}
+                        }
+                    });
+
+                if (localStorage.clickcount == 1) {
+                    document.getElementById("sign--register").innerHTML = "";
+                    document.getElementById("sign--register1").innerHTML = "<span style='color:red; margin-top:11px;margin-left:-15px'>"+localStorage.userName+"</span>";
+                    document.getElementById("button__signout").innerHTML="Sign out"; 
+                    document.getElementById("button__signout--submenu").innerHTML="Sign out";}
+
         }).catch(function(error) {
             alert("Error:" + error.message);
-        })
+        });
+
+        
 }
 // Check nội dung send now
 function validateForm() {

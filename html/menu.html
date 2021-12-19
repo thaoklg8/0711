@@ -29,13 +29,14 @@
                 <input type="text" class="input-search " placeholder="Bạn tìm gì..." name="key" class="fas fa-search">
                 <span class="fas fa-search" style="margin-left: 5px;"></span>
             </div>
-            <div class="page__menu--icon flexrow">
+            <div class="page__menu--icon flexrow" id="sign--register">
                 <div class="btn-signin icon">
                     <a href="/html/signin_email.html"><i class="far fa-user-circle"></i> Sign in</a>
                 </div>
                 <div class="btn-register icon"><a href="/html/register_email.html"><i class="far fa-edit"></i> Register</a></div>
             </div>
-
+            <div class="page__menu--icon1 flexrow" id="sign--register1"></div>
+            <a href="" id="button__signout" style="margin-left: -60px;" onclick="signout()"></a>
             <div class="page__menu--icon-menu ">
                 <a href="#" onclick="hiddenMenu()"><i class="fas fa-align-justify"></i></a>
             </div>
@@ -49,6 +50,7 @@
                     <li><a href="./aboutus.html">About us</a></li>
                     <li><a href="./signin_email.html">Sign in</a></li>
                     <li><a href="./register_email.html">Register</a></li>
+                    <li><a href="" id="button__signout--submenu" onclick="signout()"></a></li>
                 </ul>
             </div>
         </div>

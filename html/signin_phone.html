@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="/CSS/footer-menu.css">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/main.js" defer></script>
+    <script src="/js/loadUser.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +24,7 @@
             <div class="form__option--si">
                 <ul>
                     <div>
-                        <li><a href="/html/signin_email.html">Email</a></li>
+                        <li><a href="/html/signin_email.html" >Email</a></li>
                     </div>
                     <div>
                         <li><a href="" id="phone">Di động</a></li>
@@ -33,34 +35,34 @@
                 <form action="#">
                     <div class="form_row">
                         <label class="form__label" for="Phone">Số di động</label>
-                        <input class="form__input" type="text" id="Phone" placeholder="Số di động">
+                        <input class="form__input" type="phone" id="Phone" placeholder="Số di động" name="myPhone">
                         <p id="notphone"></p>
                     </div>
                     <div class="form_row">
-                        <label class="form__label" for="pass">Mật khẩu</label>
-                        <input class="form__input" type="password" id="pass" placeholder="Mật khẩu">
-                        <p id="notpass"></p>
+                        <label class="form__label" for="pwd">Mật khẩu</label>
+                        <input class="form__input" type="password" id="pwd" placeholder="Mật khẩu">
+                        <p id="notpwd"></p>
                     </div>
                     <ul class="reason">
                         <div>
                             <li><a href="/html/register_email.html">Tạo tài khoản</a></li>
                         </div>
                         <div>
-                            <li><a href="">Quên mật khẩu?</a></li>
+                            <li><a href="/html/changePassword.html">Quên mật khẩu?</a></li>
                         </div>
                     </ul>
-                    <div class="form_row verify">
-                        <input class="form__button" type="button" name="submit" value="Đăng nhập" onclick="chuyenTrang()" onmouseenter="checkSignPhone()">
+                    <div class="form_row">
+                        <input class="form__button" type="button" name="submit" value="Đăng nhập" onclick="checkSigninPhone()">
                     </div>
                     <p id="match">hoặc tiếp tục với</p>
                     <ul class="other_method">
                         <div>
-                            <li><a href="" id="gg">
+                            <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" id="gg">
                                 <img src="/img/Detail/GGLogo.png" alt=""><p>Google</p>
                             </a></li>
                         </div>
                         <div>
-                            <li><a href="" id="fb">
+                            <li><a href="https://www.facebook.com/" target="_blank" id="fb">
                                 <img src="/img/Detail/FBLogo.png" alt=""><p>Facebook</p>
                             </a></li>
                         </div>

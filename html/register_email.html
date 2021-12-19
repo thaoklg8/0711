@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="/CSS/footer-menu.css">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/main.js" defer></script>
+    <script src="/js/loadUser.js" defer></script>
 </head>
 
 <body>
@@ -20,68 +22,66 @@
 
         <div class="page__content">
             <div class="form__option--re">
-                <ul>
-                    <div>
-                        <li><a href="" id="email">Email</a></li>
-                    </div>
-                    <div>
-                        <li><a href="/html/register_phone.html">Di động</a></li>
-                    </div>
-                </ul>
-                <hr>
-                <h3>Đăng ký với Email</h3>
-                <form class="form__regis">
+                <h3>Đăng ký với EIV</h3>
+                <form class="form__register" ng-app="" name="myForm">
                     <div class="form_row">
-                        <label class="form__label" for="name">Tên</label>
+                        <label class="form__label" for="name">Tên <span style="margin-left: 30px;">*</span></label>
                         <input class="form__input" type="text" id="name" name="name" placeholder="Tên">
                         <p id="notname"></p>
                     </div>
+    
                     <div class="form_row">
-                        <label class="form__label" for="surname">Họ</label>
-                        <input class="form__input" type="text" id="surname" name="surname" placeholder="Họ">
-                        <p id="notsurname"></p>
-                    </div>
-                    <div class="form_row">
-                        <label class="form__label" for="Email">Email</label>
-                        <input class="form__input" type="text" id="Email" name="email" placeholder="Email">
+                        <label class="form__label" for="Email">Email<span style="margin-left: 47px;">*</span></label>
+                        <input class="form__input" type="email" id="Email" placeholder="Email" ng-model="text" name="myEmail"><br>
+                        <span ng-show="myForm.myEmail.$error.email">Not a valid email address</span>
                         <p id="notemail"></p>
                     </div>
+
                     <div class="form_row">
-                        <label class="form__label" for="pass">Mật khẩu</label>
-                        <input class="form__input" type="password" id="pass" name="pass" placeholder="Mật khẩu">
-                        <p id="notpass"></p>
+                        <label class="form__label" for="Phone">Số di động<span style="margin-left: 95px;">*</span></label>
+                        <input class="form__input" type="text" id="Phone" name="phone" placeholder="Số di động">
+                        <p id="notphone"></p>
                     </div>
+
                     <div class="form_row">
-                        <label class="form__label" for="repass">Xác nhận lại mật khẩu</label>
-                        <input class="form__input" type="password" id="repass" placeholder="Xác nhận lại mật khẩu">
-                        <p id="notrepass"></p>
+                        <label class="form__label" for="pwd">Mật khẩu<span style="margin-left: 83px;">*</span></label>
+                        <input class="form__input" type="password" id="pwd" name="pass" placeholder="Mật khẩu">
+                        <p id="notpwd"></p>
                     </div>
+
+                    <div class="form_row">
+                        <label class="form__label" for="repwd">Xác nhận lại mật khẩu</label>
+                        <input class="form__input" type="password" id="repwd" placeholder="Xác nhận lại mật khẩu">
+                        <p id="notrepwd"></p>
+                    </div>
+
                     <div class="form_row accept">
                         <input type="checkbox" value="accept" name="accept" id="accept">
-                        <h6 style="margin-top: -5px;">Chấp nhận điều khoản sử dụng của công ty.</h6>
+                        <h6 style="margin-top: -5px;">Chấp nhận <a href="/html/provision.html">điều khoản sử dụng</a> của công ty.</h6>
                     </div>
                     <p id="notaccept"></p>
+
                     <div class="form_row">
-                        <input class="form__button" type="button" name="submit" value="Đăng ký" onclick="chuyenTrang()" onmouseenter="checkRegisEmail()">
+                        <input class="form__button" type="button" name="submit" value="Đăng ký" onclick="checkRegister()">
                     </div>
                 </form>
+
                 <p id="match">hoặc tiếp tục với</p>
                 <ul class="other_method">
                     <div>
-                        <li><a href="" id="gg">
+                        <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" id="gg">
                             <img src="/img/Detail/GGLogo.png" alt=""><p>Google</p>
                         </a></li>
                     </div>
                     <div>
-                        <li><a href="" id="fb">
+                        <li><a href="https://www.facebook.com/" target="_blank" id="fb">
                             <img src="/img/Detail/FBLogo.png" alt=""><p>Facebook</p>
                         </a></li>
                     </div>
                 </ul>
-
             </div>
         </div>
-
+        
         <div id="page__footer"></div>
     </div>
 </body>

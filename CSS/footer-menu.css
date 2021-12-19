@@ -332,6 +332,9 @@
     .page__menu--icon {
         display: none;
     }
+    #button__signout{
+        display: none;
+    }
     #page__partner {
         display: none;
     }
