@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/footer-menu.css">
+    <!-- <script src="../js/main.js" defer></script> -->
     <title>Menu</title>
 </head>
 
 <body>
-    <div class="page page1" id="menu_page">
+    <div class="page page1">
         <div class="page__menu flexrow">
             <div class="page__menu--logo">
                 <img src="../img/logo.png" alt="">
@@ -25,21 +26,19 @@
                     <li><a href="./aboutus.html">about us</a></li>
                 </ul>
             </div>
-            <div class="btn-search flexrow">
-                <input type="text" class="input-search " placeholder="Bạn tìm gì..." name="key" class="fas fa-search">
-                <span class="fas fa-search" style="margin-left: 5px;"></span>
-            </div>
             <div class="page__menu--icon flexrow" id="sign--register">
                 <div class="btn-signin icon">
                     <a href="/html/signin_email.html"><i class="far fa-user-circle"></i> Sign in</a>
                 </div>
-                <div class="btn-register icon"><a href="/html/register_email.html"><i class="far fa-edit"></i> Register</a></div>
+                <div class="btn-register icon"><a href="/html/register.html"><i class="far fa-edit"></i> Register</a></div>
             </div>
-            <div class="page__menu--icon1 flexrow" id="sign--register1"></div>
-            <a href="" id="button__signout" style="margin-left: -60px;" onclick="signout()"></a>
+            <!-- <div class="page__menu--icon1 flexrow" id="sign--register1"></div>
+            <a href="" id="button__signout" onclick="signout()"></a> -->
+
             <div class="page__menu--icon-menu ">
                 <a href="#" onclick="hiddenMenu()"><i class="fas fa-align-justify"></i></a>
             </div>
+
         </div>
         <div id="page__menu--right">
             <div class="page__menu--ul">
@@ -49,20 +48,16 @@
                     <li><a href="./review.html">Review</a></li>
                     <li><a href="./aboutus.html">About us</a></li>
                     <li><a href="./signin_email.html">Sign in</a></li>
-                    <li><a href="./register_email.html">Register</a></li>
-                    <li><a href="" id="button__signout--submenu" onclick="signout()"></a></li>
+                    <li><a href="./register.html">Register</a></li>
+                    <li>
+                        <a href="" id="button__signout--submenu" onclick="signout()"></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </body>
 <script>
-    function hiddenMenu() {
-        var hidden = document.getElementById('page__menu--right');
-        if (hidden.style.display === 'none') {
-            hidden.style.display = 'block';
-        } else hidden.style.display = 'none';
-    }
 </script>
 
 </html>

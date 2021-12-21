@@ -1,42 +1,43 @@
 {
-    "users":[{
-        "id":1,
-        "userName": "thaovtt19406",
-        "email": "thaovtt19406@st.uel.edu.vn",
-        "phone": "0388776611",
-        "password": "12345",
-        "img": "/img/user/user-img-1-100x100.png"
-    },
-    {
-        "id":2,
-        "userName": "nhintt19406",
-        "email": "nhintt19406@st.uel.edu.vn",
-        "phone": "0388771166",
-        "password": "12543",
-        "img": "/img/user/user-img-4-100x100.png"
-    },
-    {
-        "id":3,
-        "userName": "phongnt19406",
-        "email": "phongnt19406@st.uel.edu.vn",
-        "phone": "0388667711",
-        "password": "12354",
-        "img": "/img/user/user-img-5-100x100.png"
-    },
-    {
-        "id":4,
-        "userName": "tramntn19406",
-        "email": "tramntn19406@st.uel.edu.vn",
-        "phone": "0388661177",
-        "password": "12435",
-        "img": "/img/user/user-img-5-100x100.png"
-    },
-    {
-        "id":5,
-        "userName": "thuttt19406",
-        "email": "thuttt19406@st.uel.edu.vn",
-        "phone": "0388117766",
-        "password": "12453",
-        "img": "/img/user/user-img-5-100x100.png"
-    }
-]}
+    "users": [{
+            "id": 1,
+            "userName": "thao",
+            "email": "thaovtt19406@st.uel.edu.vn",
+            "phone": "0388776611",
+            "password": "12345",
+            "img": "/img/user/user-img-1-100x100.png"
+        },
+        {
+            "id": 2,
+            "userName": "nhintt19406",
+            "email": "nhintt19406@st.uel.edu.vn",
+            "phone": "0388771166",
+            "password": "12543",
+            "img": "/img/user/user-img-4-100x100.png"
+        },
+        {
+            "id": 3,
+            "userName": "phongnt19406",
+            "email": "phongnt19406@st.uel.edu.vn",
+            "phone": "0388667711",
+            "password": "12354",
+            "img": "/img/user/user-img-5-100x100.png"
+        },
+        {
+            "id": 4,
+            "userName": "tramntn19406",
+            "email": "tramntn19406@st.uel.edu.vn",
+            "phone": "0388661177",
+            "password": "12435",
+            "img": "/img/user/user-img-5-100x100.png"
+        },
+        {
+            "id": 5,
+            "userName": "thuttt19406",
+            "email": "thuttt19406@st.uel.edu.vn",
+            "phone": "0388117766",
+            "password": "12453",
+            "img": "/img/user/user-img-5-100x100.png"
+        }
+    ]
+}

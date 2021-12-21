@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/main.js" defer></script>
+    <script src="../js/main.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="/CSS/footer_menu.css" type="text/css">
+    <link rel="stylesheet" href="/CSS/footer_menu.css" type="text/html">
     <link rel="stylesheet" href="/CSS/style.css">
-    
+
     <title>Group6-Website</title>
 
 </head>
@@ -24,12 +24,15 @@
             <!--Phần slide chưa sửa được-->
             <img src="/img/img111.jpg" alt="">
         </div>
-        <div class="page__content">
+        <div class="btn-search flexrow">
+            <input type="text" class="input-search " ng-model="keyword" placeholder="Bạn tìm gì..." id="dataSearch">
+            <span class="fas fa-search" style="margin-left: 5px;" onclick="searchTour()"></span>
+        </div>
+        <div class="page__content" id="page__content">
             <!--Phần inforTours xong-->
-            <h2 class="title text-center">BEST PACKAGES</h2>
-            <div class="page__content">
-                <div class="page__content--tour" id="jsonData">
-                </div>
+            <h2 class="title text-center" id="h2">BEST PACKAGES</h2>
+            <div id="parent">
+                <div class="page__content--tour" id="jsonData"></div>
             </div>
         </div>
         <div class="page">
@@ -38,22 +41,50 @@
             </div>
         </div>
         <div class="page__content">
-            <div class="page__content--review">
+            <h2 class="text-center title" style="color: var(--btnColor1);">HOT TOURS</h2>
+            <div class="page__content--review flexrow">
                 <!--Phần review ở home page chưa xong-->
-                <div>
-                    <p style="text-align: center;">Đại Nội Huế</p>
-                    <p> Đại Nội Huế chính là nơi sinh hoạt và diễn ra các hoạt động của vua chúa Nguyễn cùng triều đình phong kiến cuối cùng của nước ta. Đại Nội Huế có thể xem là một công trình có quy mô đồ sộ nhất trong lịch sử Việt Nam từ trước đến nay.
-                        Đại Nội Huế có quá trình xây dựng kéo dài trong nhiều năm với hàng vạn người thi công cùng hàng loạt các công việc như lấp sông, đào hào, đắp thành, bên cạnh đó là khối lượng đất đá khổng lồ lên đến hàng triệu mét khối.
-                    </p>
-                    <p style="text-align: right;">người đấu tên</p>
+                <div class="review--item">
+                    <p class="text-center">Đại Nội Huế</p>
+                    <p class="text-center"><i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i></p>
+                    <p style="text-align: right;">500 tours đã bán</p>
                 </div>
-                <div>
-                    <p style="text-align: center;">Nha Trang</p>
-                    <p> Được mệnh danh là thiên đường của miền nhiệt đới, Vinpearl Land – nơi du khách được đắm mình giữa thiên nhiên, tắm trong nắng, hòa cùng gió, đùa vui với sóng và cảm nhận từng chi tiết vẻ đẹp của du lịch vùng biển Nha Trang – Khánh
-                        Hòa. Lựa chọn di lịch Nha Trang Là một lựa chọn sáng suốt
-                    </p>
-                    <p style="text-align: right;">người đấu tên</p>
+                <div class="review--item">
+                    <p class="text-center">Đại Nội Huế</p>
+                    <p class="text-center"><i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i></p>
+                    <p style="text-align: right;">500 tours đã bán</p>
                 </div>
+                <div class="review--item">
+                    <p class="text-center">Đại Nội Huế</p>
+                    <p class="text-center"><i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i></p>
+                    <p style="text-align: right;">500 tours đã bán</p>
+                </div>
+                <div class="review--item">
+                    <p class="text-center">Đại Nội Huế</p>
+                    <p class="text-center"><i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i>
+                        <i class="fas fa-star" style="color: yellow;"></i></p>
+                    <p style="text-align: right;">500 tours đã bán</p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="page__transition">
+                <img src="/img/home/transaction (2).png" alt="">
             </div>
         </div>
         <div id="page__partner"></div>

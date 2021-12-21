@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="/CSS/footer-menu.css">
     <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/main.js" defer></script>
@@ -36,20 +36,20 @@
                     <div class="form_row">
                         <label class="form__label" for="Email">Email</label>
                         <input class="form__input" type="email" id="Email" placeholder="Email" ng-model="text" name="myEmail"><br>
-                        <span ng-show="myForm.myEmail.$error.email">Not a valid email address</span>
+                        <span ng-show="myForm.myEmail.$error.email" class="validation_message">Not a valid email address</span>
                         <p id="notemail"></p>
                     </div>
                     <div class="form_row">
                         <label class="form__label" for="pwd">Mật khẩu</label>
-                        <input class="form__input" type="password" id="pwd" placeholder="Mật khẩu" >
+                        <input class="form__input" type="password" id="pwd" placeholder="Mật khẩu">
                         <p id="notpwd"></p>
                     </div>
                     <ul class="reason">
                         <div>
-                            <li><a href="/html/register_email.html">Tạo tài khoản</a></li>
+                            <li><a href="/html/register.html">Tạo tài khoản</a></li>
                         </div>
                         <div>
-                            <li><a href="/html/changePassword.html">Quên mật khẩu?</a></li>
+                            <li><a href="/html/forgot_password.html">Quên mật khẩu?</a></li>
                         </div>
                     </ul>
                     <div class="form_row">
@@ -58,14 +58,20 @@
                     <p id="match">hoặc tiếp tục với</p>
                     <ul class="other_method">
                         <div>
-                            <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" id="gg">
-                                <img src="/img/Detail/GGLogo.png" alt=""><p>Google</p>
-                            </a></li>
+                            <li>
+                                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" id="gg">
+                                    <img src="/img/Detail/GGLogo.png" alt="">
+                                    <p>Google</p>
+                                </a>
+                            </li>
                         </div>
                         <div>
-                            <li><a href="https://www.facebook.com/" target="_blank" id="fb">
-                                <img src="/img/Detail/FBLogo.png" alt=""><p>Facebook</p>
-                            </a></li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank" id="fb">
+                                    <img src="/img/Detail/FBLogo.png" alt="">
+                                    <p>Facebook</p>
+                                </a>
+                            </li>
                         </div>
                     </ul>
                 </form>

@@ -29,11 +29,11 @@
                         <input class="form__input" type="text" id="name" name="name" placeholder="Tên">
                         <p id="notname"></p>
                     </div>
-    
+
                     <div class="form_row">
                         <label class="form__label" for="Email">Email<span style="margin-left: 47px;">*</span></label>
                         <input class="form__input" type="email" id="Email" placeholder="Email" ng-model="text" name="myEmail"><br>
-                        <span ng-show="myForm.myEmail.$error.email">Not a valid email address</span>
+                        <span ng-show="myForm.myEmail.$error.email" class="validation_message">Not a valid email address</span>
                         <p id="notemail"></p>
                     </div>
 
@@ -69,19 +69,25 @@
                 <p id="match">hoặc tiếp tục với</p>
                 <ul class="other_method">
                     <div>
-                        <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" id="gg">
-                            <img src="/img/Detail/GGLogo.png" alt=""><p>Google</p>
-                        </a></li>
+                        <li>
+                            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" id="gg">
+                                <img src="/img/Detail/GGLogo.png" alt="">
+                                <p>Google</p>
+                            </a>
+                        </li>
                     </div>
                     <div>
-                        <li><a href="https://www.facebook.com/" target="_blank" id="fb">
-                            <img src="/img/Detail/FBLogo.png" alt=""><p>Facebook</p>
-                        </a></li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" id="fb">
+                                <img src="/img/Detail/FBLogo.png" alt="">
+                                <p>Facebook</p>
+                            </a>
+                        </li>
                     </div>
                 </ul>
             </div>
         </div>
-        
+
         <div id="page__footer"></div>
     </div>
 </body>

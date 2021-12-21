@@ -1,10 +1,8 @@
 // check();
-function signout(){
+function signout() {
     localStorage.clickcount = 0;
 }
-//document.getElementById("sign--register").innerHTML = "";
-//document.getElementById("sign--register1").innerHTML = "<span style='color:red; margin-top:11px;margin-left:-50px'>Tố Nhi</span>";
-//document.getElementById("button__signout--submenu").innerHTML="Sign out";
+/*ẩn hiện menu*/
 function hiddenMenu() {
     var hidden = document.getElementById('page__menu--right');
     if (hidden.style.display === 'none') {
@@ -25,7 +23,7 @@ $(function() {
 });
 
 //kiểm tra đăng nhập bằng Email
-function checkSigninEmail(){
+function checkSigninEmail() {
     var dataInput = new Array();
     dataInput[0] = document.getElementById('Email').value;
     dataInput[1] = document.getElementById('pwd').value;
@@ -45,26 +43,29 @@ function checkSigninEmail(){
             fetch("/json/users.json")
                 .then(function(response) {
                     if (!response.ok) {
-                        throw new Error("HTTP error, status: " + response.status)}
+                        throw new Error("HTTP error, status: " + response.status)
+                    }
                     return response.json();
                 })
                 .then(function(data) {
                     let n = data.users.length;
-                for (let j = 0; j < n; j++) {
-                    let emailUser = data.users[j];
-                    let pwdUser = data.users[j];
-                if ((dataInput[0]== emailUser.email) && (dataInput[1] == pwdUser.password)){
-                    localStorage.clickcount = 1;
-                    localStorage.email = dataInput[0];
-                    window.location="/html/home_index.html"; 
-                    break;  
-                }
-                else {
-                    if (j==n-1){
-                        document.getElementById("notpwd").innerHTML="Tài khoản không chính xác";
-                    }}
-                }});
-            }}
+                    for (let j = 0; j < n; j++) {
+                        let emailUser = data.users[j];
+                        let pwdUser = data.users[j];
+                        if ((dataInput[0] == emailUser.email) && (dataInput[1] == pwdUser.password)) {
+                            localStorage.clickcount = 1;
+                            localStorage.email = dataInput[0];
+                            window.location = "/html/home_index.html";
+                            break;
+                        } else {
+                            if (j == n - 1) {
+                                document.getElementById("notpwd").innerHTML = "Tài khoản không chính xác";
+                            }
+                        }
+                    }
+                });
+        }
+    }
 };
 
 //kiểm tra đăng nhập Signin bằng Số di động
@@ -89,25 +90,28 @@ function checkSigninPhone() {
             fetch("/json/users.json")
                 .then(function(response) {
                     if (!response.ok) {
-                        throw new Error("HTTP error, status: " + response.status)}
+                        throw new Error("HTTP error, status: " + response.status)
+                    }
                     return response.json();
                 })
                 .then(function(data) {
                     let n = data.users.length;
-                for (let j = 0; j < n; j++) {
-                    let phoneUser = data.users[j];
-                    let pwdUser = data.users[j];
-                if ((dataInput[0]== phoneUser.phone) && (dataInput[1] == pwdUser.password)){
-                    localStorage.clickcount = 1;
-                    window.location="/html/home_index.html"; 
-                    break;  
-                }
-                else {
-                    if (j==n-1){
-                        document.getElementById("notpwd").innerHTML="Tài khoản không chính xác";
-                    }}
-                }});
-            }}
+                    for (let j = 0; j < n; j++) {
+                        let phoneUser = data.users[j];
+                        let pwdUser = data.users[j];
+                        if ((dataInput[0] == phoneUser.phone) && (dataInput[1] == pwdUser.password)) {
+                            localStorage.clickcount = 1;
+                            window.location = "/html/home_index.html";
+                            break;
+                        } else {
+                            if (j == n - 1) {
+                                document.getElementById("notpwd").innerHTML = "Tài khoản không chính xác";
+                            }
+                        }
+                    }
+                });
+        }
+    }
 };
 
 //kiểm tra đăng ký
@@ -135,7 +139,7 @@ function checkRegister() {
             document.getElementById(div).innerHTML = error;
         } else {
             document.getElementById(div).innerHTML = "";
-            if ((i = 4) && (data[i] == data[i - 1]) && (data[i] !="")) {
+            if ((i = 4) && (data[i] == data[i - 1]) && (data[i] != "")) {
                 if (document.getElementById('accept').checked == true) {
                     localStorage.clickcount = 1;
                     window.location = "/html/home_index.html";
@@ -175,80 +179,164 @@ function loadInforTours(n) {
                     '</div><div class="tour--item--content--right price">' + p.price + ' </div></div>' +
                     '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn"><a href="' + p.detail + '">DETAILS</a></div>';
                 document.getElementById("jsonData").appendChild(left);
-                }
-                fetch("/json/users.json")
-                    .then(response => response.json())
-                    .then(function(data){
+            }
+            fetch("/json/users.json")
+                .then(response => response.json())
+                .then(function(data) {
                     for (let i = 0; i < data.users.length; i++) {
                         u = data.users[i];
-                        if(u.email == localStorage.email)
-                            {localStorage.userName= u.userName;}
-                        }
-                    });
+                        if (u.email == localStorage.email) { localStorage.userName = u.userName; }
+                    }
+                });
 
-                if (localStorage.clickcount == 1) {
-                    document.getElementById("sign--register").innerHTML = "";
-                    document.getElementById("sign--register1").innerHTML = "<span style='color:red; margin-top:11px;margin-left:-15px'>"+localStorage.userName+"</span>";
-                    document.getElementById("button__signout").innerHTML="Sign out"; 
-                    document.getElementById("button__signout--submenu").innerHTML="Sign out";}
+            if (localStorage.clickcount == 1) {
+                document.getElementById("sign--register").innerHTML = "";
+                document.getElementById("sign--register1").innerHTML = "<span style='color:red; margin-top:11px;margin-left:-15px'>" + localStorage.userName + "</span>";
+                document.getElementById("button__signout").innerHTML = "Sign out";
+                document.getElementById("button__signout--submenu").innerHTML = "Sign out";
+            }
 
         }).catch(function(error) {
             alert("Error:" + error.message);
         });
-
-        
 }
+
 // Check nội dung send now
 function validateForm() {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
     var mess = document.getElementById("message").value;
-   if (name == null || name == "") {
-      document.getElementById("namespan").innerHTML = "<b>" + 'Bạn vui lòng điền tên' + "</b>";
-          return false;
-   } else if (email == null || email == "") {
-      document.getElementById("emailspan").innerHTML = "<b>" + 'Bạn vui lòng điền email' + "</b>";
-          return false;
-   } else if (phone == null || phone == "") {
-      document.getElementById("phonespan").innerHTML = "<b>" + 'Bạn vui lòng điền số điện thoại' + "</b>";
-          return false;
-   }else if (mess == null || mess == "") {
-      document.getElementById("messspan").innerHTML = "<b>" + 'Bạn vui lòng điền nội dung' + "</b>";
-          return false;
-   }
+    if (name == null || name == "") {
+        document.getElementById("namespan").innerHTML = "<b>" + 'Bạn vui lòng điền tên' + "</b>";
+        return false;
+    } else if (email == null || email == "") {
+        document.getElementById("emailspan").innerHTML = "<b>" + 'Bạn vui lòng điền email' + "</b>";
+        return false;
+    } else if (phone == null || phone == "") {
+        document.getElementById("phonespan").innerHTML = "<b>" + 'Bạn vui lòng điền số điện thoại' + "</b>";
+        return false;
+    } else if (mess == null || mess == "") {
+        document.getElementById("messspan").innerHTML = "<b>" + 'Bạn vui lòng điền nội dung' + "</b>";
+        return false;
+    }
 
-   
-   var regExp =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-   var regExp1 = /^(0[234][0-9]{8}|1[89]00[0-9]{4})$/;
-   var email = document.getElementById("email").value;
-   var phone = document.getElementById("phone").value;
-   if (!regExp.test(email)) {
-       document.getElementById("emailspan").value ="";
-       document.getElementById("emailspan").innerHTML = "<b>" + 'email không hợp lệ' + "</b>";
-      document.getElementById("email").value ="";
-      document.getElementById("email").focus();
 
-      return false;
-   } else if (!regExp1.test(phone)){
-       document.getElementById("phonespan").value ="";
-       document.getElementById("phonespan").innerHTML = "<b>" + 'phone không hợp lệ' + "</b>";
-      document.getElementById("phone").value ="";
-      document.getElementById("phone").focus();
+    var regExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    var regExp1 = /^(0[234][0-9]{8}|1[89]00[0-9]{4})$/;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    if (!regExp.test(email)) {
+        document.getElementById("emailspan").value = "";
+        document.getElementById("emailspan").innerHTML = "<b>" + 'Email không hợp lệ' + "</b>";
+        document.getElementById("email").value = "";
+        document.getElementById("email").focus();
 
-      return false;
-   }
-   else {
+        return false;
+    } else if (!regExp1.test(phone)) {
+        document.getElementById("phonespan").value = "";
+        document.getElementById("phonespan").innerHTML = "<b>" + 'Phone không hợp lệ' + "</b>";
+        document.getElementById("phone").value = "";
+        document.getElementById("phone").focus();
 
-      document.getElementById("sendnow").innerHTML = "<b>" + 'Cảm ơn về tin nhắn này' + "</b>"
-      
-   }
+        return false;
+    } else {
+
+        document.getElementById("sendnow").innerHTML = "<b>" + 'Cảm ơn về tin nhắn này!' + "</b>"
+
+    }
 }
-function hiddenSend(){
-            
+
+function hiddenSend() {
     var hidden = document.getElementById('hidden')
-    if (hidden.style.display === 'none'){
+    if (hidden.style.display === 'none') {
         hidden.style.display = 'block';
-    } 
-    else hidden.style.display = 'none'; 
+    } else hidden.style.display = 'none';
 }
+
+//search ở menu
+function searchTour() {
+    var data = document.getElementById("dataSearch").value;
+    if (data.length > 0) {
+        var div = document.createElement("div");
+        div.className = 'page__content--tour';
+        div.id = 'jsonData';
+        document.getElementById("parent").appendChild(div);
+        var parent = document.getElementById("parent");
+        var child = document.getElementById("jsonData");
+        parent.replaceChild(div, child);
+        loc();
+    } else {
+        alert("Vui lòng nhập địa điểm để tìm kiếm!");
+    }
+}
+
+function loc() {
+    var result = true;
+    fetch("../json/inforTours.json")
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("HTTP error, status: " + response.status)
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            var textInput = document.getElementById("dataSearch").value;
+            p = data.inforTours;
+            let n = p.length;
+            var province;
+            var title;
+            var script;
+            for (let i = 0; i < n; i++) {
+                province = p[i].province.toUpperCase().search(textInput.toUpperCase());
+                title = p[i].title.toUpperCase().search(textInput.toUpperCase());
+                script = p[i].script.toUpperCase().search(textInput.toUpperCase());
+                if (province > 0 || title > 0 || script > 0) {
+                    loadInforToursID(i);
+                    result = false;
+                }
+            }
+            if (result) {
+                alert("Không có tour phù hợp, thử từ khóa khác!");
+                loadInforTours(0);
+            }
+        }).catch(function(error) {
+            alert("Error:" + error.message);
+        });
+
+
+}
+
+/*hiện thị inforTours theo ID*/
+function loadInforToursID(id) {
+    fetch("../json/inforTours.json")
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("HTTP error, status: " + response.status)
+            }
+            return response.json();
+        })
+        .then(function(data) {
+
+            p = data.inforTours[id];
+            var left = document.createElement("div");
+            left.className = 'tour--item';
+            left.innerHTML = '<div class="tour--item-pic"><img src="' + p.img + '" alt=""></div>' +
+                '<div class="tour--item--content"><div class="middle--item-content flexrow"><div class="tour--item--content--left">' + '<p class="title text-center">' + p.title + '</p>' +
+                '<p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> ' + p.province + '</p>' +
+                '</div><div class="tour--item--content--right price">' + p.price + ' </div></div>' +
+                '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn"><a href="' + p.detail + '">DETAILS</a></div>';
+            document.getElementById("jsonData").appendChild(left);
+        }).catch(function(error) {
+            alert("Error:" + error.message);
+        });
+}
+//menu ẩn hiện
+function hiddenMenu() {
+    var hidden = document.getElementById('page__menu--right');
+    if (hidden.style.display === 'none') {
+        hidden.style.display = 'block';
+    } else hidden.style.display = 'none';
+}
+
+//js của slide
