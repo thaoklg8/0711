@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Đăng Review</title>
 
-    <link rel="stylesheet" href="/CSS/footer-menu.css">
+    <link rel="stylesheet" href="/CSS/standard.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -17,12 +17,10 @@
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     $('#blah')
                         .attr('src', e.target.result);
                 };
-
                 reader.readAsDataURL(input.files[0]);
             }
         }
@@ -32,28 +30,22 @@
 <body>
     <div class="cusreview_page page">
         <div id="page__menu"></div>
-        
-        <div class="page__content content" >
-            <div class="page_content_slide_img" >
-               <img src="/img/img111.jpg" alt="">
-               
+        <div class="page__content content">
+            <div class="page_content_slide_img">
+                <img src="/img/img111.jpg" alt="">
             </div>
-
             <div class="page__content--cusreview flexrow">
-                
-               <div class="page__content--cusreview-left">
-                   <div class="cusreview__uploadfile">
-                    <input type='file' onchange="readURL(this);" />
-                    <img  id="blah" src="http://placehold.it/180" alt="your image" />
-                   </div>
-                    <button class="btn content__btn--cusreview">Đăng ảnh</button>
-               </div>
-
-               <div class="page__content--cusreview-right">
-                   <textarea name="content__text--cusreview" id="cusreview_text" placeholder=" Nhập nội dung review vào đây.... " ></textarea>           
-                   <button class="btn content__btn--cusreview">Đăng bình luận</button>
-               </div>
+                <div class="page__content--cusreview-left">
+                    <div class="cusreview__uploadfile">
+                        <input type='file' onchange="readURL(this);" />
+                        <img id="blah" src="http://placehold.it/180" alt="your image" />
+                    </div>
+                </div>
+                <div class="page__content--cusreview-right">
+                    <textarea name="content__text--cusreview" id="cusreview_text" placeholder=" Nhập nội dung review vào đây.... "></textarea>
+                </div>
             </div>
+            <button class="btn content__btn--cusreview">Đăng review</button>
         </div>
         <div id="page__footer"></div>
     </div>

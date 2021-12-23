@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/asset/js/main.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link rel="stylesheet" href="../CSS/footer-menu.css">
+    <link rel="stylesheet" href="../CSS/standard.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -20,59 +20,66 @@
 
 <body>
     <div class="book_page page">
+        <div id="page__menu">
+        </div>
         <form action="./Booknow_server.html" method="get">
-        <div class="img_slidego">
-            <img src="../img/imgheader.jpg" alt="">
-        </div>
+            <div class="img_slidego">
+                <img src="../img/imgheader.jpg" alt="">
+            </div>
 
-        <div class="page__content content">
-            <div class="page__content--information">
-                <div class="information--left">
-                    <p class=" text-center">INFORMATION OF CUSTOMERS BOOKING TOURS</p>
+            <div class="page__content content">
+                <div class="page__content--information">
+                    <div class="information--left">
+                        <p class=" text-center">INFORMATION OF CUSTOMERS BOOKING TOURS</p>
+                        <div class="flex_row">
+                            <label class="flex-label" for="name">Full name </label>
+                            <input class="flex-input" type="text" id="name" name="name">
+                        </div>
+                        <div class="flex_row">
+                            <label class="flex-label" for="email">Email: </label>
+                            <input class="flex-input" type="text" id="email" name="email">
+                        </div>
+                        <div class="flex_row">
+                            <label class="flex-label" for="phone">Phone: </label>
+                            <input class="flex-input" type="text" id="phone" name="phone">
+                        </div>
+                        <div class="flex_row">
+                            <label class="flex-label" for="note">Note: </label>
+                            <input class="flex-input" type="text" id="note" name="content">
+                        </div>
+
+                    </div>
+                    <div class="information--right">
+                        <img src="../img/img1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="page__content--book">
                     <div class="flex_row">
-                        <label class="flex-label" for="name">Full name </label>
-                        <input class="flex-input" type="text" id="name" name="name">
+                        <label class="flex-label" for="number">Quantity</label>
+                        <input class="flex-input" type="text" id="number_book" placeholder="1">
+                        <input class="flex-input" type="text" placeholder="Phú Quốc Tour" id="place_book" name="place">
                     </div>
                     <div class="flex_row">
-                        <label class="flex-label" for="email">Email: </label>
-                        <input class="flex-input" type="text" id="email" name="email">
+                        <label class="flex-label" for="price">Unit price</label>
+                        <input class="flex-input" type="text" id="price">
                     </div>
                     <div class="flex_row">
-                        <label class="flex-label" for="phone">Phone: </label>
-                        <input class="flex-input" type="text" id="phone" name="phone">
-                    </div>
-                    <div class="flex_row">
-                        <label class="flex-label" for="note">Note: </label>
-                        <input class="flex-input" type="text" id="note" name="content">
-                    </div>
-                    
-                </div>
-                <div class="information--right">
-                    <img src="../img/img1.jpg" alt="">
-                </div>
-            </div>
-            <div class="page__content--book">
-                <div  class="flex_row">
-                    <label class="flex-label" for="number">Quantity</label>
-                    <input class="flex-input" type="text" id="number_book" placeholder="1" >
-                    <input  class="flex-input" type="text" placeholder="Phú Quốc Tour" id="place_book" name="place">
-                </div>
-                <div class="flex_row">
-                    <label class="flex-label" for="price">Unit price</label>
-                    <input class="flex-input" type="text" id="price">
-                </div>
-                <div class="flex_row">
                         <label class="flex-label" for="total">Total</label>
-                        <input class="flex-input" type="text" id="total" >
-                </div>
-                <div >
-                    <input class="btn_book_done" type="button" value="COMPLETED" onclick="Completed()">
+                        <input class="flex-input" type="text" id="total">
+                    </div>
+                    <div>
+                        <input class="btn btn-medium btn_book_done" type="button" value="COMPLETED" onclick="Completed()">
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+        <div id="page__footer"></div>
     </div>
 </body>
+<script>
+    window.onload = function() {
+
+    }
+</script>
 
 </html>
-

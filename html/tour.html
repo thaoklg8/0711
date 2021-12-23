@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/CSS/footer-menu.css">
+    <link rel="stylesheet" href="/CSS/standard.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <title>Tour</title>
@@ -14,7 +14,7 @@
     <script src="/js/main.js" defer></script>
 </head>
 
-<body onload="loadInforTours(0)">
+<body>
     <div class="tour_page page">
         <div id="page__menu"></div>
         <div class="page__content content">
@@ -32,5 +32,14 @@
         <div id="page__footer"></div>
     </div>
 </body>
+<script>
+    window.onload = function() {
+        var indexColor = document.getElementById('tour_menu');
+        indexColor.style.color = "var(--btnColor1)";
+        indexColor.style.fontWeight = "bold";
+        loadInforTours(0);
+        loadUserName();
+    }
+</script>
 
 </html>

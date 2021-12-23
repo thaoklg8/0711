@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="/CSS/footer_menu.css" type="text/html">
     <link rel="stylesheet" href="/CSS/style.css">
-
     <title>Group6-Website</title>
 
 </head>
 
-<body onload="loadInforTours(6)">
+<body>
     <div class="home_page page">
         <div id="page__menu">
             <!--menu xong-->
@@ -42,9 +41,9 @@
         </div>
         <div class="page__content">
             <h2 class="text-center title" style="color: var(--btnColor1);">HOT TOURS</h2>
-            <div class="page__content--review flexrow">
+            <div class="page__content--review flexrow" id="rate">
                 <!--Phần review ở home page chưa xong-->
-                <div class="review--item">
+                <!-- <div class="review--item">
                     <p class="text-center">Đại Nội Huế</p>
                     <p class="text-center"><i class="fas fa-star" style="color: yellow;"></i>
                         <i class="fas fa-star" style="color: yellow;"></i>
@@ -79,7 +78,7 @@
                         <i class="fas fa-star" style="color: yellow;"></i>
                         <i class="fas fa-star" style="color: yellow;"></i></p>
                     <p style="text-align: right;">500 tours đã bán</p>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="page">
@@ -91,6 +90,15 @@
         <div id="page__footer"></div>
     </div>
 </body>
-
+<script>
+    window.onload = function() {
+        var indexColor = document.getElementById('home_menu');
+        indexColor.style.color = "var(--btnColor1)";
+        indexColor.style.fontWeight = "bold";
+        loadInforTours(6);
+        loadUserName();
+        loadHotTours();
+    }
+</script>
 
 </html>
