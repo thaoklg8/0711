@@ -7,57 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="../CSS/footer-menu.css">
-    <!-- <script src="../js/main.js" defer></script> -->
-    <title>Menu</title>
+    <link rel="stylesheet" href="../CSS/standard.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <title>EIV tour</title>
+    <link rel="shortcut icon" type="image/png" href="/img/Logo_EIV.png" />
 </head>
 
-<body>
+<body onload="loadUserName()">
     <div class="page page1">
         <div class="page__menu flexrow">
             <div class="page__menu--logo">
-                <img src="../img/logo.png" alt="">
+                <a href="../html/home_index.html"><img src="../img/logo.png" alt=""></a>
             </div>
             <div class="page__menu--ul">
                 <ul>
-                    <li><a href="./home_index.html">home</a></li>
-                    <li><a href="./tour.html">tour</a></li>
-                    <li><a href="./review.html">review</a></li>
-                    <li><a href="./aboutus.html">about us</a></li>
+                    <li><a href="./home_index.html" id="home_menu">home</a></li>
+                    <li><a href="./tour.html" id="tour_menu">tour</a></li>
+                    <li><a href="./review.html" id="review_menu">review</a></li>
+                    <li><a href="./aboutus.html" id="aboutus_menu">about us</a></li>
                 </ul>
             </div>
             <div class="page__menu--icon flexrow" id="sign--register">
-                <div class="btn-signin icon">
-                    <a href="/html/signin_email.html"><i class="far fa-user-circle"></i> Sign in</a>
+                <div class="btn-signin icon" id="btn-signin1">
+                    <a class="a-signin" id="signin" href="/html/signin_email.html"><i class="far fa-user-circle"></i> Sign in</a>
                 </div>
-                <div class="btn-register icon"><a href="/html/register.html"><i class="far fa-edit"></i> Register</a></div>
+                <div class="btn-register icon" id="btn-register1">
+                    <a class="a-register" id="register" href="/html/register.html"><i class="far fa-edit" ></i> Register</a></div>
             </div>
-            <!-- <div class="page__menu--icon1 flexrow" id="sign--register1"></div>
-            <a href="" id="button__signout" onclick="signout()"></a> -->
-
             <div class="page__menu--icon-menu ">
                 <a href="#" onclick="hiddenMenu()"><i class="fas fa-align-justify"></i></a>
             </div>
-
         </div>
+        
         <div id="page__menu--right">
             <div class="page__menu--ul">
                 <ul>
                     <li><a href="./home_index.html">Home</a></li>
                     <li><a href="./tour.html">Tour</a></li>
                     <li><a href="./review.html">Review</a></li>
-                    <li><a href="./aboutus.html">About us</a></li>
-                    <li><a href="./signin_email.html">Sign in</a></li>
-                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="./aboutus.html">About_us</a></li>
+                    <li class="btn__signin_emai--submenu"><a href="./signin_email.html">Sign_in</a></li>
+                    <li class="btn__register--submenu"><a href="./register.html">Register</a></li>
                     <li>
-                        <a href="" id="button__signout--submenu" onclick="signout()"></a>
+                        <a href="" id="btn__signout--submenu" onclick="signout()"></a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 </body>
-<script>
-</script>
 
 </html>

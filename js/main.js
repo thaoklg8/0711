@@ -1,7 +1,4 @@
 // check();
-function signout() {
-    localStorage.clickcount = 0;
-}
 /*ẩn hiện menu*/
 function hiddenMenu() {
     var hidden = document.getElementById('page__menu--right');
@@ -54,7 +51,7 @@ function checkSigninEmail() {
                         let pwdUser = data.users[j];
                         if ((dataInput[0] == emailUser.email) && (dataInput[1] == pwdUser.password)) {
                             localStorage.clickcount = 1;
-                            localStorage.email = dataInput[0];
+                            localStorage.setItem("email", dataInput[0]);
                             window.location = "/html/home_index.html";
                             break;
                         } else {
@@ -101,6 +98,7 @@ function checkSigninPhone() {
                         let pwdUser = data.users[j];
                         if ((dataInput[0] == phoneUser.phone) && (dataInput[1] == pwdUser.password)) {
                             localStorage.clickcount = 1;
+                            localStorage.setItem("phone", dataInput[0]);
                             window.location = "/html/home_index.html";
                             break;
                         } else {
@@ -142,6 +140,7 @@ function checkRegister() {
             if ((i = 4) && (data[i] == data[i - 1]) && (data[i] != "")) {
                 if (document.getElementById('accept').checked == true) {
                     localStorage.clickcount = 1;
+                    localStorage.setItem("email", data[1]);
                     window.location = "/html/home_index.html";
                 } else {
                     document.getElementById('notaccept').innerHTML = "Bạn chưa chấp nhận điều khoản sử dụng của công ty";
@@ -156,6 +155,7 @@ function checkRegister() {
 function check() {
     app.use(express.static('public'));
 }
+
 /*hiện thị inforTours*/
 function loadInforTours(n) {
     fetch("../json/inforTours.json")
@@ -174,77 +174,15 @@ function loadInforTours(n) {
                 var left = document.createElement("div");
                 left.className = 'tour--item';
                 left.innerHTML = '<div class="tour--item-pic"><img src="' + p.img + '" alt=""></div>' +
-                    '<div class="tour--item--content"><div class="middle--item-content flexrow"><div class="tour--item--content--left">' + '<p class="title text-center">' + p.title + '</p>' +
+                    '<div class="tour--item--content"><div class="middle--item-content flexrow"><div class="tour--item--content--left">' + '<p class="title text-center"id="t11111">' + p.title + '</p>' +
                     '<p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> ' + p.province + '</p>' +
-                    '</div><div class="tour--item--content--right price">' + p.price + ' </div></div>' +
-                    '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn"><a href="' + p.detail + '">DETAILS</a></div>';
+                    '</div><div class="tour--item--content--right price">' + p.price + ' VNĐ' + ' </div></div>' +
+                    '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn" onclick="sendIDTour(' + p.id + ')"><a href="' + p.detail + '">Chi tiết</a></div>';
                 document.getElementById("jsonData").appendChild(left);
             }
-            fetch("/json/users.json")
-                .then(response => response.json())
-                .then(function(data) {
-                    for (let i = 0; i < data.users.length; i++) {
-                        u = data.users[i];
-                        if (u.email == localStorage.email) { localStorage.userName = u.userName; }
-                    }
-                });
-
-            if (localStorage.clickcount == 1) {
-                document.getElementById("sign--register").innerHTML = "";
-                document.getElementById("sign--register1").innerHTML = "<span style='color:red; margin-top:11px;margin-left:-15px'>" + localStorage.userName + "</span>";
-                document.getElementById("button__signout").innerHTML = "Sign out";
-                document.getElementById("button__signout--submenu").innerHTML = "Sign out";
-            }
-
         }).catch(function(error) {
             alert("Error:" + error.message);
         });
-}
-
-// Check nội dung send now
-function validateForm() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var mess = document.getElementById("message").value;
-    if (name == null || name == "") {
-        document.getElementById("namespan").innerHTML = "<b>" + 'Bạn vui lòng điền tên' + "</b>";
-        return false;
-    } else if (email == null || email == "") {
-        document.getElementById("emailspan").innerHTML = "<b>" + 'Bạn vui lòng điền email' + "</b>";
-        return false;
-    } else if (phone == null || phone == "") {
-        document.getElementById("phonespan").innerHTML = "<b>" + 'Bạn vui lòng điền số điện thoại' + "</b>";
-        return false;
-    } else if (mess == null || mess == "") {
-        document.getElementById("messspan").innerHTML = "<b>" + 'Bạn vui lòng điền nội dung' + "</b>";
-        return false;
-    }
-
-
-    var regExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-    var regExp1 = /^(0[234][0-9]{8}|1[89]00[0-9]{4})$/;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    if (!regExp.test(email)) {
-        document.getElementById("emailspan").value = "";
-        document.getElementById("emailspan").innerHTML = "<b>" + 'Email không hợp lệ' + "</b>";
-        document.getElementById("email").value = "";
-        document.getElementById("email").focus();
-
-        return false;
-    } else if (!regExp1.test(phone)) {
-        document.getElementById("phonespan").value = "";
-        document.getElementById("phonespan").innerHTML = "<b>" + 'Phone không hợp lệ' + "</b>";
-        document.getElementById("phone").value = "";
-        document.getElementById("phone").focus();
-
-        return false;
-    } else {
-
-        document.getElementById("sendnow").innerHTML = "<b>" + 'Cảm ơn về tin nhắn này!' + "</b>"
-
-    }
 }
 
 function hiddenSend() {
@@ -303,8 +241,6 @@ function loc() {
         }).catch(function(error) {
             alert("Error:" + error.message);
         });
-
-
 }
 
 /*hiện thị inforTours theo ID*/
@@ -317,26 +253,252 @@ function loadInforToursID(id) {
             return response.json();
         })
         .then(function(data) {
-
             p = data.inforTours[id];
             var left = document.createElement("div");
             left.className = 'tour--item';
             left.innerHTML = '<div class="tour--item-pic"><img src="' + p.img + '" alt=""></div>' +
-                '<div class="tour--item--content"><div class="middle--item-content flexrow"><div class="tour--item--content--left">' + '<p class="title text-center">' + p.title + '</p>' +
+                '<div class="tour--item--content"><div class="middle--item-content flexrow"><div class="tour--item--content--left">' + '<p class="title text-center" >' + p.title + '</p>' +
                 '<p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> ' + p.province + '</p>' +
-                '</div><div class="tour--item--content--right price">' + p.price + ' </div></div>' +
-                '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn"><a href="' + p.detail + '">DETAILS</a></div>';
+                '</div><div class="tour--item--content--right price">' + p.price + ' VNĐ' + ' </div></div>' +
+                '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn" onclick="sendIDTour(' + p.id + ')"><a href="' + p.detail + '">Chi tiết</a></div>';
             document.getElementById("jsonData").appendChild(left);
         }).catch(function(error) {
             alert("Error:" + error.message);
         });
 }
-//menu ẩn hiện
-function hiddenMenu() {
-    var hidden = document.getElementById('page__menu--right');
-    if (hidden.style.display === 'none') {
-        hidden.style.display = 'block';
-    } else hidden.style.display = 'none';
+
+//hàm thay thế Signin
+function replaceSignin() {
+    var a = document.createElement("a");
+    a.className = 'a-signin';
+    a.id = 'signin';
+    a.innerHTML = '<style="color: red;">' + localStorage.getItem("userName") + '</style>';
+    document.getElementById("btn-signin1").appendChild(a);
+    var divParent = document.getElementById("btn-signin1");
+    var divChild = document.getElementById("signin");
+    divParent.replaceChild(a, divChild);
 }
 
-//js của slide
+//hàm thay thế Register
+function replaceRegister() {
+    var a = document.createElement("a");
+    a.className = 'a-register';
+    a.id = 'register';
+    a.innerHTML = '<a href="" onclick="signout()">Sign out</a>'
+    document.getElementById("btn-register1").appendChild(a);
+    var divParent = document.getElementById("btn-register1");
+    var divChild = document.getElementById("register");
+    divParent.replaceChild(a, divChild);
+}
+
+//load UserName
+function loadUserName() {
+    fetch("/json/users.json")
+        .then(response => response.json())
+        .then(
+            function(data) {
+                for (let i = 0; i < data.users.length; i++) {
+                    u = data.users[i];
+                    if ((u.email == localStorage.getItem("email")) || (u.phone == localStorage.getItem("phone"))) {
+                        localStorage.setItem("userName", u.userName);
+                        break;
+                    }
+                }
+            }
+        );
+
+    if (localStorage.clickcount == 1) {
+        replaceSignin();
+        replaceRegister();
+    }
+}
+
+//hàm Signout
+function signout() {
+    localStorage.clickcount = 0;
+
+}
+
+//trang DETAIL
+//load detail cua tour theo id duoc chon
+function sendIDTour(input) {
+    fetch("../json/details.json")
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("HTTP error, status: " + response.status)
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            p = data.details;
+            let n = p.length;
+            for (let i = 0; i < n; i++) {
+                if (p[i].id == input) {
+                    localStorage.idtour = i;
+                }
+            }
+        }).catch(function(error) {
+            alert("Error: " + error.message);
+        });
+}
+
+function loadDetailTour() {
+    fetch("../json/details.json")
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("HTTP error, status: " + response.status)
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            p = data.details[localStorage.idtour];
+            var left = document.createElement("div");
+            left.innerHTML = '<h1>' + p.title + '</h1><p>' +
+                p.content + '</p><br><p style="font-weight: bold;">' +
+                p.timeOfTour + '</p><p>' +
+                p.timeline + '</p>';
+            document.getElementById("detailTour").appendChild(left);
+        }).catch(function(error) {
+            alert("Error: " + error.message);
+        });
+}
+
+/*hien thi cac tour duoc mua nhieu nhat */
+function showStar(quantity) {
+    let string = "";
+    for (let i = 0; i < quantity; i++) {
+        string += '<i class="fas fa-star" style="color: yellow;"></i>';
+    }
+    return string;
+}
+
+function loadHotTours() {
+    fetch("../json/quantity.json")
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("HTTP error, status: " + response.status)
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            var n = data.quantity.length;
+            for (let i = 0; i < n; i++) {
+                p = data.quantity[i];
+                p = data.quantity[i];
+                var left = document.createElement("div");
+                left.className = 'review--item';
+                left.innerHTML = '<p>' + p.title +
+                    '</p><p>' + '<p>' + showStar(p.rate) + '</p><p>' + p.quantity +
+                    ' vé đã bán</p>';
+                document.getElementById("rate").appendChild(left);
+            }
+        })
+        .catch(function(error) {
+            alert("Error:" + error.message);
+        });
+}
+
+function loadDetail_page() {
+    window.location = "/html/detail.html";
+}
+
+/*BOOK NOW */
+function loadUserInfor() {
+    if (localStorage.clickcount == 1) {
+        var userNameInput = document.getElementById("btn-signin1").innerText;
+        fetch("/json/users.json")
+            .then(response => response.json())
+            .then(function(data) {
+                let n = data.users.length;
+                for (let i = 0; i < n; i++) {
+                    if (data.users[i].userName == userNameInput) {
+                        document.getElementById("name").value = data.users[i].userName;
+                        document.getElementById("email").value = data.users[i].email;
+                        document.getElementById("phone").value = data.users[i].phone;
+                        loadTourClicked();
+                    } else {}
+                }
+            });
+    } else {
+
+    }
+}
+
+function loadTourClicked() {
+    fetch("../json/inforTours.json")
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("HTTP error, status: " + response.status)
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            p = data.inforTours[localStorage.idtour];
+            document.getElementById("place_book").value = p.title;
+            document.getElementById("price").value = p.price;
+            let price = parseInt(p.price);
+            localStorage.price = price;
+            var img = document.createElement('img');
+            img.src = p.img;
+            document.getElementById('img').appendChild(img);
+        }).catch(function(error) {
+            alert("Error: " + error.message);
+        });
+}
+
+function sum() {
+    var sl = document.getElementById("number_book").value;
+    if (sl > 0) {
+        sl = parseInt(sl, 10);
+        var b2 = sl * parseInt(localStorage.price);
+        document.getElementById("total").value = b2 + " VNĐ";
+    } else {
+        alert("Khong hop le");
+    }
+}
+
+//Trang review
+function loadImgReview() {
+    fetch("../json/reviews.json")
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("HTTP error, status: " + response.status)
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            let n = data.reviews.length;
+            for (let i = 0; i < n; i++) {
+                let r = data.reviews[i];
+                var left = document.createElement("div");
+                left.innerHTML = '<a href="/html/review_sample.html" id="' + i + '" target="myreview"><img src="' + r.img + '" alt="" title="huế" onClick="getIDReview(' + i + ')"></a>';
+                document.getElementById("review").appendChild(left);
+            }
+        }).catch(function(error) {
+            alert("Error:" + error.message);
+        });
+}
+
+function getIDReview(id) {
+    localStorage.idReview = id;
+}
+
+function loadReview() {
+    let id = localStorage.idReview;
+    fetch("../json/reviews.json")
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("HTTP error, status: " + response.status)
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            p = data.reviews[id];
+            var left = document.createElement("div");
+            left.className = 'container-reviewofcustomer__content';
+            left.innerHTML = '<h2>' + p.title + '</h2><p>' + p.content + '</p><div class="content__date--cusreview"><p>' + p.date + '</p></div>';
+            document.getElementById("review_sample").appendChild(left);
+        }).catch(function(error) {
+            alert("Error:" + error.message);
+        });
+}

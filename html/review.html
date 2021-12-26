@@ -5,24 +5,137 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review</title>
-
+    <link rel="shortcut icon" type="image/png" href="/img/Logo_EIV.png"/>
     <link rel="stylesheet" href="/CSS/footer-menu.css">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="../js/main.js" defer></script>
     <script src="/js/loadUser.js" defer></script>
+
+    <title>EIV tour</title>
+
     <script defer>
         function resizeIframe(obj) {
             obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
         }
     </script>
+
+    <style>
+        .page__content--image {
+            flex-wrap: wrap;
+        }
+        
+        .comment__items {
+            display: flex;
+            padding-bottom: var(--space);
+        }
+        
+        .comment__items img {
+            padding-right: 5px;
+        }
+        
+        .span {
+            margin-left: calc(var(--space)/3);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Verdana, sans-serif;
+        }
+        
+        .mySlides {
+            display: none;
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 900px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.8s linear;
+        }
+        
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 3.0s;
+            animation-name: fade;
+            animation-duration: 3.0s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="review_page page ">
         <div id="page__menu"></div>
+
         <div class="page__content p1--review">
             <div class="page__content--section">
                 <div class="page__content--slide">
@@ -74,124 +187,103 @@
                         }
                     </script>
                 </div>
-                <div class="page__content--best">
-                    <h3> Best package</h3>
-                    <div class="content__image--best">
-                        <div class="content__best">
-                            <img src="/img/bestpackage/4d_sapa.jpg" alt="" usemap="#mymap1">
-                            <map name="mymap1">
-                                <area target="" href="detail.html" coords="-1,-1,766,511" shape="rect">
-                            </map>
-                            <p class="content__best-location">Sapa</p>
-                            <div class="price">
-                                <p>$600</p>
-                            </div>
-                        </div>
 
-                        <div class="content__best">
-                            <img src="/img/bestpackage/5f_NhaTrang.jpg" alt="" usemap="#mymap2">
-                            <map name="mymap2">
-                                <area target="blank" href="detail.html" coords="-2,5,4581,3441" shape="rect">
-                            </map>
-                            <p class="content__best-location">Nha Trang</p>
-                            <div class="price">
-                                <p>$700</p>
-                            </div>
-                        </div>
-                        <div class="content__best">
-                            <img src="/img/bestpackage/6b_VT.jpg" alt="" usemap="#mymap3">
-                            <map name="mymap3">
-                                <area target="blank" href="detail.html" coords="0,4,1349,898" shape="rect">
-                            </map>
-                            <p class="content__best-location">Vũng Tàu</p>
-                            <div class="price">
-                                <p>$600</p>
-                            </div>
-                        </div>
+                <div class="page__content--best ">
+                    <div class="page__content--besth3 ">
+                        <h3> Best package</h3>
                     </div>
-                    <div class="btn btn-booknow btn-medium btn btn-booknowdetail" style="margin-top: 50px;">
-                        <a href="./booknow.html">BOOK NOW</a>
+                    <div class="content__image--best">
+                        <div class="content__best ">
+                            <img src="../img/Detail/Hanoi.png " alt=" ">
+                            <div>
+                                <h4>Lăng Bác Hồ</h4>
+                                <p class="title_province text-center "><i class="fas fa-map-pin " style="color: brown; "></i> Hà Nội</p>
+                                <div class="tour--item--content--right price ">
+                                    500000 VNĐ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__best ">
+                            <img src="../img/Detail/HaLong.png " alt=" ">
+                            <div>
+                                <h4>Vịnh Hạ Long</h4>
+                                <p class="title_province text-center "><i class="fas fa-map-pin " style="color: brown; "></i> Quảng Ninh</p>
+                                <div class="tour--item--content--right price ">
+                                    100000 VNĐ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__best ">
+                            <img src="/img/Detail/VT.png " alt=" ">
+                            <div>
+                                <h4>Vũng Tàu</h4>
+                                <p class="title_province text-center "><i class="fas fa-map-pin " style="color: brown; "></i> Vũng Tàu</p>
+                                <div class="tour--item--content--right price ">
+                                    500000 VNĐ
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="">
-                <img style="width: 100%; height: 250px; margin-bottom: 20px;" src="/img/paner.png" alt="">
-            </div>
 
-            <h2>REVIEWS FROM CUSTOMER</h2>
+            <h2 class="title_upperCase">Nhận xét từ khách hàng trước</h2>
             <div class="page__content--section p2--review">
-                <div class="page__content--image" style="overflow-y: scroll;">
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/1f-hue_c.png" alt="" title="huế"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/2c_HaNoi_c.png" alt="" title="Hà nội"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/3b_BinhDinh_c.png" alt="" title="Bình Định"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/4a_sapa_c.png" alt="" title="Sa pa"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/5h_NhaTrangc.png" alt="" title="Nha Trang"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/6m_VTc.png" alt="" title="Vũng tàu"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/7b_CanTho-c.png" alt="" title="Cần thơ"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/8d_DaLatc.png" alt="" title="Đà Lạt"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/9a_YenBaic.png" alt="" title="Yên Bái"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/10c_KienGiangc.png" alt="" title="Kiên Giang"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/11c_AnGiangc.png" alt="" title="An Giang"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/12c_BinhThuanc.png" alt="" title="Bình Thuận"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/13b_HaLong.png" alt="" title="Hạ Long"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/14c_Phú Yênc.png" alt="" title="Phú Yên"></a>
-                    <a href="/html/review_sample.html" target="myreview"><img src="/img/review/15_DakLakc.png" alt="" title="Đắk Lắk"></a>
+                <div class="page__content--image flexrow" style="overflow-y: scroll;" id="review">
                 </div>
                 <div class="page__content--review">
-                    <iframe name="myreview" onload="resizeIframe(this)"></iframe>
+                    <iframe name="myreview" onload="resizeIframe(this)" frameborder="0"></iframe>
                 </div>
             </div>
+            <span><p class="page__review--note">**Vui lòng chọn ảnh để xem nhận xét**</p></span>
             <div class="page__content--btn btn">
-                <a href="cusreview.html">Send review</a>
+                <a href="cusreview.html">Đăng nhận xét</a>
             </div>
+
             <div class="page-review--comment">
-                <h1>COMMENTS</h1>
-                <div class="comment__items flexrow">
+                <p class="title_upperCase">Bình luận</p>
+                <div class="comment__items">
                     <div><img src="/img/user-img-1-100x100.png" alt=""></div>
                     <div class="comment__items--infor">
                         <p><b> Jenny</b></p>
-                        <div class="rely-comment"><a href="">rely</a></div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi repudiandae similique inventore expedita, eos vel minima ipsa perspiciatis aspernatur quis? Fuga voluptatum aspernatur quae voluptates sit illo maxime dolores Lorem
-                            ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, optio facilis vitae quidem hic illo repellendus ex a ullam sit vel aliquam dolorum possimus, debitis totam eos cum facere. Numquam.</p>
-                        <b>21/11/2021 at 8h30</b>
+                        <p>Cảm ơn bạn đã review cho mình về chuyến đi, giúp mình có được những kinh nghiệm hết sức quý báu, mình cũng đang có dự định sẽ lên lịch để đi du lịch vào cuối năm nay nè !!!</p>
+                        <span class="span">
+                            <b style="font-size: 12px;">21/11/2021 lúc 10h30</b>
+                        </span>
+                        <b class="rely-comment"><a href="">Reply</a></b>
                     </div>
                 </div>
-                <div class="comment__items--rely flexrow">
+                <div class="comment__items--rely comment__items">
                     <div><img src="/img/user-img-5-100x100.png" alt=""></div>
                     <div class="comment__items--infor">
                         <p><b>David</b> </p>
-                        <div class="rely-comment"><a href="">rely</a></div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum asperiores impedit ipsum vero, voluptatibus facilis, blanditiis odit ut at recusandae tenetur, distinctio qui facere ad pariatur perspiciatis explicabo mollitia dolorum?</p>
-                        <b><b>20/11/2021 lúc 8h</b></b>
+                        <p>Không có chi</p>
+                        <span class="span">
+                            <b style="font-size: 12px;">21/11/2021 lúc 8h30</b>
+                        </span>
+                        <b class="rely-comment"><a href="">Reply</a></b>
                     </div>
                 </div>
-                <div class="comment__items flexrow">
+                <div class="comment__items">
                     <div><img src="/img/user-img-4-100x100.png" alt=""></div>
                     <div class="comment__items--infor">
-                        <p><b>Jessica</b></p>
-                        <div class="rely-comment"><a href="">rely</a></div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quisquam illo voluptatem voluptates quasi vero incidunt molestias error, aliquam obcaecati quaerat soluta minus. Quos nihil eveniet doloremque expedita aperiam explicabo.</p>
-                        <b>21/11/2021 at 16h30</b>
+                        <p><b> Windy</b></p>
+                        <p>Mình cũng đã từng đi ở đây 1 vài lần nhưng không được biết đến nhiều chỗ thú vị như bạn đã nói, mình sẽ note lại để có thể tham quan các địa điểm đó 1 lần nữa</p>
+                        <span class="span">
+                            <b style="font-size: 12px;">21/11/2021 lúc 4h30</b>
+                        </span>
+                        <b class="rely-comment"><a href="">Reply</a></b>
                     </div>
                 </div>
-                <div class="comment__items flexrow">
-                    <div><img src="/img/user-ad.png" alt="">
-                    </div>
+                <div class="comment__items">
+                    <div><img src="/img/user-ad.png" alt=""></div>
                     <div class="comment__items--infor">
-                        <p><b>Khách</b></p>
-                        <div class="rely-comment"><a href="">rely</a></div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quisquam illo voluptatem voluptates quasi vero incidunt molestias error, aliquam obcaecati quaerat soluta minus. Quos nihil eveniet doloremque expedita aperiam explicabo.</p>
-                        <b>21/11/2021 at 16h30</b>
-                    </div>
-                </div>
-                <div class="comment__items flexrow">
-                    <div><img src="/img/user-ad.png" alt="">
-                    </div>
-                    <div class="comment__items--infor">
-                        <p><b>Khách</b></p>
-                        <div class="rely-comment"><a href="">rely</a></div>
-                        <p><span id="hvn">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum iure et pariatur omnis possimus rem quasi molestiae modi ad! Nesciunt eveniet aut inventore unde vel molestias neque dolorum hic cupiditate?</span></p>
-                        <b> <span id="test"></span> </b>
+                        <p><b> Peter</b></p>
+                        <p>Chỗ đó có nhiều địa điểm ăn uống mua sắm không bạn ơi. Đi ở đó có cần đem theo áo khoác hay nói gì không vậy bạn? mình cảm ơn</p>
+                        <span class="span">
+                            <b style="font-size: 12px;">21/11/2021 lúc 8h</b>
+                        </span>
+                        <b class="rely-comment"><a href="">Reply</a></b>
                     </div>
                 </div>
 
@@ -199,24 +291,36 @@
             <div class="post--comment">
                 <form action="" method="post">
                     <div class="post--comment-header">
-                        <h2>Nhập comment </h2>
+                        <p class="title text-center">Nhập bình luận </p>
                     </div>
                     <div class="post--comment-row">
-                        <textarea name="" id="input--comment" placeholder="nhập comment vào đây"></textarea>
+                        <textarea name="" id="input--comment" placeholder="Nhập bình luận vào đây"></textarea>
                     </div>
-                    <div class="post--comment-row">
+                    <div class="post--comment-row--guest">
                         <input type="checkbox" id="save-infor--comment" name="save-infor--comment" value="yes">
-                        <label for="save-infor--comment">Đăng với chế độ ẩn danh</label>
+                        <label for="save-infor--comment" class="postwithguess">Đăng với chế độ khách</label>
                     </div>
-                    <div class="post--comment-btn">
-                        <!-- <button id="post--comment-button" >Đăng bài</button> -->
-                        <input type="button" id="post--comment-button" class="form__btn" value="Nhập dữ liệu" onclick="nhapDL()">
+                    <div class="post--comment-btn ">
+                        <input type="button" id="post--comment-button" class="form__btn btn" value="Đăng bình luận" onclick="nhapDL()">
                     </div>
                 </form>
             </div>
         </div>
+
         <div id="page__footer"></div>
+
     </div>
 </body>
+
+<script>
+    window.onload = function() {
+        var indexColor = document.getElementById('review_menu');
+        indexColor.style.color = "var(--btnColor1)";
+        indexColor.style.fontWeight = "bold";
+        loadUserName();
+        loadImgReview();
+
+    }
+</script>
 
 </html>

@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
-
-    <link rel="stylesheet" href="/CSS/footer-menu.css">
+    <link rel="shortcut icon" type="image/png" href="/img/Logo_EIV.png"/>
+    <link rel="stylesheet" href="/CSS/standard.css">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/main.js" defer></script>
     <script src="/js/loadUser.js" defer></script>
+
+    <title>EIV tour</title>
 </head>
 
-<body>
+<body onload=loadUserName()>
     <div class="signin_page page">
         <div id="page__menu"></div>
 
         <div class="page__content">
             <div class="form__option--si">
-                <ul>
+                <ul class="redirect">
                     <div>
                         <li><a href="/html/signin_email.html">Email</a></li>
                     </div>
@@ -31,7 +32,7 @@
                     </div>
                 </ul>
                 <hr>
-                <h3>Đăng nhập với EIV</h3>
+                <h3 class="title">Đăng nhập với EIV</h3>
                 <form action="#">
                     <div class="form_row">
                         <label class="form__label" for="Phone">Số di động</label>
@@ -45,21 +46,21 @@
                     </div>
                     <ul class="reason">
                         <div>
-                            <li><a href="/html/register.html">Tạo tài khoản</a></li>
+                            <li><a href="/html/register.html" style="color: blue;">Tạo tài khoản</a></li>
                         </div>
                         <div>
-                            <li><a href="/html/forgot_password.html">Quên mật khẩu?</a></li>
+                            <li><a href="/html/forgot_password.html" style="color: blue;">Quên mật khẩu?</a></li>
                         </div>
                     </ul>
                     <div class="form_row">
-                        <input class="form__button" type="button" name="submit" value="Đăng nhập" onclick="checkSigninPhone()">
+                        <div class="form__button btn btn-medium" onclick="checkSigninPhone()">Đăng nhập</div>
                     </div>
                     <p id="match">hoặc tiếp tục với</p>
                     <ul class="other_method">
                         <div>
                             <li>
                                 <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" id="gg">
-                                    <img src="/img/Detail/GGLogo.png" alt="">
+                                    <img src="/img/Detail/google.jpg" alt="">
                                     <p>Google</p>
                                 </a>
                             </li>
@@ -67,7 +68,7 @@
                         <div>
                             <li>
                                 <a href="https://www.facebook.com/" target="_blank" id="fb">
-                                    <img src="/img/Detail/FBLogo.png" alt="">
+                                    <img src="/img/Detail/facebook.jpg" alt="">
                                     <p>Facebook</p>
                                 </a>
                             </li>

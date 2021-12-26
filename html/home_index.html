@@ -10,27 +10,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="/CSS/footer_menu.css" type="text/html">
     <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="shortcut icon" type="image/png" href="/img/Logo_EIV.png"/>
 
-    <title>Group6-Website</title>
-
+    <title>EIV tour</title>
 </head>
 
-<body onload="loadInforTours(6)">
+<body>
     <div class="home_page page">
-        <div id="page__menu">
-            <!--menu xong-->
-        </div>
-        <div class="page--slide">
-            <!--Phần slide chưa sửa được-->
+        <div id="page__menu"> </div>
+
+        <div class="page--slide ">
             <img src="/img/img111.jpg" alt="">
-        </div>
-        <div class="btn-search flexrow">
-            <input type="text" class="input-search " ng-model="keyword" placeholder="Bạn tìm gì..." id="dataSearch">
-            <span class="fas fa-search" style="margin-left: 5px;" onclick="searchTour()"></span>
+            <div class="page__search">
+                <input type="text" class="input-search " ng-model="keyword" placeholder="Bạn tìm gì..." id="dataSearch">
+                <span class="fas fa-search" style="margin-left: 5px;" onclick="searchTour()"></span>
+            </div>
         </div>
         <div class="page__content" id="page__content">
-            <!--Phần inforTours xong-->
-            <h2 class="title text-center" id="h2">BEST PACKAGES</h2>
+            <h2 class="title_upperCase" id="h2">Địa điểm nổi bật</h2>
             <div id="parent">
                 <div class="page__content--tour" id="jsonData"></div>
             </div>
@@ -41,45 +38,8 @@
             </div>
         </div>
         <div class="page__content">
-            <h2 class="text-center title" style="color: var(--btnColor1);">HOT TOURS</h2>
-            <div class="page__content--review flexrow">
-                <!--Phần review ở home page chưa xong-->
-                <div class="review--item">
-                    <p class="text-center">Đại Nội Huế</p>
-                    <p class="text-center"><i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i></p>
-                    <p style="text-align: right;">500 tours đã bán</p>
-                </div>
-                <div class="review--item">
-                    <p class="text-center">Đại Nội Huế</p>
-                    <p class="text-center"><i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i></p>
-                    <p style="text-align: right;">500 tours đã bán</p>
-                </div>
-                <div class="review--item">
-                    <p class="text-center">Đại Nội Huế</p>
-                    <p class="text-center"><i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i></p>
-                    <p style="text-align: right;">500 tours đã bán</p>
-                </div>
-                <div class="review--item">
-                    <p class="text-center">Đại Nội Huế</p>
-                    <p class="text-center"><i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i>
-                        <i class="fas fa-star" style="color: yellow;"></i></p>
-                    <p style="text-align: right;">500 tours đã bán</p>
-                </div>
+            <h2 class="title_upperCase">Bán chạy</h2>
+            <div class="page__content--review flexrow" id="rate">
             </div>
         </div>
         <div class="page">
@@ -87,10 +47,22 @@
                 <img src="/img/home/transaction (2).png" alt="">
             </div>
         </div>
+
         <div id="page__partner"></div>
+
         <div id="page__footer"></div>
     </div>
 </body>
 
+<script>
+    window.onload = function() {
+        var indexColor = document.getElementById('home_menu');
+        indexColor.style.color = "var(--btnColor1)";
+        indexColor.style.fontWeight = "bold";
+        loadInforTours(6);
+        loadUserName();
+        loadHotTours();
+    }
+</script>
 
 </html>

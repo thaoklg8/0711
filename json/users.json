@@ -1,7 +1,7 @@
 {
     "users": [{
             "id": 1,
-            "userName": "thao",
+            "userName": "Thao",
             "email": "thaovtt19406@st.uel.edu.vn",
             "phone": "0388776611",
             "password": "12345",
@@ -9,7 +9,7 @@
         },
         {
             "id": 2,
-            "userName": "nhintt19406",
+            "userName": "Nhi",
             "email": "nhintt19406@st.uel.edu.vn",
             "phone": "0388771166",
             "password": "12543",
@@ -17,7 +17,7 @@
         },
         {
             "id": 3,
-            "userName": "phongnt19406",
+            "userName": "Phong",
             "email": "phongnt19406@st.uel.edu.vn",
             "phone": "0388667711",
             "password": "12354",
@@ -25,7 +25,7 @@
         },
         {
             "id": 4,
-            "userName": "tramntn19406",
+            "userName": "Tram",
             "email": "tramntn19406@st.uel.edu.vn",
             "phone": "0388661177",
             "password": "12435",
@@ -33,7 +33,7 @@
         },
         {
             "id": 5,
-            "userName": "thuttt19406",
+            "userName": "Thu",
             "email": "thuttt19406@st.uel.edu.vn",
             "phone": "0388117766",
             "password": "12453",

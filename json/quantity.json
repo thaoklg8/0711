@@ -1,0 +1,25 @@
+{
+    "quantity": [{
+            "id": 1,
+            "title": "Đại nội Huế",
+            "quantity": 500,
+            "rate": 5
+        },
+        {
+            "id": 2,
+            "title": "Lăng Bác Hồ",
+            "quantity": 500,
+            "rate": 5
+        }, {
+            "id": 3,
+            "title": "Cù Lao Xanh",
+            "quantity": 500,
+            "rate": 5
+        }, {
+            "id": 4,
+            "title": "Đỉnh núi Fansipan",
+            "quantity": 500,
+            "rate": 5
+        }
+    ]
+}

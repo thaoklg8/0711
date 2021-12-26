@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-
-    <link rel="stylesheet" href="/CSS/footer-menu.css">
+    <link rel="shortcut icon" type="image/png" href="/img/Logo_EIV.png"/>
+    <link rel="stylesheet" href="/CSS/standard.css">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/main.js" defer></script>
     <script src="/js/loadUser.js" defer></script>
+
+    <title>EIV tour</title>
 </head>
 
-<body>
+<body onload=loadUserName()>
     <div class="register_page page">
         <div id="page__menu"></div>
 
         <div class="page__content">
             <div class="form__option--re">
-                <h3>Đăng ký với EIV</h3>
+                <h3 class="title">Đăng ký với EIV</h3>
                 <form class="form__register" ng-app="" name="myForm">
                     <div class="form_row">
                         <label class="form__label" for="name">Tên <span style="margin-left: 30px;">*</span></label>
@@ -33,7 +34,7 @@
                     <div class="form_row">
                         <label class="form__label" for="Email">Email<span style="margin-left: 47px;">*</span></label>
                         <input class="form__input" type="email" id="Email" placeholder="Email" ng-model="text" name="myEmail"><br>
-                        <span ng-show="myForm.myEmail.$error.email" class="validation_message">Not a valid email address</span>
+                        <span ng-show="myForm.myEmail.$error.email" class="validation_message">Định dạng email không chính xác</span>
                         <p id="notemail"></p>
                     </div>
 
@@ -50,19 +51,19 @@
                     </div>
 
                     <div class="form_row">
-                        <label class="form__label" for="repwd">Xác nhận lại mật khẩu</label>
+                        <label class="form__label" for="repwd">Xác nhận lại mật khẩu<span style="margin-left: 193px;">*</span></label>
                         <input class="form__input" type="password" id="repwd" placeholder="Xác nhận lại mật khẩu">
                         <p id="notrepwd"></p>
                     </div>
 
                     <div class="form_row accept">
                         <input type="checkbox" value="accept" name="accept" id="accept">
-                        <h6 style="margin-top: -5px;">Chấp nhận <a href="/html/provision.html">điều khoản sử dụng</a> của công ty.</h6>
+                        <h6>Chấp nhận <a href="/html/provision.html" style="color: #044D98;">điều khoản sử dụng</a> của công ty.</h6>
                     </div>
                     <p id="notaccept"></p>
 
                     <div class="form_row">
-                        <input class="form__button" type="button" name="submit" value="Đăng ký" onclick="checkRegister()">
+                        <div class="form__button btn btn-medium" onclick="checkRegister()">Đăng ký</div>
                     </div>
                 </form>
 
@@ -71,7 +72,7 @@
                     <div>
                         <li>
                             <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" id="gg">
-                                <img src="/img/Detail/GGLogo.png" alt="">
+                                <img src="/img/Detail/google.jpg" alt="">
                                 <p>Google</p>
                             </a>
                         </li>
@@ -79,7 +80,7 @@
                     <div>
                         <li>
                             <a href="https://www.facebook.com/" target="_blank" id="fb">
-                                <img src="/img/Detail/FBLogo.png" alt="">
+                                <img src="/img/Detail/facebook.jpg" alt="">
                                 <p>Facebook</p>
                             </a>
                         </li>
@@ -89,6 +90,7 @@
         </div>
 
         <div id="page__footer"></div>
+        
     </div>
 </body>
 

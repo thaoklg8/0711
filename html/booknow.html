@@ -7,72 +7,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/asset/js/main.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link rel="stylesheet" href="../CSS/footer-menu.css">
+    <link rel="stylesheet" href="../CSS/standard.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/main.js" defer></script>
     <script src="/js/loadUser.js" defer></script>
+    <link rel="shortcut icon" type="image/png" href="/img/Logo_EIV.png" />
 
-    <title>Book now</title>
+    <title>EIV tour</title>
 </head>
 
 <body>
     <div class="book_page page">
-        <form action="./Booknow_server.html" method="get">
-        <div class="img_slidego">
-            <img src="../img/imgheader.jpg" alt="">
-        </div>
+        <div id="page__menu"></div>
 
-        <div class="page__content content">
-            <div class="page__content--information">
-                <div class="information--left">
-                    <p class=" text-center">INFORMATION OF CUSTOMERS BOOKING TOURS</p>
-                    <div class="flex_row">
-                        <label class="flex-label" for="name">Full name </label>
-                        <input class="flex-input" type="text" id="name" name="name">
+        <form action="./Booknow_server.html" method="get">
+            <div class="img_slidego">
+                <img src="../img/imgheader.jpg" alt="">
+            </div>
+            <div class="title_booknow">
+                <p class="title_upperCase" style="font-weight: bold;">ĐẶT VÉ ONLINE</p>
+            </div>
+            <div class="page__content content">
+                <div class="page__content--information">
+                    <div class="information--left ">
+                        <p class="title_upperCase">THÔNG TIN ĐẶT VÉ CỦA KHÁCH HÀNG</p>
+                        <div class="flex_row">
+                            <label class="flex-label" for="name">Họ và tên </label>
+                            <input class="flex-input" type="text" id="name" name="name">
+                        </div>
+                        <div class="flex_row">
+                            <label class="flex-label" for="email">Email </label>
+                            <input class="flex-input" type="text" id="email" name="email">
+                        </div>
+                        <div class="flex_row">
+                            <label class="flex-label" for="phone">Điện thoại</label>
+                            <input class="flex-input" type="text" id="phone" name="phone">
+                        </div>
+                        <div class="flex_row ">
+                            <label class="flex-label" for="number">Số lượng</label>
+                            <input class="flex-input" type="text" id="number_book" onkeyup="sum()">
+                            <input class="flex-input" type="text" placeholder="Hạ Long Tour" id="place_book" name="place">
+                        </div>
+                        <div class="flex_row">
+                            <label class="flex-label" for="price">Đơn giá</label>
+                            <input class="flex-input" type="text" id="price">
+                        </div>
+                        <div class="flex_row">
+                            <label class="flex-label" for="discount">Mã giảm giá</label>
+                            <input class="flex-input" type="text" id="discount" name="discount">
+                        </div>
+                        <div class="flex_row">
+                            <label class="flex-label" for="total">Tổng thanh toán</label>
+                            <input class="flex-input" type="text" id="total">
+                        </div>
+                        <div class="flex_row">
+                            <label class="flex-label" for="note">Ghi chú </label>
+                            <textarea class="flex-input" name="" id="note" placeholder="Nhập ghi chú vào đây"></textarea>
+                        </div>
+                        <div class="btn-lager btn btn-completed">
+                            <a href="#" onclick="alert('Bạn đã đặt vé thành công!')">Hoàn Thành</a>
+                        </div>
                     </div>
-                    <div class="flex_row">
-                        <label class="flex-label" for="email">Email: </label>
-                        <input class="flex-input" type="text" id="email" name="email">
+                    <div class="information--right" id="img">
+                        <p class="title_upperCase">HÌNH ẢNH LIÊN QUAN ĐẾN TOUR</p>
+                        <img src="/img/BookNow/444.jpg" alt="">
                     </div>
-                    <div class="flex_row">
-                        <label class="flex-label" for="phone">Phone: </label>
-                        <input class="flex-input" type="text" id="phone" name="phone">
-                    </div>
-                    <div class="flex_row">
-                        <label class="flex-label" for="note">Note: </label>
-                        <input class="flex-input" type="text" id="note" name="content">
-                    </div>
-                    
-                </div>
-                <div class="information--right">
-                    <img src="../img/img1.jpg" alt="">
                 </div>
             </div>
-            <div class="page__content--book">
-                <div  class="flex_row">
-                    <label class="flex-label" for="number">Quantity</label>
-                    <input class="flex-input" type="text" id="number_book" placeholder="1" >
-                    <input  class="flex-input" type="text" placeholder="Phú Quốc Tour" id="place_book" name="place">
-                </div>
-                <div class="flex_row">
-                    <label class="flex-label" for="price">Unit price</label>
-                    <input class="flex-input" type="text" id="price">
-                </div>
-                <div class="flex_row">
-                        <label class="flex-label" for="total">Total</label>
-                        <input class="flex-input" type="text" id="total" >
-                </div>
-                <div >
-                    <input class="btn_book_done" type="button" value="COMPLETED" onclick="Completed()">
-                </div>
-            </div>
-        </div>
-    </form>
+        </form>
+
+        <div id="page__footer"></div>
     </div>
 </body>
 
-</html>
+<script>
+    window.onload = function() {
+        loadUserName();
+        loadUserInfor();
+    }
+</script>
 
+</html>
