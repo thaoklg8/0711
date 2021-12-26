@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="shortcut icon" type="image/png" href="/img/Logo_EIV.png" />
+=======
+    <title> Đăng Review</title>
+
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
     <link rel="stylesheet" href="/CSS/standard.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/responsive.css">
@@ -21,7 +26,11 @@
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
+<<<<<<< HEAD
                     $('#img__ofcustomer')
+=======
+                    $('#blah')
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
                         .attr('src', e.target.result);
                 };
                 reader.readAsDataURL(input.files[0]);
@@ -44,26 +53,41 @@
 <body>
     <div class="cusreview_page page">
         <div id="page__menu"></div>
+<<<<<<< HEAD
 
         <div class="page_content_slide_img">
             <img src="/img/img111.jpg" alt="">
         </div>
         <div class="page__content content">
             <h2 class="title_upperCase">Chia sẻ trải nghiệm du lịch </h2>
+=======
+        <div class="page__content content">
+            <div class="page_content_slide_img">
+                <img src="/img/img111.jpg" alt="">
+            </div>
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
             <div class="page__content--cusreview flexrow">
                 <div class="page__content--cusreview-left">
                     <div class="cusreview__uploadfile">
                         <input type='file' onchange="readURL(this);" />
+<<<<<<< HEAD
                         <img id="img__ofcustomer" src="http://placehold.it/180" alt="your image" />
+=======
+                        <img id="blah" src="http://placehold.it/180" alt="your image" />
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
                     </div>
                 </div>
                 <div class="page__content--cusreview-right">
                     <textarea name="content__text--cusreview" id="cusreview_text" placeholder=" Nhập nội dung review vào đây.... "></textarea>
                 </div>
+<<<<<<< HEAD
             </div>
             <div class="form__button btn btn-medium">
                 <button class="btn btn-medium">Đăng nhận xét</button>
+=======
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
             </div>
+            <button class="btn content__btn--cusreview">Đăng review</button>
         </div>
         
         <div id="page__footer"></div>

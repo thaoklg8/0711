@@ -252,9 +252,21 @@
           text-align: center;
       }
       
+<<<<<<< HEAD
       .information--left #place_book {
           width: 200%;
           text-align: center;
+=======
+      .book_page .page__content--book {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          min-width: 300px;
+          background-color: rgb(87, 165, 177);
+          color: white;
+          margin-bottom: var(--space);
+          padding-bottom: calc(var(--space)/2);
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
       }
       
       .book_page .information--right {
@@ -262,7 +274,32 @@
           flex: 1;
       }
       
+<<<<<<< HEAD
       .book_page .btn-completed {
+=======
+      .page__content--book .flex_row label {
+          display: inline-block;
+          width: 200px;
+      }
+      
+      .page__content--book .flex-input {
+          width: 200px;
+          outline-style: none;
+          border: none;
+      }
+      
+      .page__content--book #number_book {
+          width: 45px;
+          text-align: left;
+      }
+      
+      .page__content--book #place_book {
+          width: 150px;
+          text-align: left;
+      }
+      
+      .page__content--book .btn_book_done {
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
           margin-top: var(--space);
           margin-bottom: var(--space);
       }
@@ -599,7 +636,25 @@
       .page__content--video video {
           width: 100%;
           display: block;
+<<<<<<< HEAD
           border-radius: 10px;
+=======
+      }
+      
+      .detail_page .page__content--book {
+          margin: 0 auto;
+          min-width: 300px;
+          padding-bottom: var(--space);
+          margin-bottom: var(--space);
+          color: white;
+      }
+      
+      .page__content--book {
+          border: 1px solid rgb(50, 99, 235);
+          min-width: 320px;
+          height: auto;
+          background-color: var(--infColor);
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
       }
       
       .content__book--price {

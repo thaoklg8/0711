@@ -53,6 +53,7 @@
     width: 100px;
     height: 36px;
     line-height: 36px;
+<<<<<<< HEAD:CSS/standard.css
     color: white;
     font-size: 20px;
     margin-left: auto;
@@ -80,6 +81,11 @@ p {
 
 .color {
     color: #044d98;
+=======
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878:CSS/footer-menu.css
 }
 
 ul a:hover,
@@ -327,6 +333,7 @@ a:hover {
         line-height: 32px;
         font-size: 18px;
     }
+<<<<<<< HEAD:CSS/standard.css
 
     .btn-medium {
         width: 130px;
@@ -336,6 +343,15 @@ a:hover {
         width: 220px;
     }
     
+=======
+    .btn-medium {
+        width: 130px;
+    }
+    .btn-lager {
+        width: 220px;
+    }
+    /**/
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878:CSS/footer-menu.css
     .page__menu ul {
         display: none;
     }
@@ -425,11 +441,17 @@ a:hover {
         line-height: 30px;
         font-size: 15px;
     }
+<<<<<<< HEAD:CSS/standard.css
 
     .btn-medium {
         width: 120px;
     }
 
+=======
+    .btn-medium {
+        width: 120px;
+    }
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878:CSS/footer-menu.css
     .btn-lager {
         width: 200px;
     }

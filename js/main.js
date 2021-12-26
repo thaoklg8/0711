@@ -1,4 +1,13 @@
 // check();
+<<<<<<< HEAD
+=======
+function signout() {
+    localStorage.clickcount = 0;
+}
+
+
+
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
 /*ẩn hiện menu*/
 function hiddenMenu() {
     var hidden = document.getElementById('page__menu--right');
@@ -176,8 +185,13 @@ function loadInforTours(n) {
                 left.innerHTML = '<div class="tour--item-pic"><img src="' + p.img + '" alt=""></div>' +
                     '<div class="tour--item--content"><div class="middle--item-content flexrow"><div class="tour--item--content--left">' + '<p class="title text-center"id="t11111">' + p.title + '</p>' +
                     '<p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> ' + p.province + '</p>' +
+<<<<<<< HEAD
                     '</div><div class="tour--item--content--right price">' + p.price + ' VNĐ' + ' </div></div>' +
                     '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn" onclick="sendIDTour(' + p.id + ')"><a href="' + p.detail + '">Chi tiết</a></div>';
+=======
+                    '</div><div class="tour--item--content--right price">' + p.price + ' </div></div>' +
+                    '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn" onclick="sendIDTour(p.title)"><a href="' + p.detail + '">DETAILS</a></div>';
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
                 document.getElementById("jsonData").appendChild(left);
             }
         }).catch(function(error) {
@@ -259,13 +273,19 @@ function loadInforToursID(id) {
             left.innerHTML = '<div class="tour--item-pic"><img src="' + p.img + '" alt=""></div>' +
                 '<div class="tour--item--content"><div class="middle--item-content flexrow"><div class="tour--item--content--left">' + '<p class="title text-center" >' + p.title + '</p>' +
                 '<p class="title_province text-center"><i class="fas fa-map-pin" style="color: brown;"></i> ' + p.province + '</p>' +
+<<<<<<< HEAD
                 '</div><div class="tour--item--content--right price">' + p.price + ' VNĐ' + ' </div></div>' +
                 '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn" onclick="sendIDTour(' + p.id + ')"><a href="' + p.detail + '">Chi tiết</a></div>';
+=======
+                '</div><div class="tour--item--content--right price">' + p.price + ' </div></div>' +
+                '<p class="title-script">' + p.script + '</p>' + '</div>' + '<div class="btn-detail btn-medium btn" onclick="sendIDTour(p.title)"><a href="' + p.detail + '">DETAILS</a></div>';
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
             document.getElementById("jsonData").appendChild(left);
         }).catch(function(error) {
             alert("Error:" + error.message);
         });
 }
+<<<<<<< HEAD
 
 //hàm thay thế Signin
 function replaceSignin() {
@@ -292,6 +312,9 @@ function replaceRegister() {
 }
 
 //load UserName
+=======
+//
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
 function loadUserName() {
     fetch("/json/users.json")
         .then(response => response.json())
@@ -299,15 +322,21 @@ function loadUserName() {
             function(data) {
                 for (let i = 0; i < data.users.length; i++) {
                     u = data.users[i];
+<<<<<<< HEAD
                     if ((u.email == localStorage.getItem("email")) || (u.phone == localStorage.getItem("phone"))) {
                         localStorage.setItem("userName", u.userName);
                         break;
                     }
+=======
+                    if (u.email == localStorage.email)
+                        localStorage.userName = u.userName;
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
                 }
             }
         );
 
     if (localStorage.clickcount == 1) {
+<<<<<<< HEAD
         replaceSignin();
         replaceRegister();
     }
@@ -374,6 +403,26 @@ function showStar(quantity) {
 
 function loadHotTours() {
     fetch("../json/quantity.json")
+=======
+        // window.onload = function() {
+        document.getElementById("sign--register").innerHTML = "";
+        document.getElementById("sign--register1").innerHTML = "<span style='color:red; margin-top:11px;margin-left:-15px'>" + localStorage.userName + "</span>";
+        document.getElementById("button__signout").innerHTML = "Sign out";
+        document.getElementById("button__signout--submenu").innerHTML = "Sign out";
+        //}
+    }
+}
+
+function signout() {
+    localStorage.clickcount = 0;
+}
+
+//trang DETAIL
+//load detail cua tour theo id duoc chon
+
+function sendIDTour(input) { /*lỗi ở đâyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy*/
+    fetch("../json/details.json")
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
         .then(function(response) {
             if (!response.ok) {
                 throw new Error("HTTP error, status: " + response.status)
@@ -381,6 +430,7 @@ function loadHotTours() {
             return response.json();
         })
         .then(function(data) {
+<<<<<<< HEAD
             var n = data.quantity.length;
             for (let i = 0; i < n; i++) {
                 p = data.quantity[i];
@@ -426,6 +476,36 @@ function loadUserInfor() {
 
 function loadTourClicked() {
     fetch("../json/inforTours.json")
+=======
+            p = data.details;
+            let n = p.length;
+            var num;
+            for (let i = 0; i < n; i++) {
+                num = p[i].title.search(input);
+                console.log(num);
+                if (num > -1) {
+                    localStorage.idtour = i;
+                    break;
+                }
+            }
+        }).catch(function(error) {
+            alert("Error: " + error.message);
+        });
+}
+
+
+function loadDetailTour() {
+    // var div = document.createElement("div");
+    // div.className = 'page__content--discription part--left';
+    // div.id = 'detailTour';
+    // div.innerHTM = "hi";
+    // document.getElementById("parent").appendChild(div);
+    // var parent = document.getElementById("parent");
+    // var child = document.getElementById("detailTour");
+    // parent.replaceChild(div, child);
+
+    fetch("../json/details.json")
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
         .then(function(response) {
             if (!response.ok) {
                 throw new Error("HTTP error, status: " + response.status)
@@ -433,6 +513,7 @@ function loadTourClicked() {
             return response.json();
         })
         .then(function(data) {
+<<<<<<< HEAD
             p = data.inforTours[localStorage.idtour];
             document.getElementById("place_book").value = p.title;
             document.getElementById("price").value = p.price;
@@ -441,10 +522,20 @@ function loadTourClicked() {
             var img = document.createElement('img');
             img.src = p.img;
             document.getElementById('img').appendChild(img);
+=======
+            p = data.details[localStorage.idtour];
+            var left = document.createElement("div");
+            left.innerHTML = '<h1>' + p.title + '</h1><p>' +
+                p.content + '</p><br><p>' +
+                p.timeOfTour + '</p><p>' +
+                p.timeline + '</p>';
+            document.getElementById("detailTour").appendChild(left);
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
         }).catch(function(error) {
             alert("Error: " + error.message);
         });
 }
+<<<<<<< HEAD
 
 function sum() {
     var sl = document.getElementById("number_book").value;
@@ -460,6 +551,19 @@ function sum() {
 //Trang review
 function loadImgReview() {
     fetch("../json/reviews.json")
+=======
+/*hien thi cac tour duoc mua nhieu nhat */
+function showStar(quantity) {
+    let string = "";
+    for (let i = 0; i < quantity; i++) {
+        string += '<i class="fas fa-star" style="color: yellow;"></i>';
+    }
+    return string;
+}
+
+function loadHotTours() {
+    fetch("../json/quantity.json")
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
         .then(function(response) {
             if (!response.ok) {
                 throw new Error("HTTP error, status: " + response.status)
@@ -467,6 +571,7 @@ function loadImgReview() {
             return response.json();
         })
         .then(function(data) {
+<<<<<<< HEAD
             let n = data.reviews.length;
             for (let i = 0; i < n; i++) {
                 let r = data.reviews[i];
@@ -499,6 +604,21 @@ function loadReview() {
             left.innerHTML = '<h2>' + p.title + '</h2><p>' + p.content + '</p><div class="content__date--cusreview"><p>' + p.date + '</p></div>';
             document.getElementById("review_sample").appendChild(left);
         }).catch(function(error) {
+=======
+            var n = data.quantity.length;
+            for (let i = 0; i < n; i++) {
+                p = data.quantity[i];
+                p = data.quantity[i];
+                var left = document.createElement("div");
+                left.className = 'review--item';
+                left.innerHTML = '<p class="text-center">' + p.title +
+                    '</p><p class="text-center">' + '<p class="title text-center">' + showStar(p.rate) + '</p><p style="text-align: right;">' + p.quantity +
+                    ' tours đã bán</p>';
+                document.getElementById("rate").appendChild(left);
+            }
+        })
+        .catch(function(error) {
+>>>>>>> fde0da68bc7f3eed2c285660ccc27ffe3586c878
             alert("Error:" + error.message);
         });
 }
